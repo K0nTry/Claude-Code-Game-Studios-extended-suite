@@ -69,15 +69,15 @@ The result: you still make every decision. The team just asks sharper questions,
 Agents are organized into three tiers, matching how real studios operate:
 
 ```
-Tier 1 — Directors (opus / strategic-reasoning)
+Tier 1 — Directors (opus) — sets vision and direction from a blank page
   creative-director    technical-director    producer
 
-Tier 2 — Department Leads (sonnet / applied-reasoning)
+Tier 2 — Department Leads (sonnet) — builds against a decision already made
   game-designer        lead-programmer       art-director
   audio-director       narrative-director    qa-lead
   release-manager      localization-lead
 
-Tier 3 — Specialists (sonnet / applied-reasoning, unless noted)
+Tier 3 — Specialists (sonnet, except two marked *) — executes against data the tiers above already produced
   gameplay-programmer  engine-programmer     ai-programmer
   network-programmer   tools-programmer      ui-programmer
   systems-designer     level-designer        economy-designer
@@ -87,7 +87,7 @@ Tier 3 — Specialists (sonnet / applied-reasoning, unless noted)
   security-engineer    qa-tester             accessibility-specialist
   live-ops-designer    community-manager *
 
-  * haiku / focused-execution — narrow, high-volume tasks
+  * haiku — the narrowest, highest-volume roles
 ```
 
 ### Engine Specialists
@@ -120,11 +120,13 @@ model: sonnet                  # the Anthropic label — Claude Code reads this
 difficulty: applied-reasoning  # the provider-neutral capability hint — any runtime reads this
 ```
 
-The tier isn't a per-task dial — it's fixed by where the agent sits in the studio's own pipeline, not by how hard any single task looks:
+The tier isn't a per-task dial and it isn't a statement about which models "can reason" — it's fixed by where the agent sits in the studio's own pipeline:
 
-- **Directors** start from a blank page — vision, tone, binding calls with no existing artifact to lean on. That's the most expensive kind of thinking, so they run on the top-tier model: `strategic-reasoning` / `opus`.
-- **Leads, and almost every specialist,** take a decision that's already been made and build against it with professional judgment — still real reasoning, just no longer inventing the direction from scratch: `applied-reasoning` / `sonnet`.
-- **The two highest-volume, most mechanical roles** — `community-manager` and `devops-engineer` — work almost entirely off data the tiers above already produced (a patch note, a pipeline config), so they run on the fastest tier: `focused-execution` / `haiku`.
+- **Directors** start from a blank page — vision, tone, binding calls with no existing artifact to lean on. That's the most expensive tier to run, so they get the top-tier model (`opus`).
+- **Leads, and almost every specialist,** take a decision that's already been made and build against it with professional judgment, no longer inventing the direction from scratch. That's the middle tier (`sonnet`).
+- **The two highest-volume, most mechanical roles** — `community-manager` and `devops-engineer` — work almost entirely off data the tiers above already produced (a patch note, a pipeline config). That's the fastest tier (`haiku`).
+
+The internal field values below are just labels for those three tiers — pick the row by pipeline role, not by task complexity:
 
 | `difficulty:` | Who | `model:` equivalent |
 |---|---|---|
