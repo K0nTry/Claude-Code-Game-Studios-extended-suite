@@ -3,22 +3,34 @@
   <p align="center">
     Turn a single Claude Code session into a full game development studio.
     <br />
-    49 agents. 73 skills. One coordinated AI team.
+    49 agents. 74 skills. Fable/Astra Lens + Graft context graph. One coordinated AI team.
   </p>
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
   <a href=".claude/agents"><img src="https://img.shields.io/badge/agents-49-blueviolet" alt="49 Agents"></a>
-  <a href=".claude/skills"><img src="https://img.shields.io/badge/skills-73-green" alt="73 Skills"></a>
+  <a href=".claude/skills"><img src="https://img.shields.io/badge/skills-74-green" alt="74 Skills"></a>
   <a href=".claude/hooks"><img src="https://img.shields.io/badge/hooks-12-orange" alt="12 Hooks"></a>
   <a href=".claude/rules"><img src="https://img.shields.io/badge/rules-11-red" alt="11 Rules"></a>
+  <a href="docs/agents"><img src="https://img.shields.io/badge/Fable%2FAstra%20Lens-34%2F49%20agents-9146FF" alt="Fable/Astra Lens on 34 of 49 agents"></a>
+  <a href="https://github.com/trailhq/Graft"><img src="https://img.shields.io/badge/context%20graph-Graft-1f6feb" alt="Graft integrated"></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/built%20for-Claude%20Code-f5f5f5?logo=anthropic" alt="Built for Claude Code"></a>
   <a href="https://www.buymeacoffee.com/donchitos3"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support%20this%20project-FFDD00?logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
   <a href="https://github.com/sponsors/Donchitos"><img src="https://img.shields.io/badge/GitHub%20Sponsors-Support%20this%20project-ea4aaa?logo=githubsponsors&logoColor=white" alt="GitHub Sponsors"></a>
 </p>
 
 ---
+
+> **This fork** (`K0nTry/Claude-Code-Game-Studios`) builds on the upstream
+> [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)
+> template. It adds two things the upstream project doesn't have:
+> - **Fable/Astra Lens** — a second standards layer (`docs/agents/*/fable.xml` + `astra.xml`) wired
+>   onto 34 of the 49 agents, adding explicit effort control, define-done, and verification-loop
+>   discipline per agent (15 engine specialists still pending).
+> - **[Graft](https://github.com/trailhq/Graft)** — a local context-graph MCP server (`.mcp.json`,
+>   `.claude/skills/graft/`) so agents pull codebase context from a graph instead of re-exploring
+>   files from scratch each session.
 
 ## Why This Exists
 
@@ -53,7 +65,7 @@ The result: you still make every decision, but now you have a team that asks the
 | Category | Count | Description |
 |----------|-------|-------------|
 | **Agents** | 49 | Specialized subagents across design, programming, art, audio, narrative, QA, and production |
-| **Skills** | 73 | Slash commands for every workflow phase (`/start`, `/design-system`, `/create-epics`, `/create-stories`, `/dev-story`, `/story-done`, etc.) |
+| **Skills** | 74 | Slash commands for every workflow phase (`/start`, `/design-system`, `/create-epics`, `/create-stories`, `/dev-story`, `/story-done`, etc.) |
 | **Hooks** | 12 | Automated validation on commits, pushes, asset changes, session lifecycle, agent audit trail, and gap detection |
 | **Rules** | 11 | Path-scoped coding standards enforced when editing gameplay, engine, AI, UI, network code, and more |
 | **Templates** | 40 | Document templates for GDDs, UX specs, ADRs, sprint plans, HUD design, accessibility, and more |
@@ -94,7 +106,7 @@ The template includes agent sets for all three major engines. Use the set that m
 
 ## Slash Commands
 
-Type `/` in Claude Code to access all 73 skills:
+Type `/` in Claude Code to access all 74 skills:
 
 **Onboarding & Navigation**
 `/start` `/help` `/project-stage-detect` `/setup-engine` `/adopt`
@@ -146,7 +158,7 @@ All hooks fail gracefully if optional tools are missing — nothing breaks, you 
 
 1. **Clone or use as template**:
    ```bash
-   git clone https://github.com/Donchitos/Claude-Code-Game-Studios.git my-game
+   git clone https://github.com/K0nTry/Claude-Code-Game-Studios.git my-game
    cd my-game
    ```
 
@@ -176,7 +188,7 @@ CLAUDE.md                           # Master configuration
 .claude/
   settings.json                     # Hooks, permissions, safety rules
   agents/                           # 49 agent definitions (markdown + YAML frontmatter)
-  skills/                           # 73 slash commands (subdirectory per skill)
+  skills/                           # 74 slash commands (subdirectory per skill)
   hooks/                            # 12 hook scripts (bash, cross-platform)
   rules/                            # 11 path-scoped coding standards
   statusline.sh                     # Status line script (context%, model, stage, epic breadcrumb)
@@ -283,8 +295,8 @@ Primary development and testing on **Windows 10** with Git Bash. All hooks use P
 
 ## Community
 
-- **Discussions** — [GitHub Discussions](https://github.com/Donchitos/Claude-Code-Game-Studios/discussions) for questions, ideas, and showcasing what you've built
-- **Issues** — [Bug reports and feature requests](https://github.com/Donchitos/Claude-Code-Game-Studios/issues)
+- **Issues** — [Bug reports and feature requests on this fork](https://github.com/K0nTry/Claude-Code-Game-Studios/issues)
+- **Upstream discussions** — [GitHub Discussions](https://github.com/Donchitos/Claude-Code-Game-Studios/discussions) on the original template for general questions and ideas
 
 ---
 
@@ -305,7 +317,7 @@ Sponsorships help fund time spent maintaining skills, adding new agents, keeping
 
 ---
 
-*Built for Claude Code. Maintained and extended — contributions welcome via [GitHub Discussions](https://github.com/Donchitos/Claude-Code-Game-Studios/discussions).*
+*Built for Claude Code. This fork adds Fable/Astra Lens and Graft on top of the upstream [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) template.*
 
 ## License
 
