@@ -77,17 +77,15 @@ Tier 2 — Department Leads (sonnet) — builds against a decision already made
   audio-director       narrative-director    qa-lead
   release-manager      localization-lead
 
-Tier 3 — Specialists (sonnet, except two marked *) — executes against data the tiers above already produced
+Tier 3 — Specialists (sonnet) — executes against data the tiers above already produced
   gameplay-programmer  engine-programmer     ai-programmer
   network-programmer   tools-programmer      ui-programmer
   systems-designer     level-designer        economy-designer
   technical-artist     sound-designer        writer
   world-builder        ux-designer           prototyper
-  performance-analyst  devops-engineer *     analytics-engineer
+  performance-analyst  devops-engineer       analytics-engineer
   security-engineer    qa-tester             accessibility-specialist
-  live-ops-designer    community-manager *
-
-  * haiku — the narrowest, highest-volume roles
+  live-ops-designer    community-manager
 ```
 
 ### Engine Specialists
