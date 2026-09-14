@@ -120,15 +120,19 @@ model: sonnet                  # the Anthropic label — Claude Code reads this
 difficulty: applied-reasoning  # the provider-neutral capability hint — any runtime reads this
 ```
 
-`model:` stays as the Claude Code label; `difficulty:` is the same information without the vendor name. Point this studio at a different runtime (GPT, Astra, Hermes, or anything else) and each agent still resolves to the right capability tier for the task in front of it, instead of defaulting to whatever the runtime happens to consider "the model."
+The tier isn't a per-task dial — it's fixed by where the agent sits in the studio's own pipeline, not by how hard any single task looks:
 
-| `difficulty:` | Maps to | `model:` equivalent |
+- **Directors** start from a blank page — vision, tone, binding calls with no existing artifact to lean on. That's the most expensive kind of thinking, so they run on the top-tier model: `strategic-reasoning` / `opus`.
+- **Leads, and almost every specialist,** take a decision that's already been made and build against it with professional judgment — still real reasoning, just no longer inventing the direction from scratch: `applied-reasoning` / `sonnet`.
+- **The two highest-volume, most mechanical roles** — `community-manager` and `devops-engineer` — work almost entirely off data the tiers above already produced (a patch note, a pipeline config), so they run on the fastest tier: `focused-execution` / `haiku`.
+
+| `difficulty:` | Who | `model:` equivalent |
 |---|---|---|
-| `strategic-reasoning` | Top-tier reasoning — vision gates, binding direction | `opus` |
-| `applied-reasoning` | Mid-tier professional — execution with judgment | `sonnet` |
-| `focused-execution` | Fast/cheap — narrow, high-volume tasks | `haiku` |
+| `strategic-reasoning` | Directors — set direction from nothing | `opus` |
+| `applied-reasoning` | Leads and specialists — build against a decision already made | `sonnet` |
+| `focused-execution` | The narrowest, highest-volume roles — execute already-resolved data | `haiku` |
 
-All 49 agents carry both fields today.
+All 49 agents carry both fields today. Point this studio at a different runtime (GPT, Astra, Hermes, or anything else) and each agent maps to its own tier without a hardcoded Anthropic model name.
 
 ## Slash Commands
 
