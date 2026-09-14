@@ -3,7 +3,7 @@
   <p align="center"><em>Fable/Astra Build</em></p>
   <p align="center">
     A 49-agent AI game studio for Claude Code — hardened with a verification-first
-    standards layer and a persistent codebase context graph.
+    standards layer and a provider-neutral difficulty tier on every agent.
   </p>
 </p>
 
@@ -14,7 +14,7 @@
   <a href=".claude/hooks"><img src="https://img.shields.io/badge/hooks-12-orange" alt="12 Hooks"></a>
   <a href=".claude/rules"><img src="https://img.shields.io/badge/rules-11-red" alt="11 Rules"></a>
   <a href="docs/agents"><img src="https://img.shields.io/badge/Fable%2FAstra%20Lens-34%2F49%20agents-9146FF" alt="Fable/Astra Lens on 34 of 49 agents"></a>
-  <a href="https://github.com/trailhq/Graft"><img src="https://img.shields.io/badge/context%20graph-Graft-1f6feb" alt="Graft integrated"></a>
+  <a href=".claude/agents"><img src="https://img.shields.io/badge/runtime-model%20agnostic-2ea44f" alt="Provider-neutral difficulty tiers"></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/built%20for-Claude%20Code-f5f5f5?logo=anthropic" alt="Built for Claude Code"></a>
 </p>
 
@@ -26,7 +26,7 @@ A single AI chat session has no structure. Nothing stops it from hardcoding magi
 
 This project turns one Claude Code session into a studio instead: 49 specialized agents organized into a real hierarchy — directors who guard the vision, leads who own their department, specialists who do the hands-on work — each with defined responsibilities, escalation paths, and quality gates.
 
-Two things push that further here. Every agent that ships work carries a **Fable/Astra Lens**, a standards layer that forces explicit effort control, a defined "done," and an adversarial verification pass before anything is called finished. And the whole team reads the codebase through **Graft**, a local context graph, instead of re-exploring files from a blank slate every session.
+Two things push that further here. Every agent that ships work carries a **Fable/Astra Lens**, a standards layer that forces explicit effort control, a defined "done," and an adversarial verification pass before anything is called finished. And every agent also carries a **provider-neutral difficulty tier**, so the same studio behaves consistently whether it's run on Claude models or routed through another runtime entirely.
 
 The result: you still make every decision. The team just asks sharper questions, catches mistakes earlier, and stays oriented as the project grows.
 
@@ -37,7 +37,7 @@ The result: you still make every decision. The team just asks sharper questions,
 - [What's Included](#whats-included)
 - [Studio Hierarchy](#studio-hierarchy)
 - [Fable/Astra Lens](#fableastra-lens)
-- [Graft Context Graph](#graft-context-graph)
+- [Model-Agnostic Difficulty Tiers](#model-agnostic-difficulty-tiers)
 - [Slash Commands](#slash-commands)
 - [Getting Started](#getting-started)
 - [Upgrading](#upgrading)
@@ -62,30 +62,32 @@ The result: you still make every decision. The team just asks sharper questions,
 | **Rules** | 11 | Path-scoped coding standards enforced when editing gameplay, engine, AI, UI, network code, and more |
 | **Templates** | 40 | Document templates for GDDs, UX specs, ADRs, sprint plans, HUD design, accessibility, and more |
 | **Fable/Astra Lens** | 34 of 49 agents | Effort control, define-done, and verification-loop discipline layered onto each agent (engine specialists next) |
-| **Graft** | 1 context graph | Local MCP server mapping the codebase so agents work from a graph, not a cold search every time |
+| **Difficulty Tiers** | 49 of 49 agents | Every agent carries a provider-neutral `difficulty:` field alongside its Claude `model:`, so any runtime can resolve its own equivalent tier |
 
 ## Studio Hierarchy
 
 Agents are organized into three tiers, matching how real studios operate:
 
 ```
-Tier 1 — Directors (Opus)
+Tier 1 — Directors (opus / strategic-reasoning)
   creative-director    technical-director    producer
 
-Tier 2 — Department Leads (Sonnet)
+Tier 2 — Department Leads (sonnet / applied-reasoning)
   game-designer        lead-programmer       art-director
   audio-director       narrative-director    qa-lead
   release-manager      localization-lead
 
-Tier 3 — Specialists (Sonnet/Haiku)
+Tier 3 — Specialists (sonnet / applied-reasoning, unless noted)
   gameplay-programmer  engine-programmer     ai-programmer
   network-programmer   tools-programmer      ui-programmer
   systems-designer     level-designer        economy-designer
   technical-artist     sound-designer        writer
   world-builder        ux-designer           prototyper
-  performance-analyst  devops-engineer       analytics-engineer
+  performance-analyst  devops-engineer *     analytics-engineer
   security-engineer    qa-tester             accessibility-specialist
-  live-ops-designer    community-manager
+  live-ops-designer    community-manager *
+
+  * haiku / focused-execution — narrow, high-volume tasks
 ```
 
 ### Engine Specialists
@@ -109,18 +111,24 @@ Every agent definition ships as a plain role prompt. That's enough for a quick t
 
 The remaining 15 agents are engine specialists (Godot/Unity/Unreal sub-roles) — the lens is rolling out to them next.
 
-## Graft Context Graph
+## Model-Agnostic Difficulty Tiers
 
-Agents normally rebuild their understanding of a codebase by grepping and reading files from scratch every session. [Graft](https://github.com/trailhq/Graft) replaces that with a persistent, local knowledge graph of the repo's architecture, dependencies, and concepts, served to Claude Code over MCP (`.mcp.json`, `.claude/skills/graft/`).
+Every agent's frontmatter carries two fields instead of one:
 
-```bash
-graft build              # generate the local graph (free, no API key)
-graft ask "<question>"   # query the graph — ranked nodes with exact file:line
-graft callers <symbol>   # who calls or references a symbol, transitively
-graft viz                # interactive graph visualization
+```yaml
+model: sonnet                  # the Anthropic label — Claude Code reads this
+difficulty: applied-reasoning  # the provider-neutral capability hint — any runtime reads this
 ```
 
-The graph itself lives in a git-ignored `graft/` directory and regenerates locally per machine — nothing about it needs to be committed or shared.
+`model:` stays as the Claude Code label; `difficulty:` is the same information without the vendor name. Point this studio at a different runtime (GPT, Astra, Hermes, or anything else) and each agent still resolves to the right capability tier for the task in front of it, instead of defaulting to whatever the runtime happens to consider "the model."
+
+| `difficulty:` | Maps to | `model:` equivalent |
+|---|---|---|
+| `strategic-reasoning` | Top-tier reasoning — vision gates, binding direction | `opus` |
+| `applied-reasoning` | Mid-tier professional — execution with judgment | `sonnet` |
+| `focused-execution` | Fast/cheap — narrow, high-volume tasks | `haiku` |
+
+All 49 agents carry both fields today.
 
 ## Slash Commands
 
@@ -168,7 +176,6 @@ Type `/` in Claude Code to access all 74 skills:
 
 - [Git](https://git-scm.com/)
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (`npm install -g @anthropic-ai/claude-code`)
-- [Node.js](https://nodejs.org/) + npm (for the Graft context graph)
 - **Recommended**: [jq](https://jqlang.github.io/jq/) (for hook validation) and Python 3 (for JSON validation)
 
 All hooks fail gracefully if optional tools are missing — nothing breaks, you just lose validation.
@@ -216,7 +223,6 @@ CLAUDE.md                           # Master configuration
     templates/                      # 40 document templates
 docs/
   agents/                           # Fable/Astra Lens XML (fable.xml + astra.xml per agent)
-graft/                              # Local context graph (git-ignored, regenerated per machine)
 src/                                # Game source code
 assets/                             # Art, audio, VFX, shaders, data files
 design/                             # GDDs, narrative docs, level designs
@@ -320,7 +326,7 @@ Bug reports and feature requests: open an issue in this repository's **Issues** 
 
 ## Acknowledgments
 
-Built on the open-source [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) agent framework (MIT licensed), extended with the Fable/Astra Lens standards layer and [Graft](https://github.com/trailhq/Graft) context graph integration.
+Built on the open-source [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) agent framework (MIT licensed), extended with the Fable/Astra Lens standards layer and model-agnostic difficulty tiers.
 
 ## License
 
