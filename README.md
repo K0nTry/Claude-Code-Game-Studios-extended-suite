@@ -1,9 +1,9 @@
 <p align="center">
   <h1 align="center">Claude Code Game Studios</h1>
+  <p align="center"><em>Fable/Astra Build</em></p>
   <p align="center">
-    Turn a single Claude Code session into a full game development studio.
-    <br />
-    49 agents. 74 skills. Fable/Astra Lens + Graft context graph. One coordinated AI team.
+    A 49-agent AI game studio for Claude Code — hardened with a verification-first
+    standards layer and a persistent codebase context graph.
   </p>
 </p>
 
@@ -16,29 +16,19 @@
   <a href="docs/agents"><img src="https://img.shields.io/badge/Fable%2FAstra%20Lens-34%2F49%20agents-9146FF" alt="Fable/Astra Lens on 34 of 49 agents"></a>
   <a href="https://github.com/trailhq/Graft"><img src="https://img.shields.io/badge/context%20graph-Graft-1f6feb" alt="Graft integrated"></a>
   <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/built%20for-Claude%20Code-f5f5f5?logo=anthropic" alt="Built for Claude Code"></a>
-  <a href="https://www.buymeacoffee.com/donchitos3"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support%20this%20project-FFDD00?logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
-  <a href="https://github.com/sponsors/Donchitos"><img src="https://img.shields.io/badge/GitHub%20Sponsors-Support%20this%20project-ea4aaa?logo=githubsponsors&logoColor=white" alt="GitHub Sponsors"></a>
 </p>
 
 ---
 
-> **This fork** (`K0nTry/Claude-Code-Game-Studios`) builds on the upstream
-> [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)
-> template. It adds two things the upstream project doesn't have:
-> - **Fable/Astra Lens** — a second standards layer (`docs/agents/*/fable.xml` + `astra.xml`) wired
->   onto 34 of the 49 agents, adding explicit effort control, define-done, and verification-loop
->   discipline per agent (15 engine specialists still pending).
-> - **[Graft](https://github.com/trailhq/Graft)** — a local context-graph MCP server (`.mcp.json`,
->   `.claude/skills/graft/`) so agents pull codebase context from a graph instead of re-exploring
->   files from scratch each session.
-
 ## Why This Exists
 
-Building a game solo with AI is powerful — but a single chat session has no structure. No one stops you from hardcoding magic numbers, skipping design docs, or writing spaghetti code. There's no QA pass, no design review, no one asking "does this actually fit the game's vision?"
+A single AI chat session has no structure. Nothing stops it from hardcoding magic numbers, skipping design docs, or quietly writing spaghetti code — there's no QA pass, no design review, no one asking "does this actually fit the game's vision?"
 
-**Claude Code Game Studios** solves this by giving your AI session the structure of a real studio. Instead of one general-purpose assistant, you get 49 specialized agents organized into a studio hierarchy — directors who guard the vision, department leads who own their domains, and specialists who do the hands-on work. Each agent has defined responsibilities, escalation paths, and quality gates.
+This project turns one Claude Code session into a studio instead: 49 specialized agents organized into a real hierarchy — directors who guard the vision, leads who own their department, specialists who do the hands-on work — each with defined responsibilities, escalation paths, and quality gates.
 
-The result: you still make every decision, but now you have a team that asks the right questions, catches mistakes early, and keeps your project organized from first brainstorm to launch.
+Two things push that further here. Every agent that ships work carries a **Fable/Astra Lens**, a standards layer that forces explicit effort control, a defined "done," and an adversarial verification pass before anything is called finished. And the whole team reads the codebase through **Graft**, a local context graph, instead of re-exploring files from a blank slate every session.
+
+The result: you still make every decision. The team just asks sharper questions, catches mistakes earlier, and stays oriented as the project grows.
 
 ---
 
@@ -46,6 +36,8 @@ The result: you still make every decision, but now you have a team that asks the
 
 - [What's Included](#whats-included)
 - [Studio Hierarchy](#studio-hierarchy)
+- [Fable/Astra Lens](#fableastra-lens)
+- [Graft Context Graph](#graft-context-graph)
 - [Slash Commands](#slash-commands)
 - [Getting Started](#getting-started)
 - [Upgrading](#upgrading)
@@ -54,8 +46,8 @@ The result: you still make every decision, but now you have a team that asks the
 - [Design Philosophy](#design-philosophy)
 - [Customization](#customization)
 - [Platform Support](#platform-support)
-- [Community](#community)
-- [Supporting This Project](#supporting-this-project)
+- [Issues](#issues)
+- [Acknowledgments](#acknowledgments)
 - [License](#license)
 
 ---
@@ -69,6 +61,8 @@ The result: you still make every decision, but now you have a team that asks the
 | **Hooks** | 12 | Automated validation on commits, pushes, asset changes, session lifecycle, agent audit trail, and gap detection |
 | **Rules** | 11 | Path-scoped coding standards enforced when editing gameplay, engine, AI, UI, network code, and more |
 | **Templates** | 40 | Document templates for GDDs, UX specs, ADRs, sprint plans, HUD design, accessibility, and more |
+| **Fable/Astra Lens** | 34 of 49 agents | Effort control, define-done, and verification-loop discipline layered onto each agent (engine specialists next) |
+| **Graft** | 1 context graph | Local MCP server mapping the codebase so agents work from a graph, not a cold search every time |
 
 ## Studio Hierarchy
 
@@ -96,13 +90,37 @@ Tier 3 — Specialists (Sonnet/Haiku)
 
 ### Engine Specialists
 
-The template includes agent sets for all three major engines. Use the set that matches your project:
+Agent sets exist for all three major engines. Use the set that matches your project:
 
 | Engine | Lead Agent | Sub-Specialists |
 |--------|-----------|-----------------|
 | **Godot 4** | `godot-specialist` | GDScript, Shaders, GDExtension |
 | **Unity** | `unity-specialist` | DOTS/ECS, Shaders/VFX, Addressables, UI Toolkit |
 | **Unreal Engine 5** | `unreal-specialist` | GAS, Blueprints, Replication, UMG/CommonUI |
+
+## Fable/Astra Lens
+
+Every agent definition ships as a plain role prompt. That's enough for a quick task and not enough for a binding creative or technical call. The Fable/Astra Lens is a second, machine-readable layer (`docs/agents/<agent>/fable.xml` + `astra.xml`) wired onto 34 of the 49 agents that adds four standing rules on top of the role itself:
+
+- **Control effort** — route simple asks to a direct answer, route complex or binding decisions to deep structured analysis
+- **Define done** — state an explicit, observable success condition before writing or coding anything
+- **Verify before delivery** — run an adversarial self-check against that success condition, not just a happy-path glance
+- **Never stop at a plan** — finish the work or name the blocker; a plan for work you could still do isn't a deliverable
+
+The remaining 15 agents are engine specialists (Godot/Unity/Unreal sub-roles) — the lens is rolling out to them next.
+
+## Graft Context Graph
+
+Agents normally rebuild their understanding of a codebase by grepping and reading files from scratch every session. [Graft](https://github.com/trailhq/Graft) replaces that with a persistent, local knowledge graph of the repo's architecture, dependencies, and concepts, served to Claude Code over MCP (`.mcp.json`, `.claude/skills/graft/`).
+
+```bash
+graft build              # generate the local graph (free, no API key)
+graft ask "<question>"   # query the graph — ranked nodes with exact file:line
+graft callers <symbol>   # who calls or references a symbol, transitively
+graft viz                # interactive graph visualization
+```
+
+The graph itself lives in a git-ignored `graft/` directory and regenerates locally per machine — nothing about it needs to be committed or shared.
 
 ## Slash Commands
 
@@ -150,15 +168,16 @@ Type `/` in Claude Code to access all 74 skills:
 
 - [Git](https://git-scm.com/)
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (`npm install -g @anthropic-ai/claude-code`)
+- [Node.js](https://nodejs.org/) + npm (for the Graft context graph)
 - **Recommended**: [jq](https://jqlang.github.io/jq/) (for hook validation) and Python 3 (for JSON validation)
 
 All hooks fail gracefully if optional tools are missing — nothing breaks, you just lose validation.
 
 ### Setup
 
-1. **Clone or use as template**:
+1. **Clone this repository**:
    ```bash
-   git clone https://github.com/K0nTry/Claude-Code-Game-Studios.git my-game
+   git clone <this-repository-url> my-game
    cd my-game
    ```
 
@@ -194,11 +213,13 @@ CLAUDE.md                           # Master configuration
   statusline.sh                     # Status line script (context%, model, stage, epic breadcrumb)
   docs/
     workflow-catalog.yaml           # 7-phase pipeline definition (read by /help)
-    templates/                      # 41 document templates
+    templates/                      # 40 document templates
+docs/
+  agents/                           # Fable/Astra Lens XML (fable.xml + astra.xml per agent)
+graft/                              # Local context graph (git-ignored, regenerated per machine)
 src/                                # Game source code
 assets/                             # Art, audio, VFX, shaders, data files
 design/                             # GDDs, narrative docs, level designs
-docs/                               # Technical documentation and ADRs
 tests/                              # Test suites (unit, integration, performance, playtest)
 tools/                              # Build and pipeline tools
 prototypes/                         # Throwaway prototypes (isolated from src/)
@@ -291,33 +312,15 @@ This is a **template**, not a locked framework. Everything is meant to be custom
 
 ## Platform Support
 
-Primary development and testing on **Windows 10** with Git Bash. All hooks use POSIX-compatible patterns (`grep -E`, not `grep -P`) and include fallbacks for missing tools, so they should run on macOS and Linux. The `notify.sh` hook uses PowerShell for Windows toast notifications and is a no-op elsewhere — desktop notifications on macOS/Linux are not yet wired. Cross-platform testing is ongoing; please file issues for any platform-specific breakage.
+Primary development and testing on **Windows 10** with Git Bash. All hooks use POSIX-compatible patterns (`grep -E`, not `grep -P`) and include fallbacks for missing tools, so they should run on macOS and Linux. The `notify.sh` hook uses PowerShell for Windows toast notifications and is a no-op elsewhere — desktop notifications on macOS/Linux are not yet wired.
 
-## Community
+## Issues
 
-- **Issues** — [Bug reports and feature requests on this fork](https://github.com/K0nTry/Claude-Code-Game-Studios/issues)
-- **Upstream discussions** — [GitHub Discussions](https://github.com/Donchitos/Claude-Code-Game-Studios/discussions) on the original template for general questions and ideas
+Bug reports and feature requests: open an issue in this repository's **Issues** tab.
 
----
+## Acknowledgments
 
-## Supporting This Project
-
-Claude Code Game Studios is free and open source. If it saves you time or helps you ship your game, consider supporting continued development:
-
-<p>
-  <a href="https://www.buymeacoffee.com/donchitos3"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee"></a>
-  &nbsp;
-  <a href="https://github.com/sponsors/Donchitos"><img src="https://img.shields.io/badge/GitHub%20Sponsors-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="GitHub Sponsors"></a>
-</p>
-
-- **[Buy Me a Coffee](https://www.buymeacoffee.com/donchitos3)** — one-time support
-- **[GitHub Sponsors](https://github.com/sponsors/Donchitos)** — recurring support through GitHub
-
-Sponsorships help fund time spent maintaining skills, adding new agents, keeping up with Claude Code and engine API changes, and responding to community issues.
-
----
-
-*Built for Claude Code. This fork adds Fable/Astra Lens and Graft on top of the upstream [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) template.*
+Built on the open-source [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) agent framework (MIT licensed), extended with the Fable/Astra Lens standards layer and [Graft](https://github.com/trailhq/Graft) context graph integration.
 
 ## License
 
