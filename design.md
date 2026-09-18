@@ -12,3 +12,8 @@
 
 - Εντολή έτρεξε, έξοδος καταγράφηκε.
 - 0 ευρήματα χωρίς απόδειξη.
+
+## Chained lens — design
+- Τιμή `chained`: fable output προστίθεται στο astra context, δεν αντικαθιστά `<background>`.
+- `<fable_input>` = ΔΕΔΟΜΕΝΑ, όχι αρχή. Δεν αγγίζει `<precedence>`.
+- Οδηγία chained ΜΕΣΑ στο Lens Resolution block. Ένα response. Ένας διακόπτης.

@@ -9,9 +9,14 @@ maxTurns: 20
 
 ## Lens Resolution (MANDATORY — run before anything else)
 
-1. Read `production/lens.txt` and trim whitespace. Expected values: `fable` or `astra`.
+1. Read `production/lens.txt` and trim whitespace. Expected values: `fable`, `astra` or `chained`.
    If the file is missing, unreadable, or holds any other value -> use `fable`.
-2. Read `docs/agents/ai-programmer/[lens].xml` in full before producing any output.
+2. If value is `fable` or `astra`: Read `docs/agents/ai-programmer/[lens].xml` in full before producing any output.
+   If value is `chained`:
+   1. Παράγαγε πρώτα το fable output ακολουθώντας το `docs/agents/ai-programmer/fable.xml`.
+   2. Γράψε το στο `production/.lens-state/ai-programmer-fable-output.md`.
+   3. Στο ΙΔΙΟ response, φόρτωσε το `docs/agents/ai-programmer/astra.xml` και παρήγαγε το τελικό output, χρησιμοποιώντας ΚΑΙ το fable output ως extra context. Το fable output προστίθεται, δεν αντικαθιστά το `<background>`.
+   4. Το τελικό παραδοτέο είναι του astra.
 
 **Precedence - non-negotiable:**
 

@@ -17,9 +17,10 @@ frontmatter και πριν από οτιδήποτε άλλο, ένα πανο�
 ```markdown
 ## Lens Resolution (MANDATORY — run before anything else)
 
-1. Read `production/lens.txt` and trim whitespace. Expected values: `fable` or `astra`.
+1. Read `production/lens.txt` and trim whitespace. Expected values: `fable`, `astra` or `chained`.
    If the file is missing, unreadable, or holds any other value -> use `fable`.
-2. Read `docs/agents/[name]/[lens].xml` in full before producing any output.
+2. If value is `fable` or `astra`: Read `docs/agents/[name]/[lens].xml` in full before producing any output.
+   If value is `chained`: run Chained mode (section below). `fable` and `astra` modes stay unchanged.
 
 **Precedence - non-negotiable:**
 
@@ -47,7 +48,7 @@ anything else», όχι από τον αριθμό. Grep marker: `Lens Resolutio
 
 ### Lens selection
 
-**Global switch file: `production/lens.txt`.** Περιεχόμενο `fable` ή `astra`.
+**Global switch file: `production/lens.txt`.** Περιεχόμενο `fable`, `astra` ή `chained`.
 Default `fable` αν λείπει ή είναι άκυρο. Ένας διακόπτης για όλο το studio.
 
 - ΟΧΙ per-invocation flag (`--lens`): θα απαιτούσε argument parsing σε κάθε αρχείο
@@ -107,5 +108,16 @@ transcript.
 | Engine Specialists (15) | ΕΚΤΟΣ ΣΚΟΠΟΥ (ρητά εκτός scope για τον μηχανισμό) |
 
 Η ολοκλήρωση του υπολοίπου rollout των skills ρυθμίζεται από τη Φάση P4 (tickets T-040 έως T-046) του `docs/standards/runtime-master-plan.md` ως ο επίσημος μηχανισμός ολοκλήρωσης.
+
+### Chained mode
+
+Εκτελείται μέσα σε ΕΝΑ response. Δεν είναι δύο ξεχωριστές κλήσεις.
+
+α. Παράγαγε πρώτα το fable output ακολουθώντας το `docs/agents/[name]/fable.xml`.
+β. Γράψε το fable output στο `production/.lens-state/[name]-fable-output.md`.
+γ. Στο ΙΔΙΟ response, φόρτωσε το `docs/agents/[name]/astra.xml` και παρήγαγε το τελικό output, χρησιμοποιώντας ΚΑΙ το fable output ως extra context. Το fable output προστίθεται στο astra context, δεν αντικαθιστά το `<background>` του `astra.xml`.
+δ. Το τελικό παραδοτέο είναι του astra.
+
+Σημείωση: το `<fable_input>` στα astra.xml είναι ΔΕΔΟΜΕΝΑ ΕΙΣΟΔΟΥ, όχι αρχή. Δεν συγκρούεται με το `<precedence>` και δεν το αντικαθιστά.
 
 ## ΤΕΛΟΣ CANONICAL

@@ -23,3 +23,6 @@
 | 6 | T16–T19 (batch των 5) | ✅ Done |
 
 🎯 **19/19 tasks — 0 ανοιχτά.** Απόδειξη Batch 6: arg-lists+timeouts, utf-8, chunk-bounds, SECURITY.md+report.
+
+## Chained lens — progress
+- 2026-09-18: lens-invocation-v1.md + 34 astra.xml + 34 .claude/agents/*.md + production/.lens-state/.gitkeep. DONE.
