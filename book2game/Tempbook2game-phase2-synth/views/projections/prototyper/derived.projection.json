@@ -1,0 +1,268 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T21:52:10.770793",
+    "derived_version": "2026-09-14T21:52:10.786793",
+    "extraction_timestamp": "2026-09-14T21:52:10.918362",
+    "canonical_uuids_present": 4,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 4,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "prototyper"
+  },
+  "_epistemic_layer": "derived",
+  "tension-pacing-curve.json": {
+    "model": "lexical tension per chapter (verbs, punctuation, sentence length, vocab)",
+    "tension_curve": [
+      {
+        "chapter_index": 1,
+        "chapter_title": "# Chapter 1: The Gathering",
+        "tension_score": 0.415,
+        "detail": {
+          "avg_sentence_words": 10.0,
+          "action_hits": 1,
+          "punct_hits": 0,
+          "neg_hits": 0,
+          "pos_hits": 0,
+          "short_sentence_ratio": 0.33,
+          "signals": [
+            "δράση: war"
+          ]
+        },
+        "evidence_snippet": "# Chapter 1: The Gathering",
+        "flow_label": "ισορροπία / διερεύνηση"
+      },
+      {
+        "chapter_index": 2,
+        "chapter_title": "# Chapter 2: The Quest",
+        "tension_score": 0.36,
+        "detail": {
+          "avg_sentence_words": 9.0,
+          "action_hits": 0,
+          "punct_hits": 0,
+          "neg_hits": 0,
+          "pos_hits": 0,
+          "short_sentence_ratio": 0.67,
+          "signals": [
+            "κοντές προτάσεις 67%"
+          ]
+        },
+        "evidence_snippet": "# Chapter 2: The Quest",
+        "flow_label": "ισορροπία / διερεύνηση"
+      },
+      {
+        "chapter_index": 3,
+        "chapter_title": "# Chapter 3: The Encounter",
+        "tension_score": 0.36,
+        "detail": {
+          "avg_sentence_words": 7.0,
+          "action_hits": 0,
+          "punct_hits": 0,
+          "neg_hits": 0,
+          "pos_hits": 0,
+          "short_sentence_ratio": 0.67,
+          "signals": [
+            "κοντές προτάσεις 67%"
+          ]
+        },
+        "evidence_snippet": "# Chapter 3: The Encounter",
+        "flow_label": "ισορροπία / διερεύνηση"
+      },
+      {
+        "chapter_index": 4,
+        "chapter_title": "# Chapter 4: The Revelation",
+        "tension_score": 0.25,
+        "detail": {
+          "avg_sentence_words": 12.0,
+          "action_hits": 0,
+          "punct_hits": 0,
+          "neg_hits": 0,
+          "pos_hits": 0,
+          "short_sentence_ratio": 0.0,
+          "signals": [
+            "ήρεμη αφήγηση / περιγραφή"
+          ]
+        },
+        "evidence_snippet": "# Chapter 4: The Revelation",
+        "flow_label": "ανάπαυλα / περισυλλογή"
+      }
+    ],
+    "pacing_dead_zone_index": 0.667,
+    "_method": "κάθε κεφάλαιο μετράται ξεχωριστά από το κείμενό του — όχι τριγωνομετρία",
+    "_note": "Για economia/gini χρειάζεται πραγματικό game design — εδώ δίνουμε μόνο pacing"
+  },
+  "character-psychology.json": {
+    "psychology": {
+      "Lyra": {
+        "name": "Lyra",
+        "role": "Recurring Entity",
+        "big_five": {
+          "openness": 35,
+          "conscientiousness": 35,
+          "extraversion": 30,
+          "agreeableness": 40,
+          "neuroticism": 25
+        },
+        "big_five_method": "lexical proxies from dialogue (questions, social/organizing/negative vocab, TTR, volume)",
+        "big_five_note": "Για κλινική ακρίβεια Big-5 απαιτείται LLM enrichment — εδώ δίνουμε ανιχνεύσιμα proxies",
+        "moral_alignment": "Πραγματιστής / Ουδέτερος",
+        "core_flaw": "Συντηρητικός / αποφεύγει το ρίσκο",
+        "driving_desire": "Απόδειξη αξίας / αναγνώριση",
+        "dialogue_count": 0,
+        "evidence_dialogues": []
+      },
+      "Elder": {
+        "name": "Elder",
+        "role": "Recurring Entity",
+        "big_five": {
+          "openness": 35,
+          "conscientiousness": 35,
+          "extraversion": 30,
+          "agreeableness": 40,
+          "neuroticism": 25
+        },
+        "big_five_method": "lexical proxies from dialogue (questions, social/organizing/negative vocab, TTR, volume)",
+        "big_five_note": "Για κλινική ακρίβεια Big-5 απαιτείται LLM enrichment — εδώ δίνουμε ανιχνεύσιμα proxies",
+        "moral_alignment": "Πραγματιστής / Ουδέτερος",
+        "core_flaw": "Συντηρητικός / αποφεύγει το ρίσκο",
+        "driving_desire": "Απόδειξη αξίας / αναγνώριση",
+        "dialogue_count": 0,
+        "evidence_dialogues": []
+      },
+      "Within": {
+        "name": "Within",
+        "role": "Recurring Entity",
+        "big_five": {
+          "openness": 35,
+          "conscientiousness": 35,
+          "extraversion": 30,
+          "agreeableness": 40,
+          "neuroticism": 25
+        },
+        "big_five_method": "lexical proxies from dialogue (questions, social/organizing/negative vocab, TTR, volume)",
+        "big_five_note": "Για κλινική ακρίβεια Big-5 απαιτείται LLM enrichment — εδώ δίνουμε ανιχνεύσιμα proxies",
+        "moral_alignment": "Πραγματιστής / Ουδέτερος",
+        "core_flaw": "Συντηρητικός / αποφεύγει το ρίσκο",
+        "driving_desire": "Απόδειξη αξίας / αναγνώριση",
+        "dialogue_count": 0,
+        "evidence_dialogues": []
+      },
+      "Chapter": {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "big_five": {
+          "openness": 35,
+          "conscientiousness": 35,
+          "extraversion": 30,
+          "agreeableness": 40,
+          "neuroticism": 25
+        },
+        "big_five_method": "lexical proxies from dialogue (questions, social/organizing/negative vocab, TTR, volume)",
+        "big_five_note": "Για κλινική ακρίβεια Big-5 απαιτείται LLM enrichment — εδώ δίνουμε ανιχνεύσιμα proxies",
+        "moral_alignment": "Πραγματιστής / Ουδέτερος",
+        "core_flaw": "Συντηρητικός / αποφεύγει το ρίσκο",
+        "driving_desire": "Απόδειξη αξίας / αναγνώριση",
+        "dialogue_count": 0,
+        "evidence_dialogues": []
+      }
+    },
+    "voice_fingerprints": {
+      "Lyra": {
+        "name": "Lyra",
+        "speech_rhythm": "σιωπηλός (καμία άμεση ατάκα στο κείμενο)",
+        "avg_sentence_length_words": 0,
+        "vocabulary_tier": "— (καμία άμεση ατάκα)",
+        "type_token_ratio": 0,
+        "dialogue_count": 0,
+        "sample_quotes": [],
+        "method": "μετρήθηκε από διαλόγους «…» που αποδίδονται στον χαρακτήρα στο κείμενο"
+      },
+      "Elder": {
+        "name": "Elder",
+        "speech_rhythm": "σιωπηλός (καμία άμεση ατάκα στο κείμενο)",
+        "avg_sentence_length_words": 0,
+        "vocabulary_tier": "— (καμία άμεση ατάκα)",
+        "type_token_ratio": 0,
+        "dialogue_count": 0,
+        "sample_quotes": [],
+        "method": "μετρήθηκε από διαλόγους «…» που αποδίδονται στον χαρακτήρα στο κείμενο"
+      },
+      "Within": {
+        "name": "Within",
+        "speech_rhythm": "σιωπηλός (καμία άμεση ατάκα στο κείμενο)",
+        "avg_sentence_length_words": 0,
+        "vocabulary_tier": "— (καμία άμεση ατάκα)",
+        "type_token_ratio": 0,
+        "dialogue_count": 0,
+        "sample_quotes": [],
+        "method": "μετρήθηκε από διαλόγους «…» που αποδίδονται στον χαρακτήρα στο κείμενο"
+      },
+      "Chapter": {
+        "name": "Chapter",
+        "speech_rhythm": "σιωπηλός (καμία άμεση ατάκα στο κείμενο)",
+        "avg_sentence_length_words": 0,
+        "vocabulary_tier": "— (καμία άμεση ατάκα)",
+        "type_token_ratio": 0,
+        "dialogue_count": 0,
+        "sample_quotes": [],
+        "method": "μετρήθηκε από διαλόγους «…» που αποδίδονται στον χαρακτήρα στο κείμενο"
+      }
+    },
+    "relationship_matrix": [
+      {
+        "source": "Lyra",
+        "target": "Elder",
+        "co_occurrence_ratio": 0.0,
+        "shared_chapters": 0,
+        "evidence": [],
+        "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+      },
+      {
+        "source": "Lyra",
+        "target": "Within",
+        "co_occurrence_ratio": 0.0,
+        "shared_chapters": 0,
+        "evidence": [],
+        "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+      },
+      {
+        "source": "Lyra",
+        "target": "Chapter",
+        "co_occurrence_ratio": 0.0,
+        "shared_chapters": 0,
+        "evidence": [],
+        "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+      },
+      {
+        "source": "Elder",
+        "target": "Within",
+        "co_occurrence_ratio": 0.0,
+        "shared_chapters": 0,
+        "evidence": [],
+        "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+      },
+      {
+        "source": "Elder",
+        "target": "Chapter",
+        "co_occurrence_ratio": 0.0,
+        "shared_chapters": 0,
+        "evidence": [],
+        "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+      },
+      {
+        "source": "Within",
+        "target": "Chapter",
+        "co_occurrence_ratio": 0.0,
+        "shared_chapters": 0,
+        "evidence": [],
+        "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+      }
+    ],
+    "_method": "dialogue extraction + lexical proxies (TTR, length, vocab hits) — όχι presets",
+    "_caveat": "Big-5 εδώ είναι proxies· για αφηγηματική ακρίβεια χρειάζεται LLM enrichment πάνω στα evidence"
+  }
+}

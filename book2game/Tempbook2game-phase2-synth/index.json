@@ -1,0 +1,42 @@
+{
+  "source": "synthetic_test_book.txt",
+  "generated": "2026-09-14T21:52:10.760278",
+  "total_chars": 599,
+  "total_words": 102,
+  "chunks": 4,
+  "entries": [
+    {
+      "id": "ch01",
+      "title": "# Chapter 1: The Gathering",
+      "file": "chapters/ch01-chapter-1-the-gathering.md",
+      "chars": 172,
+      "words": 30,
+      "offset": 0
+    },
+    {
+      "id": "ch02",
+      "title": "# Chapter 2: The Quest",
+      "file": "chapters/ch02-chapter-2-the-quest.md",
+      "chars": 145,
+      "words": 27,
+      "offset": 174
+    },
+    {
+      "id": "ch03",
+      "title": "# Chapter 3: The Encounter",
+      "file": "chapters/ch03-chapter-3-the-encounter.md",
+      "chars": 142,
+      "words": 21,
+      "offset": 321
+    },
+    {
+      "id": "ch04",
+      "title": "# Chapter 4: The Revelation",
+      "file": "chapters/ch04-chapter-4-the-revelation.md",
+      "chars": 133,
+      "words": 24,
+      "offset": 465
+    }
+  ],
+  "rag_hint": "Χρήση: grep -n 'όρος' full_text.md  ή  grep -rn 'όρος' chapters/  — για μεγάλα βιβλία μην κάνεις Read(full_text.md)"
+}

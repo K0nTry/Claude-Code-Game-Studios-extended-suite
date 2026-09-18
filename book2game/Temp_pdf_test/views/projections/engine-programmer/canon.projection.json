@@ -1,0 +1,79 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:27:27.618711",
+    "derived_version": "2026-09-14T22:27:27.650556",
+    "extraction_timestamp": "2026-09-14T22:27:27.839627",
+    "canonical_uuids_present": 3,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "engine-programmer"
+  },
+  "_epistemic_layer": "canon",
+  "entities.json": {
+    "characters": [
+      {
+        "name": "Minimal",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "Minimal Test Book PDF",
+            "line": 1
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_001",
+        "_category": "characters"
+      },
+      {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "Chapter 1: The Beginning",
+            "line": 2
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_002",
+        "_category": "characters"
+      },
+      {
+        "name": "This",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "This is the first paragraph of the minimal test PDF book.",
+            "line": 3
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_003",
+        "_category": "characters"
+      }
+    ],
+    "locations": [],
+    "objects": [],
+    "factions": []
+  },
+  "world-boundaries.json": {
+    "_epistemic": "open_space",
+    "_reason": "World boundaries derived from entity extraction; requires narrative director validation",
+    "locations": [],
+    "factions": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "# Πλήρες Κείμενο (IR Normalized) — sample_real_book.txt",
+      "hash": "sha256:f76cfc1b067567c4e4d7381d3e37a7fa4a4c3679b9d94a507beaf81fbc50900a",
+      "line_start": 1,
+      "line_end": 1
+    },
+    {
+      "index": 1,
+      "text": "> Source Hash: `sha256:207632d33d2e17f0d2b403d78534e3ad96574adf9e3a21b61175503b61203bfd`  \n> Format: `txt` | Blocks: 3  \n> Generated: 2026-09-14T21:48:04.966889",
+      "hash": "sha256:a44cf12c8dfe3f1b7d55eb950ac5ba0f751bc8a122af2e221f07022975cb08d6",
+      "line_start": 3,
+      "line_end": 5
+    },
+    {
+      "index": 2,
+      "text": "---",
+      "hash": "sha256:cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "line_start": 7,
+      "line_end": 7
+    },
+    {
+      "index": 3,
+      "text": "# Chapter 1: The Echoes of Old\nThe ship drifted through the nebula. Kael looked out of the viewport.\nHe missed the green plains of his home, Terren.\nThe mission was simple: retrieve the Stellar Core.",
+      "hash": "sha256:60066aae6893a29c643b833b6c63db90dfc4e6429407227febe02bd5a2685370",
+      "line_start": 9,
+      "line_end": 12
+    },
+    {
+      "index": 4,
+      "text": "# Chapter 2: The Bargain\nAt the space station, Zora waited. She was a known smuggler.\n\"I have the coordinates,\" she whispered, handing Kael a drive.\n\"The price remains the same: a seat on the next transport.\"",
+      "hash": "sha256:4f85bc3a5390301f36e8a24d5953324013312237bb08e6a9f551936f9657c3af",
+      "line_start": 14,
+      "line_end": 17
+    },
+    {
+      "index": 5,
+      "text": "# Chapter 3: The Betrayal\nKael realized too late that the drive was a tracker.\nZora had sold them out to the Syndicate.\nThe alarm began to blare throughout the ship.",
+      "hash": "sha256:f16611391f5719f6503f20c04f3369c4c77dc794e0965e663cfb46048e9a1479",
+      "line_start": 19,
+      "line_end": 22
+    }
+  ],
+  "file_hash": "sha256:c756dc8f140eeebb2cdde6183ebae34afd4e3f8b4a047051751fd3d65ea536d3"
+}

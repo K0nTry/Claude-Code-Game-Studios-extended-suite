@@ -1,0 +1,33 @@
+{
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "# Πλήρες Κείμενο (IR Normalized) — minimal.epub",
+      "hash": "sha256:512ebdfc4e2391d430e3b8bfc0da797aea415fd8980a7c2bf9f55b5b013e19f9",
+      "line_start": 1,
+      "line_end": 1
+    },
+    {
+      "index": 1,
+      "text": "> Source Hash: `sha256:6626259ce9e065e070cf199b1df513b56593254443d2e72a05d5ab8dc2ad05b7`  \n> Format: `epub` | Blocks: 1  \n> Generated: 2026-09-14T22:27:28.131286",
+      "hash": "sha256:31fc9538999bd9fd68b16a14bac5eb46f5bb28de68cff794d3c320155a06b38d",
+      "line_start": 3,
+      "line_end": 5
+    },
+    {
+      "index": 2,
+      "text": "---",
+      "hash": "sha256:cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "line_start": 7,
+      "line_end": 7
+    },
+    {
+      "index": 3,
+      "text": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+      "hash": "sha256:ece7862e3df8d86de5d27b66157f6c30895b378e3261085dbb22c2bf8e96bb06",
+      "line_start": 9,
+      "line_end": 9
+    }
+  ],
+  "file_hash": "sha256:2263d0b03dc85432978f65fec2384feb746117bff9b6b6f5d39ce73f000857a5"
+}

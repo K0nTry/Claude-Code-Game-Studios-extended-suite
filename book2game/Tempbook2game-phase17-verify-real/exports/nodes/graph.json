@@ -1,0 +1,66 @@
+{
+  "export_type": "node-graph",
+  "generated_from": [
+    "design/narrative/choice-tree.json",
+    "design/balance/tension-pacing-curve.json"
+  ],
+  "node_count": 3,
+  "edge_count": 0,
+  "nodes": [
+    {
+      "id": "tension-0",
+      "type": "pacing",
+      "label": "ισορροπία / διερεύνηση",
+      "chapter": "# Chapter 1: The Echoes of Old",
+      "tension": 0.5,
+      "detail": {
+        "avg_sentence_words": 9.0,
+        "action_hits": 0,
+        "punct_hits": 0,
+        "neg_hits": 0,
+        "pos_hits": 0,
+        "short_sentence_ratio": 0.5,
+        "signals": [
+          "κοντές προτάσεις 50%"
+        ]
+      }
+    },
+    {
+      "id": "tension-1",
+      "type": "pacing",
+      "label": "ανάπαυλα / περισυλλογή",
+      "chapter": "# Chapter 2: The Bargain",
+      "tension": 0.5,
+      "detail": {
+        "avg_sentence_words": 9.2,
+        "action_hits": 0,
+        "punct_hits": 0,
+        "neg_hits": 0,
+        "pos_hits": 0,
+        "short_sentence_ratio": 0.25,
+        "signals": [
+          "ήρεμη αφήγηση / περιγραφή"
+        ]
+      }
+    },
+    {
+      "id": "tension-2",
+      "type": "pacing",
+      "label": "ισορροπία / διερεύνηση",
+      "chapter": "# Chapter 3: The Betrayal",
+      "tension": 0.5,
+      "detail": {
+        "avg_sentence_words": 10.3,
+        "action_hits": 0,
+        "punct_hits": 0,
+        "neg_hits": 0,
+        "pos_hits": 0,
+        "short_sentence_ratio": 0.67,
+        "signals": [
+          "κοντές προτάσεις 67%"
+        ]
+      }
+    }
+  ],
+  "edges": []
+}

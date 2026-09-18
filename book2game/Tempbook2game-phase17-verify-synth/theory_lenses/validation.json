@@ -1,0 +1,58 @@
+{
+  "theory_lenses": [
+    {
+      "lens": "south_park_causality",
+      "validator": "therefore/but causal linkage",
+      "total_decision_points": 0,
+      "causal_linked": 0,
+      "coverage": 1.0,
+      "verdict": "PASS",
+      "deterministic": true
+    },
+    {
+      "lens": "character_arc",
+      "validator": "Big-5 trait variance (character arc)",
+      "character_count": 0,
+      "verdict": "SKIPPED",
+      "reason": "No character profiles available",
+      "deterministic": true
+    },
+    {
+      "lens": "heros_journey",
+      "validator": "12-stage Hero's Journey mapping",
+      "total_chapters": 4,
+      "stages_mapped": 4,
+      "coverage": 0.333,
+      "stages": [
+        {
+          "stage_index": 1,
+          "label": "ordinary_world",
+          "chapter_title": "# Chapter 1: The Gathering",
+          "tension": 0.5
+        },
+        {
+          "stage_index": 2,
+          "label": "call_to_adventure",
+          "chapter_title": "# Chapter 2: The Quest",
+          "tension": 0.5
+        },
+        {
+          "stage_index": 3,
+          "label": "refusal",
+          "chapter_title": "# Chapter 3: The Encounter",
+          "tension": 0.5
+        },
+        {
+          "stage_index": 4,
+          "label": "mentor",
+          "chapter_title": "# Chapter 4: The Revelation",
+          "tension": 0.5
+        }
+      ],
+      "verdict": "PARTIAL",
+      "deterministic": true
+    }
+  ],
+  "generated": "theory_lenses.py",
+  "deterministic": true
+}

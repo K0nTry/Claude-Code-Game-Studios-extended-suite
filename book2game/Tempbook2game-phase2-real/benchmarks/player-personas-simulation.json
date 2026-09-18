@@ -1,0 +1,40 @@
+{
+  "personas": [
+    {
+      "persona": "Explorer (Εξερευνητής)",
+      "motivation": "Ανακάλυψη κόσμου, μυστικά, περιβάλλον",
+      "compatibility_score": 0.15,
+      "top_signals": [],
+      "evidence": [],
+      "design_hint": "δυνατό αν explorer >0.55: έμφαση σε χάρτη/εξερεύνηση/κρυφά"
+    },
+    {
+      "persona": "Achiever (Επιτευγματίας)",
+      "motivation": "Στόχοι, αποστολές, πρόοδος, συλλογή",
+      "compatibility_score": 0.15,
+      "top_signals": [],
+      "evidence": [],
+      "design_hint": "δυνατό αν achiever >0.55: σαφείς αποστολές/ανταμοιβές"
+    },
+    {
+      "persona": "Socializer (Κοινωνικός)",
+      "motivation": "Σχέσεις, διάλογοι, φατρίες, ηθικές επιλογές",
+      "compatibility_score": 0.15,
+      "top_signals": [],
+      "evidence": [],
+      "design_hint": "δυνατό αν social >0.55: διάλογοι/σχέσεις/συνέπειες"
+    },
+    {
+      "persona": "Killer/Challenger (Ανταγωνιστής)",
+      "motivation": "Σύγκρουση, πρόκληση, κυριαρχία σε συστήματα",
+      "compatibility_score": 0.15,
+      "top_signals": [],
+      "evidence": [],
+      "design_hint": "δυνατό αν killer >0.55: μάχες/δυσκολία/στρατηγική"
+    }
+  ],
+  "overall_player_fit_score": 0.15,
+  "top_fit": "Explorer (Εξερευνητής)",
+  "_method": "λεξιλόγιο ανά αρχέτυπο + πυκνότητα ανά 1000 λέξεις + evidence αποσπάσματα",
+  "_caveat": "Δεν προβλέπει retention/Metacritic — αυτά απαιτούν playtest, όχι heuristics"
+}

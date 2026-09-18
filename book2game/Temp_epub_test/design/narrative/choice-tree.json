@@ -1,0 +1,37 @@
+{
+  "branching_graph": {
+    "nodes": [
+      {
+        "id": "node_00_intro",
+        "type": "Intro",
+        "label": "Αρχή — setup"
+      },
+      {
+        "id": "node_01_c_______1:_t",
+        "type": "Chapter",
+        "title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+        "index": 1
+      }
+    ],
+    "edges": [
+      {
+        "from": "node_00_intro",
+        "to": "node_01_c_______1:_t"
+      }
+    ],
+    "algorithm": "decision points extracted from text + linear chapter spine + BFS reachability"
+  },
+  "decision_points": [],
+  "validation": {
+    "total_nodes": 2,
+    "chapter_nodes": 1,
+    "decision_nodes": 0,
+    "visited_nodes": 2,
+    "orphan_nodes": [],
+    "isolated_decisions": [],
+    "orphan_rate": 0.0,
+    "verdict": "PASS"
+  },
+  "_method": "regex decision lexicon + sentence scan + chapter-mapped DAG — όχι σταθερά 3 τέλη",
+  "_note": "Για πλήρες branching με πολλαπλά τέλη απαιτείται LLM enrichment πάνω στα evidence"
+}

@@ -1,0 +1,130 @@
+{
+  "nodes": [
+    {
+      "name": "Lyra",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Quest"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Encounter"
+        }
+      ],
+      "chapter_count": 2,
+      "first_appearance": {
+        "chapter_index": 2,
+        "chapter_title": "# Chapter 2: The Quest",
+        "line": 2,
+        "quote": "Lyra left the city of Aethelgard."
+      }
+    },
+    {
+      "name": "Within",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 4,
+          "chapter_title": "# Chapter 4: The Revelation"
+        }
+      ],
+      "chapter_count": 1,
+      "first_appearance": {
+        "chapter_index": 4,
+        "chapter_title": "# Chapter 4: The Revelation",
+        "line": 2,
+        "quote": "Within the ruins, she found the Ancient Data Core."
+      }
+    },
+    {
+      "name": "Elder",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "# Chapter 1: The Gathering"
+        }
+      ],
+      "chapter_count": 1,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "# Chapter 1: The Gathering",
+        "line": 2,
+        "quote": "The Council of Elders met in the Obsidian Chamber."
+      }
+    },
+    {
+      "name": "Chapter",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "# Chapter 1: The Gathering"
+        },
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Quest"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Encounter"
+        },
+        {
+          "chapter_index": 4,
+          "chapter_title": "# Chapter 4: The Revelation"
+        }
+      ],
+      "chapter_count": 4,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "# Chapter 1: The Gathering",
+        "line": 1,
+        "quote": "# Chapter 1: The Gathering"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "Lyra",
+      "target": "Chapter",
+      "shared_chapters": [
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Quest"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Encounter"
+        }
+      ],
+      "shared_count": 2,
+      "evidence": []
+    },
+    {
+      "source": "Within",
+      "target": "Chapter",
+      "shared_chapters": [
+        {
+          "chapter_index": 4,
+          "chapter_title": "# Chapter 4: The Revelation"
+        }
+      ],
+      "shared_count": 1,
+      "evidence": []
+    },
+    {
+      "source": "Elder",
+      "target": "Chapter",
+      "shared_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "# Chapter 1: The Gathering"
+        }
+      ],
+      "shared_count": 1,
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "tool_version": "book2game v2.0.0",
+  "source_hash": "sha256:fca3be40afbe8acf7597a031a780b43dc650a9c170e04a7ac106d84eef3f2de2",
+  "extraction_timestamp": "2026-09-14T21:52:10.771793",
+  "canon_entity_count": 4,
+  "uuid_map": {
+    "Chapter": "char_001",
+    "Elder": "char_002",
+    "Lyra": "char_003",
+    "Within": "char_004"
+  }
+}

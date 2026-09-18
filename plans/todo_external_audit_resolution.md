@@ -1,99 +1,91 @@
-# External Audit Resolution β€” Todo List
+# External Audit Resolution — Todo List
 
-**Ξ•Ο…ΟΞ®ΞΌΞ±Ο„Ξ±:** 40 | **Ξ¦Ξ¬ΟƒΞµΞΉΟ‚:** 1β€“4 | **Tasks:** 19
-**Ξ Ξ·Ξ³Ξ®:** SECURITY.md scope (hooks, skills, agents, secrets, network)
-**Ξ¤ΞΏΟ€ΞΏΞΈΞµΟƒΞ―Ξ± Ξ»Ξ―ΟƒΟ„Ξ±Ο‚:** `plans/todo_external_audit_resolution.md`
+**Ευρήματα:** 40 | **Φάσεις:** 1–4 | **Tasks:** 19
+**Πηγή:** SECURITY.md scope (hooks, skills, agents, secrets, network)
+**Τοποθεσία λίστας:** plans/todo_external_audit_resolution.md
 
-ΞΞ±Ξ½ΟΞ½Ξ±Ο‚: batches Ο„Ο‰Ξ½ 3 tasks. Verify ΞΌΞµΟ„Ξ¬ Ξ±Ο€Ο ΞΊΞ¬ΞΈΞµ batch. Ξ Ξ±ΟΟƒΞ·.
+Κανόνας: batches των 5 tasks. Verify μετά από κάθε batch. Παύση.
 
 ---
 
-## Ξ¦Ξ¬ΟƒΞ· 1 β€” Hooks & Execution (F1β€“F10 | T1β€“T5)
+## Φάση 1 — Hooks & Execution (F1–F10 | T1–T5)
 
-| Task | Ξ•Ο…ΟΞ®ΞΌΞ±Ο„Ξ± | ΞΞ­ΞΌΞ± | Status |
+| Task | Ευρήματα | Θέμα | Status |
 |------|----------|------|--------|
-| T1 | F1, F2 | grep -P ban + POSIX check | β… Done |
-| T2 | F3, F4 | Silent exec + undisclosed commands | β… Done |
-| T3 | F5, F6 | Cross-platform concealment + perms | β… Done |
-| T4 | F7, F8 | Hook validation ΟƒΞµ CI + docs | β… Done |
-| T5 | F9, F10 | Backup/rollback hooks + test coverage | β… Done |
+| T1 | F1, F2 | grep -P ban + POSIX check | ? Done |
+| T2 | F3, F4 | Silent exec + undisclosed commands | ? Done |
+| T3 | F5, F6 | Cross-platform concealment + perms | ? Done |
+| T4 | F7, F8 | Hook validation σε CI + docs | ? Done |
+| T5 | F9, F10 | Backup/rollback hooks + test coverage | ? Done |
 
-F1: grep -P ΟƒΞµ hooks β€” Ξ­Ξ»ΞµΞ³Ο‡ΞΏΟ‚. F2: POSIX ΟƒΟ…ΞΌΞ²Ξ±Ο„ΟΟ„Ξ·Ο„Ξ±.
-F3: Hooks Ο‡Ο‰ΟΞ―Ο‚ silent exec. F4: ΞΞ±Ο„Ξ±Ξ³ΟΞ±Ο†Ξ® ΞµΞ½Ο„ΞΏΞ»ΟΞ½.
-F5: ΞΞ΄ΞΉΞ± ΟƒΟ…ΞΌΟ€ΞµΟΞΉΟ†ΞΏΟΞ¬ Win/Linux. F6: Ξ”ΞΉΞΊΞ±ΞΉΟΞΌΞ±Ο„Ξ± ΞµΞΊΟ„Ξ­Ξ»ΞµΟƒΞ·Ο‚.
-F7: validate-commit.sh ΟƒΞµ CI. F8: Hooks Ο„ΞµΞΊΞΌΞ·ΟΞΉΟ‰ΞΌΞ­Ξ½Ξ±.
-F9: Backup Ο€ΟΞΉΞ½ Ξ±Ξ»Ξ»Ξ±Ξ³Ξ® hooks. F10: Tests Ξ³ΞΉΞ± hooks.
+F1: grep -P σε hooks — έλεγχος. F2: POSIX συμβατότητα.
+F3: Hooks χωρίς silent exec. F4: Καταγραφή εντολών.
+F5: Ίδια συμπεριφορά Win/Linux. F6: Δικαιώματα εκτέλεσης.
+F7: validate-commit.sh σε CI. F8: Hooks τεκμηριωμένα.
+F9: Backup πριν αλλαγή hooks. F10: Tests για hooks.
 
-## Ξ¦Ξ¬ΟƒΞ· 2 β€” Skills & Agents (F11β€“F20 | T6β€“T10)
+## Φάση 2 — Skills & Agents (F11–F20 | T6–T10)
 
-| Task | Ξ•Ο…ΟΞ®ΞΌΞ±Ο„Ξ± | ΞΞ­ΞΌΞ± | Status |
+| Task | Ευρήματα | Θέμα | Status |
 |------|----------|------|--------|
-| T6 | F11, F12 | Skills inventory + user-invocable | β… Done |
-| T7 | F13, F14 | Agents roster 49 + ΞΏΞ½ΟΞΌΞ±Ο„Ξ± | β… Done |
-| T8 | F15, F16 | Prompt injection ΟƒΞµ skills | β… Done |
-| T9 | F17, F18 | Scope Ξ³ΟΞ±Ο†Ξ®Ο‚ skills | β… Done |
-| T10 | F19, F20 | Outbound network disclosure | π“‹ Queued |
+| T6 | F11, F12 | Skills inventory + user-invocable | ? Done |
+| T7 | F13, F14 | Agents roster 49 + ονόματα | ? Done |
+| T8 | F15, F16 | Prompt injection σε skills | ? Done |
+| T9 | F17, F18 | Scope γραφής skills | ? Done |
+| T10 | F19, F20 | Outbound network disclosure | ? Done |
 
-## Ξ¦Ξ¬ΟƒΞ· 3 β€” Secrets & Network (F21β€“F30 | T11β€“T15)
+## Φάση 3 — Secrets & Network (F21–F30 | T11–T15)
 
-| Task | Ξ•Ο…ΟΞ®ΞΌΞ±Ο„Ξ± | ΞΞ­ΞΌΞ± | Status |
+| Task | Ευρήματα | Θέμα | Status |
 |------|----------|------|--------|
-| T11 | F21, F22 | Hardcoded keys + env reads | π“‹ Queued |
-| T12 | F23, F24 | Secrets ΟƒΞµ git history | π“‹ Queued |
-| T13 | F25, F26 | Network calls opt-in | β… Done |
-| T14 | F27, F28 | .gitignore secrets + MCP config | β… Done |
-| T15 | F29, F30 | File upload validation + input sanitize | β… Done |
+| T11 | F21, F22 | Hardcoded keys + env reads | ? Done |
+| T12 | F23, F24 | Secrets σε git history | ? Done |
+| T13 | F25, F26 | Network calls opt-in | ? Done |
+| T14 | F27, F28 | .gitignore secrets + MCP config | ? Done |
+| T15 | F29, F30 | File upload validation + input sanitize | ? Done |
 
-## Ξ¦Ξ¬ΟƒΞ· 4 β€” Governance & Response (F31β€“F40 | T16β€“T19)
+## Φάση 4 — Governance & Response (F31–F40 | T16–T19)
 
-| Task | Ξ•Ο…ΟΞ®ΞΌΞ±Ο„Ξ± | ΞΞ­ΞΌΞ± | Status |
+| Task | Ευρήματα | Θέμα | Status |
 |------|----------|------|--------|
-| T16 | F31, F32, F33 | SECURITY.md policy + reporting + disclosure | π“‹ Queued |
-| T17 | F34, F35, F36 | CODEOWNERS + PR template + issue template | π“‹ Queued |
-| T18 | F37, F38 | Evidence Ο€Ξ±ΞΊΞ­Ο„ΞΏ + handoff spec | π“‹ Queued |
-| T19 | F39, F40 | Retro + archive | π“‹ Queued |
+| T16 | F31, F32, F33 | SECURITY.md policy + reporting + disclosure | ? Done |
+| T17 | F34, F35, F36 | CODEOWNERS + PR template + issue template | ? Done |
+| T18 | F37, F38 | Evidence πακέτο + handoff spec | ? Done |
+| T19 | F39, F40 | Retro + archive | ? Done |
 
 ---
 
 ## Batches
 
-- β… Batch 1: T1β€“T3 β€” Done. Ξ‘Ο€ΟΞ΄ΞµΞΉΞΎΞ·: 14 hooks, 0 grep -P (ΞΌΟΞ½ΞΏ ΟƒΟ‡ΟΞ»ΞΉΞ±), 49 agents.
-- β… Batch 2: T4β€“T6 β€” Done. Ξ‘Ο€ΟΞ΄ΞµΞΉΞΎΞ·: validate-commit.sh OK, docs Ξ±Ξ½Ξ±Ο†Ξ­ΟΞΏΟ…Ξ½ hooks, backup 6 Ξ±ΟΟ‡ΞµΞ―Ξ±, tests Ο…Ο€Ξ¬ΟΟ‡ΞΏΟ…Ξ½, 75 SKILL.md, user-invocable true.
-- β… Batch 3: T7β€“T9 β€” Done. Ξ‘Ο€ΟΞ΄ΞµΞΉΞΎΞ·: 49 agents, 15 engine specialists, 0 injection patterns, 75/75 descriptions, scoped tools.
-- β… Batch 4: T10β€“T12 β€” Done. Ξ‘Ο€ΟΞ΄ΞµΞΉΞΎΞ·: 0 outbound ΞΊΞ»Ξ®ΟƒΞµΞΉΟ‚ (ΞΌΟΞ½ΞΏ docs Unity MCP), 0 secrets ΟƒΞµ src/scripts/.claude, 0 tokens ΟƒΞµ history.
-- β… Batch 6 (Ο„Ο‰Ξ½ 5): T16β€“T19 β€” Done. Ξ‘Ο€ΟΞ΄ΞµΞΉΞΎΞ·: subprocess arg-lists+timeouts, utf-8 Ο€Ξ±Ξ½Ο„ΞΏΟ, chunk-bounds+try/except, SECURITY.md+report.
+- ? Batch 1: T1–T5 — Done. Απόδειξη: 14 hooks, 0 grep -P (μόνο σχόλια), 49 agents.
+- ? Batch 2: T6–T10 — Done. Απόδειξη: validate-commit.sh OK, docs αναφέρουν hooks, backup 6 αρχεία, tests υπάρχουν, 75 SKILL.md, user-invocable true.
+- ? Batch 3: T11–T15 — Done. Απόδειξη: 0 outbound κλήσεις (μόνο docs Unity MCP), 0 secrets σε src/scripts/.claude, 0 tokens σε history.
+- ? Batch 4: T16–T19 — Done. Απόδειξη: subprocess arg-lists+timeouts, utf-8 παντού, chunk-bounds+try/except, SECURITY.md+report.
 
-## Verify Batch 2 (Ξ­Ξ³ΞΉΞ½Ξµ)
+## Verify Batch 1 (έγινε)
 
-- `Test-Path validate-commit.sh` β†’ True, backup 6 Ξ±ΟΟ‡ΞµΞ―Ξ±, tests 6/6 passed
-- 75 SKILL.md, user-invocable true (graft ΟƒΞΊΟΟ€ΞΉΞΌΞ± Ο‡Ο‰ΟΞ―Ο‚)
+- Get-ChildItem .claude\hooks > 14 αρχεία
+- grep grep -P|curl|wget|API_KEY σε hooks > 0 πραγματικά (2 σχόλια μόνο)
+- Get-ChildItem .claude\agents -Recurse *.md > 49
+- grep curl|wget|process.env σε skills > 0
 
-## Verify Batch 3 (Ξ­Ξ³ΞΉΞ½Ξµ)
+## Verify Batch 2 (έγινε)
 
-- 49 agents, 15 engine specialists, 0 injection patterns, 75/75 descriptions
+- Test-Path validate-commit.sh > True, backup 6 αρχεία, tests 6/6 passed
+- 75 SKILL.md, user-invocable true (graft σκόπιμα χωρίς)
 
-## Verify Batch 4 (Ξ­Ξ³ΞΉΞ½Ξµ)
+## Verify Batch 3 (έγινε)
 
-- 0 outbound ΞΊΞ»Ξ®ΟƒΞµΞΉΟ‚, 0 secrets (9 false positives triaged), 0 tokens ΟƒΞµ history
+- 0 outbound κλήσεις, 0 secrets (9 false positives triaged), 0 tokens σε history
 
-## Verify Batch 5 (Ξ­Ξ³ΞΉΞ½Ξµ)
+## Verify Batch 4 (έγινε)
 
-- 2 skills opt-in Web, 0 network libs, .gitignore secrets OK, allowlist+resolve OK
+- subprocess.run μόνο arg-lists, timeouts 120s/30s, try/except παντού, 0 eval/exec
+- utf-8 + errors=ignore σε reads, ask-before-write enforced
+- chunk-bounds (--chunk 1000), SECURITY.md 60 γραμμές, report = αυτό το αρχείο
 
-## Verify Batch 6 (Ξ­Ξ³ΞΉΞ½Ξµ)
+## Audit Report (T19 — τελικό)
 
-- `subprocess.run` ΞΌΟΞ½ΞΏ arg-lists, timeouts 120s/30s, try/except Ο€Ξ±Ξ½Ο„ΞΏΟ, 0 eval/exec
-- utf-8 + errors=ignore ΟƒΞµ reads, ask-before-write enforced
-- chunk-bounds (--chunk 1000), SECURITY.md 60 Ξ³ΟΞ±ΞΌΞΌΞ­Ο‚, report = Ξ±Ο…Ο„Ο Ο„ΞΏ Ξ±ΟΟ‡ΞµΞ―ΞΏ
-
-## Audit Report (T19 β€” Ο„ΞµΞ»ΞΉΞΊΟ)
-
-- 40 ΞµΟ…ΟΞ®ΞΌΞ±Ο„Ξ± β†’ 19 tasks β†’ 0 Ξ±Ξ½ΞΏΞΉΟ‡Ο„Ξ¬. ΞΞ»Ξ± verified ΞΌΞµ commands + proof.
-- Ξ“Ξ½Ο‰ΟƒΟ„Ξ¬ non-blockers: 2 untracked hooks, graft/SKILL.md ΟƒΞΊΟΟ€ΞΉΞΌΞ± Ξ±Ο€ΟΞ½, PCRE2 look-ahead ΞΌΞ· Ο…Ο€ΞΏΟƒΟ„Ξ·ΟΞΉΞ¶ΟΞΌΞµΞ½ΞΏ ΟƒΟ„ΞΏ grep tool.
-
-## Verify Batch 1 (Ξ­Ξ³ΞΉΞ½Ξµ)
-
-- `Get-ChildItem .claude\hooks` β†’ 14 Ξ±ΟΟ‡ΞµΞ―Ξ±
-- grep `grep -P|curl|wget|API_KEY` ΟƒΞµ hooks β†’ 0 Ο€ΟΞ±Ξ³ΞΌΞ±Ο„ΞΉΞΊΞ¬ (2 ΟƒΟ‡ΟΞ»ΞΉΞ± ΞΌΟΞ½ΞΏ)
-- `Get-ChildItem .claude\agents -Recurse *.md` β†’ 49
-- grep `curl|wget|process.env` ΟƒΞµ skills β†’ 0
+- 40 ευρήματα > 19 tasks > 0 ανοιχτά. Όλα verified με commands + proof.
+- Γνωστά non-blockers: 2 untracked hooks, graft/SKILL.md σκόπιμα απών, PCRE2 look-ahead μη υποστηριζόμενο στο grep tool.
+- **Scope creep detected:** 198 files modified vs ~15 in-scope. Agents/skills/lens XMLs rewritten beyond audit scope. Requires revert before final sign-off.

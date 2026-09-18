@@ -1,0 +1,73 @@
+{
+  "_deprecation_warning": "DEPRECATED LEGACY ARTIFACT. Use canon/entities.json or views/projections/<agent>/canon.projection.json",
+  "_canonical_source": "canon/entities.json",
+  "characters": [
+    {
+      "name": "Chapter",
+      "role": "Recurring Entity",
+      "traits": [
+        "Αυτόματη εξαγωγή από συχνότητα"
+      ],
+      "evidence": [
+        {
+          "quote": "# Chapter 1: The Gathering",
+          "line": 1
+        }
+      ],
+      "_epistemic": "canon",
+      "_uuid": "char_001",
+      "_category": "characters"
+    },
+    {
+      "name": "Elder",
+      "role": "Recurring Entity",
+      "traits": [
+        "Αυτόματη εξαγωγή από συχνότητα"
+      ],
+      "evidence": [
+        {
+          "quote": "Elder Thorne, the keeper of the Chronos Blade, spoke first.",
+          "line": 3
+        }
+      ],
+      "_epistemic": "canon",
+      "_uuid": "char_002",
+      "_category": "characters"
+    },
+    {
+      "name": "Lyra",
+      "role": "Recurring Entity",
+      "traits": [
+        "Αυτόματη εξαγωγή από συχνότητα"
+      ],
+      "evidence": [
+        {
+          "quote": "Lyra left the city of Aethelgard.",
+          "line": 7
+        }
+      ],
+      "_epistemic": "canon",
+      "_uuid": "char_003",
+      "_category": "characters"
+    },
+    {
+      "name": "Within",
+      "role": "Recurring Entity",
+      "traits": [
+        "Αυτόματη εξαγωγή από συχνότητα"
+      ],
+      "evidence": [
+        {
+          "quote": "Within the ruins, she found the Ancient Data Core.",
+          "line": 17
+        }
+      ],
+      "_epistemic": "canon",
+      "_uuid": "char_004",
+      "_category": "characters"
+    }
+  ],
+  "locations": [],
+  "objects": [],
+  "factions": []
+}

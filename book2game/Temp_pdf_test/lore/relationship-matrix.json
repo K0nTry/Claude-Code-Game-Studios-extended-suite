@@ -1,0 +1,26 @@
+[
+  {
+    "source": "This",
+    "target": "Chapter",
+    "co_occurrence_ratio": 0.0,
+    "shared_chapters": 0,
+    "evidence": [],
+    "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+  },
+  {
+    "source": "This",
+    "target": "Minimal",
+    "co_occurrence_ratio": 0.0,
+    "shared_chapters": 0,
+    "evidence": [],
+    "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+  },
+  {
+    "source": "Chapter",
+    "target": "Minimal",
+    "co_occurrence_ratio": 0.0,
+    "shared_chapters": 0,
+    "evidence": [],
+    "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+  }
+]

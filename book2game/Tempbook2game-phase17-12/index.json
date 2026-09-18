@@ -1,0 +1,18 @@
+{
+  "source": "minimal.pdf",
+  "generated": "2026-09-14T22:45:33.123864",
+  "total_chars": 105,
+  "total_words": 19,
+  "chunks": 1,
+  "entries": [
+    {
+      "id": "ch01",
+      "title": "Chapter 1: The Beginning",
+      "file": "chapters/ch01-chapter-1-the-beginning.md",
+      "chars": 82,
+      "words": 15,
+      "offset": 22
+    }
+  ],
+  "rag_hint": "Χρήση: grep -n 'όρος' full_text.md  ή  grep -rn 'όρος' chapters/  — για μεγάλα βιβλία μην κάνεις Read(full_text.md)"
+}

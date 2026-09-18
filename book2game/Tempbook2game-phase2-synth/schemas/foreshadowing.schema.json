@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "book2game/schemas/foreshadowing.schema.json",
+  "title": "Foreshadowing Tracker",
+  "type": "object",
+  "required": ["chapter_id", "foreshadowing_event"],
+  "properties": {
+    "chapter_id": { "type": "string" },
+    "foreshadowing_event": { "type": "string" },
+    "payload": { "type": "string" },
+    "resolved_in": { "type": "string" }
+  }
+}

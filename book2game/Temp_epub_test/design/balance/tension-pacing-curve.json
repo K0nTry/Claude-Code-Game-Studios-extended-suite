@@ -1,0 +1,26 @@
+{
+  "model": "lexical tension per chapter (verbs, punctuation, sentence length, vocab)",
+  "tension_curve": [
+    {
+      "chapter_index": 1,
+      "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+      "tension_score": 0.25,
+      "detail": {
+        "avg_sentence_words": 19.0,
+        "action_hits": 0,
+        "punct_hits": 0,
+        "neg_hits": 0,
+        "pos_hits": 0,
+        "short_sentence_ratio": 0.0,
+        "signals": [
+          "ήρεμη αφήγηση / περιγραφή"
+        ]
+      },
+      "evidence_snippet": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+      "flow_label": "ανάπαυλα / περισυλλογή"
+    }
+  ],
+  "pacing_dead_zone_index": 0.0,
+  "_method": "κάθε κεφάλαιο μετράται ξεχωριστά από το κείμενό του — όχι τριγωνομετρία",
+  "_note": "Για economia/gini χρειάζεται πραγματικό game design — εδώ δίνουμε μόνο pacing"
+}

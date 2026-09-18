@@ -1,0 +1,125 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:45:33.131864",
+    "derived_version": "2026-09-14T22:45:33.153376",
+    "extraction_timestamp": "2026-09-14T22:45:33.252912",
+    "canonical_uuids_present": 3,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "audio-director"
+  },
+  "_epistemic_layer": "derived",
+  "leitmotif-matrix.json": {
+    "global_keywords": [
+      {
+        "word": "beginning",
+        "count": 1
+      },
+      {
+        "word": "this",
+        "count": 1
+      },
+      {
+        "word": "first",
+        "count": 1
+      },
+      {
+        "word": "paragraph",
+        "count": 1
+      },
+      {
+        "word": "minimal",
+        "count": 1
+      },
+      {
+        "word": "test",
+        "count": 1
+      },
+      {
+        "word": "book",
+        "count": 1
+      }
+    ],
+    "leitmotif_matrix": [
+      {
+        "chapter_index": 1,
+        "chapter_title": "Chapter 1: The Beginning",
+        "top_keywords": [
+          {
+            "word": "beginning",
+            "count": 1
+          },
+          {
+            "word": "this",
+            "count": 1
+          },
+          {
+            "word": "first",
+            "count": 1
+          },
+          {
+            "word": "paragraph",
+            "count": 1
+          },
+          {
+            "word": "minimal",
+            "count": 1
+          }
+        ],
+        "dominant_theme": "beginning",
+        "tone": "ισορροπημένος",
+        "evidence": [
+          "Chapter 1: The Beginning"
+        ],
+        "audio_hint": "ουδέτερο ambient"
+      }
+    ],
+    "lighting_color_script": [
+      {
+        "chapter_index": 1,
+        "chapter_title": "Chapter 1: The Beginning",
+        "tone": "ισορροπημένος",
+        "dark_hits": 0,
+        "bright_hits": 0,
+        "lut_suggestion": "Neutral cinematic",
+        "evidence": [
+          "Chapter 1: The Beginning"
+        ]
+      }
+    ],
+    "_method": "συχνότητα λέξεων (εκτός stopwords) + dark/bright λεξιλόγιο ανά κεφάλαιο — όχι presets",
+    "_note": "Για τελική μουσική/φωτισμό χρειάζεται art direction· εδώ δίνουμε χαρτογράφηση θεμάτων"
+  },
+  "tension-pacing-curve.json": {
+    "model": "lexical tension per chapter (verbs, punctuation, sentence length, vocab)",
+    "tension_curve": [
+      {
+        "chapter_index": 1,
+        "chapter_title": "Chapter 1: The Beginning",
+        "tension_score": 0.25,
+        "detail": {
+          "avg_sentence_words": 15.0,
+          "action_hits": 0,
+          "punct_hits": 0,
+          "neg_hits": 0,
+          "pos_hits": 0,
+          "short_sentence_ratio": 0.0,
+          "signals": [
+            "ήρεμη αφήγηση / περιγραφή"
+          ]
+        },
+        "evidence_snippet": "Chapter 1: The Beginning",
+        "flow_label": "ανάπαυλα / περισυλλογή"
+      }
+    ],
+    "pacing_dead_zone_index": 0.0,
+    "_method": "κάθε κεφάλαιο μετράται ξεχωριστά από το κείμενό του — όχι τριγωνομετρία",
+    "_note": "Για economia/gini χρειάζεται πραγματικό game design — εδώ δίνουμε μόνο pacing"
+  }
+}

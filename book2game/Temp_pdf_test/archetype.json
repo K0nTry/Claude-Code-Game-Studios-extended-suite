@@ -1,0 +1,14 @@
+{
+  "archetype": "THEMATIC_EDUCATIONAL",
+  "confidence": 0.9,
+  "metrics": {
+    "edu_density_per_1k": 52.63,
+    "narrative_density_per_1k": 0.0,
+    "dialogue_quotes_count": 0
+  },
+  "reasoning": [
+    "Υψηλή πυκνότητα επιστημονικών/εκπαιδευτικών όρων (52.6/1k λέξεις)",
+    "Χαμηλή παρουσία αφηγηματικών ρημάτων και απουσία διαλόγων"
+  ],
+  "recommended_studio_approach": "Concept-to-Mechanic Matrix, Management/Simulation or Puzzle, Skill Tree."
+}

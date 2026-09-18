@@ -1,0 +1,80 @@
+{
+  "simulation_type": "binary_card_mode",
+  "seed": 42,
+  "deterministic": true,
+  "nodes_visited": [
+    {
+      "depth": 0,
+      "card": 0,
+      "chosen": true,
+      "node_id": "depth0_card0"
+    },
+    {
+      "depth": 0,
+      "card": 1,
+      "chosen": true,
+      "node_id": "depth0_card1"
+    },
+    {
+      "depth": 1,
+      "card": 0,
+      "chosen": false,
+      "node_id": "depth1_card0"
+    },
+    {
+      "depth": 1,
+      "card": 1,
+      "chosen": true,
+      "node_id": "depth1_card1"
+    },
+    {
+      "depth": 2,
+      "card": 0,
+      "chosen": true,
+      "node_id": "depth2_card0"
+    },
+    {
+      "depth": 2,
+      "card": 1,
+      "chosen": true,
+      "node_id": "depth2_card1"
+    },
+    {
+      "depth": 3,
+      "card": 0,
+      "chosen": true,
+      "node_id": "depth3_card0"
+    },
+    {
+      "depth": 3,
+      "card": 1,
+      "chosen": true,
+      "node_id": "depth3_card1"
+    },
+    {
+      "depth": 4,
+      "card": 0,
+      "chosen": false,
+      "node_id": "depth4_card0"
+    },
+    {
+      "depth": 4,
+      "card": 1,
+      "chosen": true,
+      "node_id": "depth4_card1"
+    }
+  ],
+  "card_stack": [
+    "depth0_card0",
+    "depth0_card1",
+    "depth1_card1",
+    "depth2_card0",
+    "depth2_card1",
+    "depth3_card0",
+    "depth3_card1",
+    "depth4_card1"
+  ],
+  "branching_factor": 2,
+  "max_depth": 5,
+  "state_hash": "sha256:e47acebc9f71e0cb"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "source": "Chapter",
+    "target": "Beginning",
+    "co_occurrence_ratio": 0.0,
+    "shared_chapters": 0,
+    "evidence": [
+      "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+    ],
+    "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+  }
+]

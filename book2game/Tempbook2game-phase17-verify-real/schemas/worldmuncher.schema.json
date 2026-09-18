@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "book2game/schemas/worldmuncher.schema.json",
+  "title": "WorldMuncher Model",
+  "type": "object",
+  "required": ["world_id", "elements"],
+  "properties": {
+    "world_id": { "type": "string" },
+    "elements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string" },
+          "properties": { "type": "object" }
+        }
+      }
+    }
+  }
+}

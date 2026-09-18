@@ -145,3 +145,10 @@ $RECYCLE.BIN/
 
 # graft's local graph cache — regenerable, not committed (run `graft build`).
 /graft/
+
+# === ccgs-suite: local-only (never push) ===
+upstream_repo/
+.claude/_backup_book2game_merge/
+diagram.png
+HANDOFF-book2game-phases3-6.md
+production/.lens-state/*.md

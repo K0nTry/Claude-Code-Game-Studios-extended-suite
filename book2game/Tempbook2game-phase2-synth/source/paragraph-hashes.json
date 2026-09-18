@@ -1,0 +1,54 @@
+{
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "# Πλήρες Κείμενο (IR Normalized) — synthetic_test_book.txt",
+      "hash": "sha256:df622994df7c8b5c462130c38937a911551bfe90751b243fd790ce5a051ed0f3",
+      "line_start": 1,
+      "line_end": 1
+    },
+    {
+      "index": 1,
+      "text": "> Source Hash: `sha256:cf69a4acea892e807e3b56ea0dcf68acfe312b8819a5b25faf49c54174fcc666`  \n> Format: `txt` | Blocks: 4  \n> Generated: 2026-09-14T21:52:10.750279",
+      "hash": "sha256:c05093ea6664cf93e94be281edd27f4ce078b2c5d0513fa67605be960bf0159e",
+      "line_start": 3,
+      "line_end": 5
+    },
+    {
+      "index": 2,
+      "text": "---",
+      "hash": "sha256:cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "line_start": 7,
+      "line_end": 7
+    },
+    {
+      "index": 3,
+      "text": "# Chapter 1: The Gathering\nThe Council of Elders met in the Obsidian Chamber.\nElder Thorne, the keeper of the Chronos Blade, spoke first.\n\"The shadow is rising,\" he warned.",
+      "hash": "sha256:ed4191eeb078d28efd4041dcfafba1d1606415963fd9e4b059d721e90fe21373",
+      "line_start": 9,
+      "line_end": 12
+    },
+    {
+      "index": 4,
+      "text": "# Chapter 2: The Quest\nLyra left the city of Aethelgard.\nShe carried the map to the Sunken Ruins.\nThe ruins were located in the Whispering Woods.",
+      "hash": "sha256:f1b903e001d9b3465a6ef2d0d1872d38f82da00939d7615acf0368433d627a29",
+      "line_start": 14,
+      "line_end": 17
+    },
+    {
+      "index": 5,
+      "text": "# Chapter 3: The Encounter\nA rogue automaton blocked her path.\n\"Identify yourself,\" the machine demanded.\nLyra activated her Shield Generator.",
+      "hash": "sha256:c9057c8b7decadd359dc50439627cad276ebeb889bb81814fc3b1466c1633b66",
+      "line_start": 19,
+      "line_end": 22
+    },
+    {
+      "index": 6,
+      "text": "# Chapter 4: The Revelation\nWithin the ruins, she found the Ancient Data Core.\nIt contained the lost history of the Faction of Light.",
+      "hash": "sha256:d6f2b8e432075841ac7164986d6a5ac18ff6f58d5a90c5a90dcaccd7e0cd2760",
+      "line_start": 24,
+      "line_end": 26
+    }
+  ],
+  "file_hash": "sha256:fca3be40afbe8acf7597a031a780b43dc650a9c170e04a7ac106d84eef3f2de2"
+}

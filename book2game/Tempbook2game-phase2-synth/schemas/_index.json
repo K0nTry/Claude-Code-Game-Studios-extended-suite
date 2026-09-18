@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-09-14T21:52:11.089588",
+  "schemas": [
+    "foreshadowing.schema.json",
+    "progress-state.schema.json",
+    "styledna.schema.json",
+    "worldmuncher.schema.json"
+  ],
+  "draft": "https://json-schema.org/draft/2020-12/schema"
+}

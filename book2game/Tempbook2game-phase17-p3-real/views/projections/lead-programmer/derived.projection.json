@@ -1,0 +1,117 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:09:06.403541",
+    "derived_version": "2026-09-14T22:09:06.437540",
+    "extraction_timestamp": "2026-09-14T22:09:06.486086",
+    "canonical_uuids_present": 3,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "lead-programmer"
+  },
+  "_epistemic_layer": "derived",
+  "mod-api-schema.json": {
+    "schema_version": "2.0",
+    "terminals": {
+      "CHARACTER": [
+        "Kael",
+        "Zora",
+        "Chapter"
+      ],
+      "LOCATION": [
+        "Κεντρική Τοποθεσία"
+      ],
+      "OBJECT": [],
+      "CONCEPT": [],
+      "FACTION": []
+    },
+    "validation_hook": "scripts/audit_lore_drift.py --mod-mode",
+    "_note": "terminals = πραγματικά ονόματα από το βιβλίο — όχι placeholders <CHARACTER>"
+  },
+  "dda-rules.json": {
+    "evaluation_window_seconds": 90,
+    "difficulty_tuning_knobs": {
+      "player_performance_high": "Αύξηση πίεσης αντιπάλων, μείωση drops",
+      "player_performance_low": "Εισαγωγή πλεονεκτημάτων περιβάλλοντος, μεγαλύτερο παράθυρο αντίδρασης",
+      "target_flow_equilibrium": "Διατήρηση έντασης 0.40-0.75 (βάσει pacing curve)"
+    }
+  },
+  "npc-utility-schedules.json": [
+    {
+      "name": "Kael",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "# Chapter 1: The Echoes of Old"
+        },
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Bargain"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Betrayal"
+        }
+      ],
+      "chapter_count": 3,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "# Chapter 1: The Echoes of Old",
+        "line": 2,
+        "quote": "The ship drifted through the nebula. Kael looked out of the viewport."
+      }
+    },
+    {
+      "name": "Zora",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Bargain"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Betrayal"
+        }
+      ],
+      "chapter_count": 2,
+      "first_appearance": {
+        "chapter_index": 2,
+        "chapter_title": "# Chapter 2: The Bargain",
+        "line": 2,
+        "quote": "At the space station, Zora waited. She was a known smuggler."
+      }
+    },
+    {
+      "name": "Chapter",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "# Chapter 1: The Echoes of Old"
+        },
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Bargain"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Betrayal"
+        }
+      ],
+      "chapter_count": 3,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "# Chapter 1: The Echoes of Old",
+        "line": 1,
+        "quote": "# Chapter 1: The Echoes of Old"
+      }
+    }
+  ]
+}

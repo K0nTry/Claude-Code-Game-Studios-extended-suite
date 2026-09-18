@@ -1,0 +1,229 @@
+{
+  "report_title": "Coverage & Evidence Audit — book2game",
+  "system": "book2game v5.0 (12-Cycle, text-grounded)",
+  "timestamp": "2026-09-14T22:45:33.173154",
+  "files_reported": 47,
+  "file_list_sample": [
+    {
+      "path": "archetype.json",
+      "size_bytes": 565,
+      "exists": true
+    },
+    {
+      "path": "entities.json",
+      "size_bytes": 1401,
+      "exists": true
+    },
+    {
+      "path": "index.json",
+      "size_bytes": 532,
+      "exists": true
+    },
+    {
+      "path": "audit\\provenance.json",
+      "size_bytes": 668,
+      "exists": true
+    },
+    {
+      "path": "benchmarks\\nash-equilibrium-report.json",
+      "size_bytes": 1189,
+      "exists": true
+    },
+    {
+      "path": "benchmarks\\player-personas-simulation.json",
+      "size_bytes": 1844,
+      "exists": true
+    },
+    {
+      "path": "canon\\entities.json",
+      "size_bytes": 1272,
+      "exists": true
+    },
+    {
+      "path": "canon\\entity-aliases.json",
+      "size_bytes": 114,
+      "exists": true
+    },
+    {
+      "path": "canon\\relationships.json",
+      "size_bytes": 2,
+      "exists": true
+    },
+    {
+      "path": "canon\\unresolved-ambiguities.json",
+      "size_bytes": 87,
+      "exists": true
+    },
+    {
+      "path": "canon\\world-boundaries.json",
+      "size_bytes": 178,
+      "exists": true
+    },
+    {
+      "path": "canon\\world-glossary.json",
+      "size_bytes": 134,
+      "exists": true
+    },
+    {
+      "path": "chapters\\ch01-chapter-1-the-beginning.md",
+      "size_bytes": 148,
+      "exists": true
+    },
+    {
+      "path": "docs\\studio-workflow.md",
+      "size_bytes": 2184,
+      "exists": true
+    },
+    {
+      "path": "lore\\bible.md",
+      "size_bytes": 286,
+      "exists": true
+    },
+    {
+      "path": "lore\\information-spread-graph.json",
+      "size_bytes": 1782,
+      "exists": true
+    },
+    {
+      "path": "lore\\relationship-matrix.json",
+      "size_bytes": 768,
+      "exists": true
+    },
+    {
+      "path": "production\\execution-dag.json",
+      "size_bytes": 609,
+      "exists": true
+    },
+    {
+      "path": "production\\stage.txt",
+      "size_bytes": 9,
+      "exists": true
+    },
+    {
+      "path": "source\\document_ir.json",
+      "size_bytes": 569,
+      "exists": true
+    },
+    {
+      "path": "source\\full_text.md",
+      "size_bytes": 346,
+      "exists": true
+    },
+    {
+      "path": "source\\paragraph-hashes.json",
+      "size_bytes": 1203,
+      "exists": true
+    },
+    {
+      "path": "technical\\mod-api-schema.json",
+      "size_bytes": 451,
+      "exists": true
+    },
+    {
+      "path": "design\\ai\\npc-utility-schedules.json",
+      "size_bytes": 998,
+      "exists": true
+    },
+    {
+      "path": "design\\art\\art-bible.md",
+      "size_bytes": 454,
+      "exists": true
+    },
+    {
+      "path": "design\\art\\lighting-color-script.json",
+      "size_bytes": 280,
+      "exists": true
+    },
+    {
+      "path": "design\\audio\\leitmotif-matrix.json",
+      "size_bytes": 1814,
+      "exists": true
+    },
+    {
+      "path": "design\\balance\\economy-formulas.md",
+      "size_bytes": 243,
+      "exists": true
+    },
+    {
+      "path": "design\\balance\\progression-gini.json",
+      "size_bytes": 424,
+      "exists": true
+    },
+    {
+      "path": "design\\balance\\tension-pacing-curve.json",
+      "size_bytes": 977,
+      "exists": true
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "Οντότητες — χαρακτήρες",
+      "value": 3,
+      "evidence": "3 ονόματα με citations"
+    },
+    {
+      "metric": "Οντότητες — τοποθεσίες",
+      "value": 0,
+      "evidence": "0 τοποθεσίες"
+    },
+    {
+      "metric": "Σημεία απόφασης (έκθεση βιβλίου)",
+      "value": 0,
+      "evidence": "0 αποσπάσματα με γραμμή/κεφάλαιο"
+    },
+    {
+      "metric": "Μέση ένταση ανά κεφάλαιο (lexical)",
+      "value": 0.25,
+      "evidence": "υπολογισμός από λεξιλόγιο κειμένου"
+    }
+  ],
+  "coverage": [
+    {
+      "requirement": "full_text.md",
+      "present": true
+    },
+    {
+      "requirement": "chapters",
+      "present": true
+    },
+    {
+      "requirement": "index.json",
+      "present": true
+    },
+    {
+      "requirement": "entities.json",
+      "present": true
+    },
+    {
+      "requirement": "character_psychology.json",
+      "present": false
+    },
+    {
+      "requirement": "voice_fingerprints.json",
+      "present": false
+    },
+    {
+      "requirement": "pacing_curve.json",
+      "present": false
+    },
+    {
+      "requirement": "branching_graph.json",
+      "present": false
+    },
+    {
+      "requirement": "player_personas.json",
+      "present": false
+    },
+    {
+      "requirement": "knowledge_graph.json",
+      "present": false
+    },
+    {
+      "requirement": "expansion_grammar.json",
+      "present": false
+    }
+  ],
+  "verdict": "PASS",
+  "_method": "αμοιβαίος έλεγχος αρχείων + metrics από το ίδιο το κείμενο",
+  "_note": "Δεν περιέχει προβλέψεις retention/Metacritic· αυτό απαιτεί playtest"
+}

@@ -1,0 +1,58 @@
+{
+  "book_title": "Book",
+  "story_grammar": {
+    "QUEST": [
+      "<INCITING_INCIDENT> -> <DISCOVERY_PHASE> -> <COMPLICATION> -> <RESOLUTION>"
+    ],
+    "INCITING_INCIDENT": [
+      "Μήνυμα για τον Lyra ανακαλύπτεται στην Κεντρική Τοποθεσία",
+      "Ο/Η Within ζητά βοήθεια υπό την απειλή άγνωστης φατρίας",
+      "Το αντικείμενο εξαφανίζεται από την Κεντρική Τοποθεσία"
+    ],
+    "DISCOVERY_PHASE": [
+      "Αποκρυπτογράφηση ενδείξεων για το μυστικό",
+      "Μυστική συνάντηση στην Κεντρική Τοποθεσία",
+      "Συνομιλία με Lyra για την αλήθεια"
+    ],
+    "COMPLICATION": [
+      "Προδοσία από απρόσμενο σύμμαχο του Lyra",
+      "Χρονικός περιορισμός πριν επέμβουν οι αντίπαλοι",
+      "Ηθικό δίλημμα: θυσία αντικείμενο για σωτηρία"
+    ],
+    "RESOLUTION": [
+      "Αποκάλυψη για το παρελθόν με επίδραση στις φατρίες",
+      "Απόκτηση αντικείμενο ως κλειδί για το επόμενο κεφάλαιο",
+      "Νέο ισοζύγιο στην Κεντρική Τοποθεσία"
+    ]
+  },
+  "terminals_source": "entities.json (πραγματικά ονόματα από το κείμενο)",
+  "dynamic_difficulty_adjustment": {
+    "evaluation_window_seconds": 90,
+    "difficulty_tuning_knobs": {
+      "player_performance_high": "Αύξηση πίεσης αντιπάλων, μείωση drops",
+      "player_performance_low": "Εισαγωγή πλεονεκτημάτων περιβάλλοντος, μεγαλύτερο παράθυρο αντίδρασης",
+      "target_flow_equilibrium": "Διατήρηση έντασης 0.40-0.75 (βάσει pacing curve)"
+    }
+  },
+  "modding_extensibility_manifest": {
+    "schema_version": "2.0",
+    "terminals": {
+      "CHARACTER": [
+        "Lyra",
+        "Within",
+        "Elder",
+        "Chapter"
+      ],
+      "LOCATION": [
+        "Κεντρική Τοποθεσία"
+      ],
+      "OBJECT": [],
+      "CONCEPT": [],
+      "FACTION": []
+    },
+    "validation_hook": "scripts/audit_lore_drift.py --mod-mode",
+    "_note": "terminals = πραγματικά ονόματα από το βιβλίο — όχι placeholders <CHARACTER>"
+  },
+  "_method": "terminals από entities + φράσεις με πραγματικά ονόματα",
+  "_caveat": "Για procedural quests χρειάζεται LLM expansion πάνω στη γραμματική"
+}

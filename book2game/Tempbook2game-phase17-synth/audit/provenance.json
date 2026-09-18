@@ -1,0 +1,26 @@
+{
+  "tool_version": "book2game v2.0.0",
+  "source_hash": "sha256:3785f43bbf62fe371aa6444eec1f75d5db642ea5a1946353965f6628a3f024b4",
+  "extraction_timestamp": "2026-09-14T22:04:42.810799",
+  "canon_entity_count": 4,
+  "uuid_map": {
+    "Chapter": "char_001",
+    "Elder": "char_002",
+    "Lyra": "char_003",
+    "Within": "char_004"
+  },
+  "reverse": {
+    "char_001": [
+      "sha256:df622994df7c8b5c462130c38937a911551bfe90751b243fd790ce5a051ed0f3"
+    ],
+    "char_002": [
+      "sha256:df622994df7c8b5c462130c38937a911551bfe90751b243fd790ce5a051ed0f3"
+    ],
+    "char_003": [
+      "sha256:df622994df7c8b5c462130c38937a911551bfe90751b243fd790ce5a051ed0f3"
+    ],
+    "char_004": [
+      "sha256:df622994df7c8b5c462130c38937a911551bfe90751b243fd790ce5a051ed0f3"
+    ]
+  }
+}

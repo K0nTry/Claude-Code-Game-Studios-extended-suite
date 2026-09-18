@@ -1,0 +1,43 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:27:28.146793",
+    "derived_version": "2026-09-14T22:27:28.172792",
+    "extraction_timestamp": "2026-09-14T22:27:28.353429",
+    "canonical_uuids_present": 2,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 2,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "gameplay-programmer"
+  },
+  "_epistemic_layer": "derived",
+  "mod-api-schema.json": {
+    "schema_version": "2.0",
+    "terminals": {
+      "CHARACTER": [
+        "Chapter",
+        "Beginning"
+      ],
+      "LOCATION": [
+        "Κεντρική Τοποθεσία"
+      ],
+      "OBJECT": [],
+      "CONCEPT": [],
+      "FACTION": []
+    },
+    "validation_hook": "scripts/audit_lore_drift.py --mod-mode",
+    "_note": "terminals = πραγματικά ονόματα από το βιβλίο — όχι placeholders <CHARACTER>"
+  },
+  "dda-rules.json": {
+    "evaluation_window_seconds": 90,
+    "difficulty_tuning_knobs": {
+      "player_performance_high": "Αύξηση πίεσης αντιπάλων, μείωση drops",
+      "player_performance_low": "Εισαγωγή πλεονεκτημάτων περιβάλλοντος, μεγαλύτερο παράθυρο αντίδρασης",
+      "target_flow_equilibrium": "Διατήρηση έντασης 0.40-0.75 (βάσει pacing curve)"
+    }
+  }
+}

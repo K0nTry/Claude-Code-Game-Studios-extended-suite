@@ -1,0 +1,312 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:27:28.146793",
+    "derived_version": "2026-09-14T22:27:28.185299",
+    "extraction_timestamp": "2026-09-14T22:27:28.349429",
+    "canonical_uuids_present": 2,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 2,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "live-ops-designer"
+  },
+  "_epistemic_layer": "derived",
+  "economy-formulas.md": "# Economy & Pacing Notes\n\n> Μέση ένταση: 0.0 dead-zone · καμπύλη από λεξιλόγιο κειμένου\n\n- Faucets/sinks: ορίζονται στο Studio με βάση pacing curve (βλ. tension-pacing-curve.json)\n",
+  "progression-gini.json": {
+    "conflicts_found": 0,
+    "imbalances": [
+      "Chapter: χωρίς καταγεγραμμένη σύγκρουση — πιθανός παθητικός ρόλος",
+      "Beginning: χωρίς καταγεγραμμένη σύγκρουση — πιθανός παθητικός ρόλος"
+    ]
+  },
+  "faction-dynamics.json": {
+    "nodes": [
+      {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "line": 1,
+          "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      },
+      {
+        "name": "Beginning",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "line": 1,
+          "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "Chapter",
+        "target": "Beginning",
+        "shared_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "shared_count": 1,
+        "evidence": [
+          {
+            "chapter": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+            "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ]
+      }
+    ]
+  },
+  "executive_audit_report.json": {
+    "report_title": "Coverage & Evidence Audit — book2game",
+    "system": "book2game v5.0 (12-Cycle, text-grounded)",
+    "timestamp": "2026-09-14T22:27:28.184299",
+    "files_reported": 47,
+    "file_list_sample": [
+      {
+        "path": "archetype.json",
+        "size_bytes": 567,
+        "exists": true
+      },
+      {
+        "path": "entities.json",
+        "size_bytes": 1638,
+        "exists": true
+      },
+      {
+        "path": "index.json",
+        "size_bytes": 634,
+        "exists": true
+      },
+      {
+        "path": "audit\\provenance.json",
+        "size_bytes": 537,
+        "exists": true
+      },
+      {
+        "path": "benchmarks\\nash-equilibrium-report.json",
+        "size_bytes": 937,
+        "exists": true
+      },
+      {
+        "path": "benchmarks\\player-personas-simulation.json",
+        "size_bytes": 1844,
+        "exists": true
+      },
+      {
+        "path": "canon\\entities.json",
+        "size_bytes": 1028,
+        "exists": true
+      },
+      {
+        "path": "canon\\entity-aliases.json",
+        "size_bytes": 81,
+        "exists": true
+      },
+      {
+        "path": "canon\\relationships.json",
+        "size_bytes": 459,
+        "exists": true
+      },
+      {
+        "path": "canon\\unresolved-ambiguities.json",
+        "size_bytes": 87,
+        "exists": true
+      },
+      {
+        "path": "canon\\world-boundaries.json",
+        "size_bytes": 178,
+        "exists": true
+      },
+      {
+        "path": "canon\\world-glossary.json",
+        "size_bytes": 134,
+        "exists": true
+      },
+      {
+        "path": "chapters\\ch01-chapter-1-the-beginning-chapter-1-the-be.md",
+        "size_bytes": 258,
+        "exists": true
+      },
+      {
+        "path": "docs\\studio-workflow.md",
+        "size_bytes": 2184,
+        "exists": true
+      },
+      {
+        "path": "lore\\bible.md",
+        "size_bytes": 286,
+        "exists": true
+      },
+      {
+        "path": "lore\\information-spread-graph.json",
+        "size_bytes": 2454,
+        "exists": true
+      },
+      {
+        "path": "lore\\relationship-matrix.json",
+        "size_bytes": 386,
+        "exists": true
+      },
+      {
+        "path": "production\\execution-dag.json",
+        "size_bytes": 609,
+        "exists": true
+      },
+      {
+        "path": "production\\stage.txt",
+        "size_bytes": 9,
+        "exists": true
+      },
+      {
+        "path": "source\\document_ir.json",
+        "size_bytes": 573,
+        "exists": true
+      },
+      {
+        "path": "source\\full_text.md",
+        "size_bytes": 350,
+        "exists": true
+      },
+      {
+        "path": "source\\paragraph-hashes.json",
+        "size_bytes": 1206,
+        "exists": true
+      },
+      {
+        "path": "technical\\mod-api-schema.json",
+        "size_bytes": 438,
+        "exists": true
+      },
+      {
+        "path": "design\\ai\\npc-utility-schedules.json",
+        "size_bytes": 1319,
+        "exists": true
+      },
+      {
+        "path": "design\\art\\art-bible.md",
+        "size_bytes": 454,
+        "exists": true
+      },
+      {
+        "path": "design\\art\\lighting-color-script.json",
+        "size_bytes": 448,
+        "exists": true
+      },
+      {
+        "path": "design\\audio\\leitmotif-matrix.json",
+        "size_bytes": 2206,
+        "exists": true
+      },
+      {
+        "path": "design\\balance\\economy-formulas.md",
+        "size_bytes": 243,
+        "exists": true
+      },
+      {
+        "path": "design\\balance\\progression-gini.json",
+        "size_bytes": 304,
+        "exists": true
+      },
+      {
+        "path": "design\\balance\\tension-pacing-curve.json",
+        "size_bytes": 1145,
+        "exists": true
+      }
+    ],
+    "metrics": [
+      {
+        "metric": "Οντότητες — χαρακτήρες",
+        "value": 2,
+        "evidence": "2 ονόματα με citations"
+      },
+      {
+        "metric": "Οντότητες — τοποθεσίες",
+        "value": 0,
+        "evidence": "0 τοποθεσίες"
+      },
+      {
+        "metric": "Σημεία απόφασης (έκθεση βιβλίου)",
+        "value": 0,
+        "evidence": "0 αποσπάσματα με γραμμή/κεφάλαιο"
+      },
+      {
+        "metric": "Μέση ένταση ανά κεφάλαιο (lexical)",
+        "value": 0.25,
+        "evidence": "υπολογισμός από λεξιλόγιο κειμένου"
+      }
+    ],
+    "coverage": [
+      {
+        "requirement": "full_text.md",
+        "present": true
+      },
+      {
+        "requirement": "chapters",
+        "present": true
+      },
+      {
+        "requirement": "index.json",
+        "present": true
+      },
+      {
+        "requirement": "entities.json",
+        "present": true
+      },
+      {
+        "requirement": "character_psychology.json",
+        "present": false
+      },
+      {
+        "requirement": "voice_fingerprints.json",
+        "present": false
+      },
+      {
+        "requirement": "pacing_curve.json",
+        "present": false
+      },
+      {
+        "requirement": "branching_graph.json",
+        "present": false
+      },
+      {
+        "requirement": "player_personas.json",
+        "present": false
+      },
+      {
+        "requirement": "knowledge_graph.json",
+        "present": false
+      },
+      {
+        "requirement": "expansion_grammar.json",
+        "present": false
+      }
+    ],
+    "verdict": "PASS",
+    "_method": "αμοιβαίος έλεγχος αρχείων + metrics από το ίδιο το κείμενο",
+    "_note": "Δεν περιέχει προβλέψεις retention/Metacritic· αυτό απαιτεί playtest"
+  }
+}

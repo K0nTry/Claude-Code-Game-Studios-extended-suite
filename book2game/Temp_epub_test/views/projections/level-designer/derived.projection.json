@@ -1,0 +1,101 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:27:28.147792",
+    "derived_version": "2026-09-14T22:27:28.168792",
+    "extraction_timestamp": "2026-09-14T22:27:28.309918",
+    "canonical_uuids_present": 2,
+    "open_space_count": 2,
+    "epistemic_breakdown": {
+      "canon": 2,
+      "derived": 0,
+      "open_space": 2
+    },
+    "projection_agent": "level-designer"
+  },
+  "_epistemic_layer": "derived",
+  "tension-pacing-curve.json": {
+    "model": "lexical tension per chapter (verbs, punctuation, sentence length, vocab)",
+    "tension_curve": [
+      {
+        "chapter_index": 1,
+        "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+        "tension_score": 0.25,
+        "detail": {
+          "avg_sentence_words": 19.0,
+          "action_hits": 0,
+          "punct_hits": 0,
+          "neg_hits": 0,
+          "pos_hits": 0,
+          "short_sentence_ratio": 0.0,
+          "signals": [
+            "ήρεμη αφήγηση / περιγραφή"
+          ]
+        },
+        "evidence_snippet": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+        "flow_label": "ανάπαυλα / περισυλλογή"
+      }
+    ],
+    "pacing_dead_zone_index": 0.0,
+    "_method": "κάθε κεφάλαιο μετράται ξεχωριστά από το κείμενό του — όχι τριγωνομετρία",
+    "_note": "Για economia/gini χρειάζεται πραγματικό game design — εδώ δίνουμε μόνο pacing"
+  },
+  "faction-dynamics.json": {
+    "nodes": [
+      {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "line": 1,
+          "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      },
+      {
+        "name": "Beginning",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "line": 1,
+          "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "Chapter",
+        "target": "Beginning",
+        "shared_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "shared_count": 1,
+        "evidence": [
+          {
+            "chapter": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+            "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ]
+      }
+    ]
+  }
+}

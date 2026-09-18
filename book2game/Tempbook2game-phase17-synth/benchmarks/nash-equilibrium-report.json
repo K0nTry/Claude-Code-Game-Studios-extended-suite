@@ -1,0 +1,38 @@
+{
+  "conflicts": [],
+  "strategy_matrix": [
+    {
+      "character": "Lyra",
+      "resources": [],
+      "conflict_count": 0,
+      "role_hint": "Recurring Entity"
+    },
+    {
+      "character": "Elder",
+      "resources": [],
+      "conflict_count": 0,
+      "role_hint": "Recurring Entity"
+    },
+    {
+      "character": "Within",
+      "resources": [],
+      "conflict_count": 0,
+      "role_hint": "Recurring Entity"
+    },
+    {
+      "character": "Chapter",
+      "resources": [],
+      "conflict_count": 0,
+      "role_hint": "Recurring Entity"
+    }
+  ],
+  "potential_imbalances": [
+    "Lyra: χωρίς καταγεγραμμένη σύγκρουση — πιθανός παθητικός ρόλος",
+    "Elder: χωρίς καταγεγραμμένη σύγκρουση — πιθανός παθητικός ρόλος",
+    "Within: χωρίς καταγεγραμμένη σύγκρουση — πιθανός παθητικός ρόλος",
+    "Chapter: χωρίς καταγεγραμμένη σύγκρουση — πιθανός παθητικός ρόλος"
+  ],
+  "total_conflicts_found": 0,
+  "_method": "conflict lexicon + character co-occurrence + resource lexicon — από το κείμενο",
+  "_caveat": "Για Nash/Gini απαιτείται playable build με προσομοίωση· εδώ δίνουμε χάρτη συγκρούσεων για σχεδιασμό"
+}

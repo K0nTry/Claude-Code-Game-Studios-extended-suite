@@ -1,0 +1,30 @@
+{
+  "export_type": "node-graph",
+  "generated_from": [
+    "design/narrative/choice-tree.json",
+    "design/balance/tension-pacing-curve.json"
+  ],
+  "node_count": 1,
+  "edge_count": 0,
+  "nodes": [
+    {
+      "id": "tension-0",
+      "type": "pacing",
+      "label": "ανάπαυλα / περισυλλογή",
+      "chapter": "Chapter 1: The Beginning",
+      "tension": 0.5,
+      "detail": {
+        "avg_sentence_words": 15.0,
+        "action_hits": 0,
+        "punct_hits": 0,
+        "neg_hits": 0,
+        "pos_hits": 0,
+        "short_sentence_ratio": 0.0,
+        "signals": [
+          "ήρεμη αφήγηση / περιγραφή"
+        ]
+      }
+    }
+  ],
+  "edges": []
+}

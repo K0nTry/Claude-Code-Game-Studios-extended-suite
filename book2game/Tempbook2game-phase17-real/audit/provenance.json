@@ -1,0 +1,22 @@
+{
+  "tool_version": "book2game v2.0.0",
+  "source_hash": "sha256:69925592420a5897243209ec955b305563a9c0b718b036c77debe71277093b38",
+  "extraction_timestamp": "2026-09-14T22:07:07.957005",
+  "canon_entity_count": 3,
+  "uuid_map": {
+    "Chapter": "char_001",
+    "Kael": "char_002",
+    "Zora": "char_003"
+  },
+  "reverse": {
+    "char_001": [
+      "sha256:f76cfc1b067567c4e4d7381d3e37a7fa4a4c3679b9d94a507beaf81fbc50900a"
+    ],
+    "char_002": [
+      "sha256:f76cfc1b067567c4e4d7381d3e37a7fa4a4c3679b9d94a507beaf81fbc50900a"
+    ],
+    "char_003": [
+      "sha256:f76cfc1b067567c4e4d7381d3e37a7fa4a4c3679b9d94a507beaf81fbc50900a"
+    ]
+  }
+}

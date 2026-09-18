@@ -1,0 +1,246 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:11:24.165104",
+    "derived_version": "2026-09-14T22:11:24.195946",
+    "extraction_timestamp": "2026-09-14T22:11:24.283109",
+    "canonical_uuids_present": 4,
+    "open_space_count": 0,
+    "epistemic_breakdown": {
+      "canon": 4,
+      "derived": 0,
+      "open_space": 0
+    },
+    "projection_agent": "economy-designer"
+  },
+  "_epistemic_layer": "derived",
+  "tension-pacing-curve.json": {
+    "model": "lexical tension per chapter (verbs, punctuation, sentence length, vocab)",
+    "tension_curve": [
+      {
+        "chapter_index": 1,
+        "chapter_title": "# Chapter 1: The Gathering",
+        "tension_score": 0.415,
+        "detail": {
+          "avg_sentence_words": 10.0,
+          "action_hits": 1,
+          "punct_hits": 0,
+          "neg_hits": 0,
+          "pos_hits": 0,
+          "short_sentence_ratio": 0.33,
+          "signals": [
+            "δράση: war"
+          ]
+        },
+        "evidence_snippet": "# Chapter 1: The Gathering",
+        "flow_label": "ισορροπία / διερεύνηση"
+      },
+      {
+        "chapter_index": 2,
+        "chapter_title": "# Chapter 2: The Quest",
+        "tension_score": 0.36,
+        "detail": {
+          "avg_sentence_words": 9.0,
+          "action_hits": 0,
+          "punct_hits": 0,
+          "neg_hits": 0,
+          "pos_hits": 0,
+          "short_sentence_ratio": 0.67,
+          "signals": [
+            "κοντές προτάσεις 67%"
+          ]
+        },
+        "evidence_snippet": "# Chapter 2: The Quest",
+        "flow_label": "ισορροπία / διερεύνηση"
+      },
+      {
+        "chapter_index": 3,
+        "chapter_title": "# Chapter 3: The Encounter",
+        "tension_score": 0.36,
+        "detail": {
+          "avg_sentence_words": 7.0,
+          "action_hits": 0,
+          "punct_hits": 0,
+          "neg_hits": 0,
+          "pos_hits": 0,
+          "short_sentence_ratio": 0.67,
+          "signals": [
+            "κοντές προτάσεις 67%"
+          ]
+        },
+        "evidence_snippet": "# Chapter 3: The Encounter",
+        "flow_label": "ισορροπία / διερεύνηση"
+      },
+      {
+        "chapter_index": 4,
+        "chapter_title": "# Chapter 4: The Revelation",
+        "tension_score": 0.25,
+        "detail": {
+          "avg_sentence_words": 12.0,
+          "action_hits": 0,
+          "punct_hits": 0,
+          "neg_hits": 0,
+          "pos_hits": 0,
+          "short_sentence_ratio": 0.0,
+          "signals": [
+            "ήρεμη αφήγηση / περιγραφή"
+          ]
+        },
+        "evidence_snippet": "# Chapter 4: The Revelation",
+        "flow_label": "ανάπαυλα / περισυλλογή"
+      }
+    ],
+    "pacing_dead_zone_index": 0.667,
+    "_method": "κάθε κεφάλαιο μετράται ξεχωριστά από το κείμενό του — όχι τριγωνομετρία",
+    "_note": "Για economia/gini χρειάζεται πραγματικό game design — εδώ δίνουμε μόνο pacing"
+  },
+  "economy-formulas.md": "# Economy & Pacing Notes\n\n> Μέση ένταση: 0.667 dead-zone · καμπύλη από λεξιλόγιο κειμένου\n\n- Faucets/sinks: ορίζονται στο Studio με βάση pacing curve (βλ. tension-pacing-curve.json)\n",
+  "progression-gini.json": {
+    "conflicts_found": 0,
+    "imbalances": [
+      "Lyra: χωρίς καταγεγραμμένη σύγκρουση — πιθανός παθητικός ρόλος",
+      "Within: χωρίς καταγεγραμμένη σύγκρουση — πιθανός παθητικός ρόλος",
+      "Elder: χωρίς καταγεγραμμένη σύγκρουση — πιθανός παθητικός ρόλος",
+      "Chapter: χωρίς καταγεγραμμένη σύγκρουση — πιθανός παθητικός ρόλος"
+    ]
+  },
+  "dda-rules.json": {
+    "evaluation_window_seconds": 90,
+    "difficulty_tuning_knobs": {
+      "player_performance_high": "Αύξηση πίεσης αντιπάλων, μείωση drops",
+      "player_performance_low": "Εισαγωγή πλεονεκτημάτων περιβάλλοντος, μεγαλύτερο παράθυρο αντίδρασης",
+      "target_flow_equilibrium": "Διατήρηση έντασης 0.40-0.75 (βάσει pacing curve)"
+    }
+  },
+  "faction-dynamics.json": {
+    "nodes": [
+      {
+        "name": "Lyra",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 2,
+            "chapter_title": "# Chapter 2: The Quest"
+          },
+          {
+            "chapter_index": 3,
+            "chapter_title": "# Chapter 3: The Encounter"
+          }
+        ],
+        "chapter_count": 2,
+        "first_appearance": {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Quest",
+          "line": 2,
+          "quote": "Lyra left the city of Aethelgard."
+        }
+      },
+      {
+        "name": "Within",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 4,
+            "chapter_title": "# Chapter 4: The Revelation"
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 4,
+          "chapter_title": "# Chapter 4: The Revelation",
+          "line": 2,
+          "quote": "Within the ruins, she found the Ancient Data Core."
+        }
+      },
+      {
+        "name": "Elder",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "# Chapter 1: The Gathering"
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "# Chapter 1: The Gathering",
+          "line": 2,
+          "quote": "The Council of Elders met in the Obsidian Chamber."
+        }
+      },
+      {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "# Chapter 1: The Gathering"
+          },
+          {
+            "chapter_index": 2,
+            "chapter_title": "# Chapter 2: The Quest"
+          },
+          {
+            "chapter_index": 3,
+            "chapter_title": "# Chapter 3: The Encounter"
+          },
+          {
+            "chapter_index": 4,
+            "chapter_title": "# Chapter 4: The Revelation"
+          }
+        ],
+        "chapter_count": 4,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "# Chapter 1: The Gathering",
+          "line": 1,
+          "quote": "# Chapter 1: The Gathering"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "Lyra",
+        "target": "Chapter",
+        "shared_chapters": [
+          {
+            "chapter_index": 2,
+            "chapter_title": "# Chapter 2: The Quest"
+          },
+          {
+            "chapter_index": 3,
+            "chapter_title": "# Chapter 3: The Encounter"
+          }
+        ],
+        "shared_count": 2,
+        "evidence": []
+      },
+      {
+        "source": "Within",
+        "target": "Chapter",
+        "shared_chapters": [
+          {
+            "chapter_index": 4,
+            "chapter_title": "# Chapter 4: The Revelation"
+          }
+        ],
+        "shared_count": 1,
+        "evidence": []
+      },
+      {
+        "source": "Elder",
+        "target": "Chapter",
+        "shared_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "# Chapter 1: The Gathering"
+          }
+        ],
+        "shared_count": 1,
+        "evidence": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "name": "Kael",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "# Chapter 1: The Echoes of Old"
+        },
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Bargain"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Betrayal"
+        }
+      ],
+      "chapter_count": 3,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "# Chapter 1: The Echoes of Old",
+        "line": 2,
+        "quote": "The ship drifted through the nebula. Kael looked out of the viewport."
+      }
+    },
+    {
+      "name": "Zora",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Bargain"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Betrayal"
+        }
+      ],
+      "chapter_count": 2,
+      "first_appearance": {
+        "chapter_index": 2,
+        "chapter_title": "# Chapter 2: The Bargain",
+        "line": 2,
+        "quote": "At the space station, Zora waited. She was a known smuggler."
+      }
+    },
+    {
+      "name": "Chapter",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "# Chapter 1: The Echoes of Old"
+        },
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Bargain"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Betrayal"
+        }
+      ],
+      "chapter_count": 3,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "# Chapter 1: The Echoes of Old",
+        "line": 1,
+        "quote": "# Chapter 1: The Echoes of Old"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "Kael",
+      "target": "Zora",
+      "shared_chapters": [
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Bargain"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Betrayal"
+        }
+      ],
+      "shared_count": 2,
+      "evidence": []
+    },
+    {
+      "source": "Kael",
+      "target": "Chapter",
+      "shared_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "# Chapter 1: The Echoes of Old"
+        },
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Bargain"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Betrayal"
+        }
+      ],
+      "shared_count": 3,
+      "evidence": []
+    },
+    {
+      "source": "Zora",
+      "target": "Chapter",
+      "shared_chapters": [
+        {
+          "chapter_index": 2,
+          "chapter_title": "# Chapter 2: The Bargain"
+        },
+        {
+          "chapter_index": 3,
+          "chapter_title": "# Chapter 3: The Betrayal"
+        }
+      ],
+      "shared_count": 2,
+      "evidence": []
+    }
+  ]
+}

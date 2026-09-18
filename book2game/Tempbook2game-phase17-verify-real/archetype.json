@@ -1,0 +1,13 @@
+{
+  "archetype": "LINEAR_NARRATIVE",
+  "confidence": 0.88,
+  "metrics": {
+    "edu_density_per_1k": 28.85,
+    "narrative_density_per_1k": 9.62,
+    "dialogue_quotes_count": 4
+  },
+  "reasoning": [
+    "Συνεχής αφήγηση: Επαναλαμβανόμενοι βασικοί χαρακτήρες και κοινή πλοκή"
+  ],
+  "recommended_studio_approach": "Κλασική δομή 3 πράξεων, ενιαίο hero's journey, άμεσο story loop."
+}

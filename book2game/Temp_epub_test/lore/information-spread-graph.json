@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "name": "Chapter",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      ],
+      "chapter_count": 1,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+        "line": 1,
+        "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+      }
+    },
+    {
+      "name": "Beginning",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      ],
+      "chapter_count": 1,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+        "line": 1,
+        "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+      }
+    }
+  ],
+  "co_occurrence_edges": [
+    {
+      "source": "Chapter",
+      "target": "Beginning",
+      "shared_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      ],
+      "shared_count": 1,
+      "evidence": [
+        {
+          "chapter": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      ]
+    }
+  ],
+  "propagation_order": [],
+  "isolated_characters": [],
+  "total_chapters": 1,
+  "_method": "presence ανά κεφάλαιο + co-occurrence + first-appearance order — όχι σταθερά schedules",
+  "_note": "Για Utility-AI schedules χρειάζεται game design· εδώ δίνουμε διάδοση πληροφορίας στο κείμενο"
+}

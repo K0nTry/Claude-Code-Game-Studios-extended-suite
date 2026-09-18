@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "name": "This",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning"
+        }
+      ],
+      "chapter_count": 1,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "Chapter 1: The Beginning",
+        "line": 2,
+        "quote": "This is the first paragraph of the minimal test PDF book."
+      }
+    },
+    {
+      "name": "Chapter",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning"
+        }
+      ],
+      "chapter_count": 1,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "Chapter 1: The Beginning",
+        "line": 1,
+        "quote": "Chapter 1: The Beginning"
+      }
+    },
+    {
+      "name": "Minimal",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [],
+      "chapter_count": 0,
+      "first_appearance": null
+    }
+  ],
+  "co_occurrence_edges": [
+    {
+      "source": "This",
+      "target": "Chapter",
+      "shared_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning"
+        }
+      ],
+      "shared_count": 1,
+      "evidence": []
+    }
+  ],
+  "propagation_order": [],
+  "isolated_characters": [
+    "Minimal"
+  ],
+  "total_chapters": 1,
+  "_method": "presence ανά κεφάλαιο + co-occurrence + first-appearance order — όχι σταθερά schedules",
+  "_note": "Για Utility-AI schedules χρειάζεται game design· εδώ δίνουμε διάδοση πληροφορίας στο κείμενο"
+}

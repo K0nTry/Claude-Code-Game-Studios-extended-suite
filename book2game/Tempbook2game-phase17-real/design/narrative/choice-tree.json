@@ -1,0 +1,57 @@
+{
+  "branching_graph": {
+    "nodes": [
+      {
+        "id": "node_00_intro",
+        "type": "Intro",
+        "label": "Αρχή — setup"
+      },
+      {
+        "id": "node_01_c_______1:_t",
+        "type": "Chapter",
+        "title": "# Chapter 1: The Echoes of Old",
+        "index": 1
+      },
+      {
+        "id": "node_02_c_______2:_t",
+        "type": "Chapter",
+        "title": "# Chapter 2: The Bargain",
+        "index": 2
+      },
+      {
+        "id": "node_03_c_______3:_t",
+        "type": "Chapter",
+        "title": "# Chapter 3: The Betrayal",
+        "index": 3
+      }
+    ],
+    "edges": [
+      {
+        "from": "node_00_intro",
+        "to": "node_01_c_______1:_t"
+      },
+      {
+        "from": "node_01_c_______1:_t",
+        "to": "node_02_c_______2:_t"
+      },
+      {
+        "from": "node_02_c_______2:_t",
+        "to": "node_03_c_______3:_t"
+      }
+    ],
+    "algorithm": "decision points extracted from text + linear chapter spine + BFS reachability"
+  },
+  "decision_points": [],
+  "validation": {
+    "total_nodes": 4,
+    "chapter_nodes": 3,
+    "decision_nodes": 0,
+    "visited_nodes": 4,
+    "orphan_nodes": [],
+    "isolated_decisions": [],
+    "orphan_rate": 0.0,
+    "verdict": "PASS"
+  },
+  "_method": "regex decision lexicon + sentence scan + chapter-mapped DAG — όχι σταθερά 3 τέλη",
+  "_note": "Για πλήρες branching με πολλαπλά τέλη απαιτείται LLM enrichment πάνω στα evidence"
+}

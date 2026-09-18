@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "book2game/schemas/styledna.schema.json",
+  "title": "StyleDNA Fingerprint",
+  "type": "object",
+  "required": ["character_uuid", "archetype", "lexical_density"],
+  "properties": {
+    "character_uuid": { "type": "string" },
+    "archetype": { "type": "string" },
+    "lexical_density": { "type": "number", "minimum": 0, "maximum": 1 },
+    "tone_vectors": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

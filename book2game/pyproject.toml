@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "book2game"
+version = "1.0.0"
+description = "Convert books (PDF, EPUB, DOCX, TXT) into Game Studio-ready structured assets and 49 specialist agent projections"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "K0nTry", email = "[REDACTED]" }]
+keywords = ["book2game", "game-dev", "narrative-design", "rag", "mcp", "book-adaptation"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Intended Audience :: Developers",
+  "Topic :: Games/Entertainment",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.0.0"]
+
+[project.scripts]
+book2game = "scripts.parse_book:main"

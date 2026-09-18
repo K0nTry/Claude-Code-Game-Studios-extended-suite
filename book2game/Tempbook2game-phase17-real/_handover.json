@@ -1,0 +1,25 @@
+{
+  "status": "NEEDS_ATTENTION",
+  "generated_at": "2026-09-14T22:07:08.350089",
+  "checks": [
+    {
+      "check": "manifest_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "document_ir_exists",
+      "status": "PASS"
+    },
+    {
+      "check": "file_hash_present",
+      "status": "PASS"
+    },
+    {
+      "check": "whitebox_robustness",
+      "status": "NEEDS_ATTENTION",
+      "reason": "robustness 0.0 < 0.6"
+    }
+  ],
+  "quarantined": [],
+  "next_action": "cp -r my-game/ <ccgs>/design/source-material/<book>/ && Read _catalog.md"
+}

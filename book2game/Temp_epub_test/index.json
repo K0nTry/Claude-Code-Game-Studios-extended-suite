@@ -1,0 +1,18 @@
+{
+  "source": "minimal.epub",
+  "generated": "2026-09-14T22:27:28.138284",
+  "total_chars": 108,
+  "total_words": 19,
+  "chunks": 1,
+  "entries": [
+    {
+      "id": "ch01",
+      "title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+      "file": "chapters/ch01-chapter-1-the-beginning-chapter-1-the-be.md",
+      "chars": 108,
+      "words": 19,
+      "offset": 0
+    }
+  ],
+  "rag_hint": "Χρήση: grep -n 'όρος' full_text.md  ή  grep -rn 'όρος' chapters/  — για μεγάλα βιβλία μην κάνεις Read(full_text.md)"
+}

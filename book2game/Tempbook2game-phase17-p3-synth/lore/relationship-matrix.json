@@ -1,0 +1,50 @@
+[
+  {
+    "source": "Lyra",
+    "target": "Within",
+    "co_occurrence_ratio": 0.0,
+    "shared_chapters": 0,
+    "evidence": [],
+    "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+  },
+  {
+    "source": "Lyra",
+    "target": "Elder",
+    "co_occurrence_ratio": 0.0,
+    "shared_chapters": 0,
+    "evidence": [],
+    "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+  },
+  {
+    "source": "Lyra",
+    "target": "Chapter",
+    "co_occurrence_ratio": 0.0,
+    "shared_chapters": 0,
+    "evidence": [],
+    "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+  },
+  {
+    "source": "Within",
+    "target": "Elder",
+    "co_occurrence_ratio": 0.0,
+    "shared_chapters": 0,
+    "evidence": [],
+    "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+  },
+  {
+    "source": "Within",
+    "target": "Chapter",
+    "co_occurrence_ratio": 0.0,
+    "shared_chapters": 0,
+    "evidence": [],
+    "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+  },
+  {
+    "source": "Elder",
+    "target": "Chapter",
+    "co_occurrence_ratio": 0.0,
+    "shared_chapters": 0,
+    "evidence": [],
+    "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "source_file": "sample_real_book.txt",
+  "file_hash": "sha256:207632d33d2e17f0d2b403d78534e3ad96574adf9e3a21b61175503b61203bfd",
+  "detected_format": "txt",
+  "generated_at": "2026-09-14T22:09:06.373540",
+  "blocks": [
+    {
+      "index": 0,
+      "type": "heading",
+      "text": "# Chapter 1: The Echoes of Old\nThe ship drifted through the nebula. Kael looked out of the viewport.\nHe missed the green plains of his home, Terren.\nThe mission was simple: retrieve the Stellar Core.",
+      "page": 1,
+      "hash": "sha256:60066aae6893a29c643b833b6c63db90dfc4e6429407227febe02bd5a2685370"
+    },
+    {
+      "index": 1,
+      "type": "heading",
+      "text": "# Chapter 2: The Bargain\nAt the space station, Zora waited. She was a known smuggler.\n\"I have the coordinates,\" she whispered, handing Kael a drive.\n\"The price remains the same: a seat on the next transport.\"",
+      "page": 1,
+      "hash": "sha256:4f85bc3a5390301f36e8a24d5953324013312237bb08e6a9f551936f9657c3af"
+    },
+    {
+      "index": 2,
+      "type": "heading",
+      "text": "# Chapter 3: The Betrayal\nKael realized too late that the drive was a tracker.\nZora had sold them out to the Syndicate.\nThe alarm began to blare throughout the ship.",
+      "page": 1,
+      "hash": "sha256:f16611391f5719f6503f20c04f3369c4c77dc794e0965e663cfb46048e9a1479"
+    }
+  ],
+  "tables": [],
+  "assets": [],
+  "notes": []
+}

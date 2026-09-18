@@ -1,0 +1,83 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:11:25.246375",
+    "derived_version": "2026-09-14T22:11:25.276400",
+    "extraction_timestamp": "2026-09-14T22:11:25.343015",
+    "canonical_uuids_present": 3,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "qa-lead"
+  },
+  "_epistemic_layer": "derived",
+  "choice-tree.json": {
+    "branching_graph": {
+      "nodes": [
+        {
+          "id": "node_00_intro",
+          "type": "Intro",
+          "label": "Αρχή — setup"
+        },
+        {
+          "id": "node_01_c_______1:_t",
+          "type": "Chapter",
+          "title": "# Chapter 1: The Echoes of Old",
+          "index": 1
+        },
+        {
+          "id": "node_02_c_______2:_t",
+          "type": "Chapter",
+          "title": "# Chapter 2: The Bargain",
+          "index": 2
+        },
+        {
+          "id": "node_03_c_______3:_t",
+          "type": "Chapter",
+          "title": "# Chapter 3: The Betrayal",
+          "index": 3
+        }
+      ],
+      "edges": [
+        {
+          "from": "node_00_intro",
+          "to": "node_01_c_______1:_t"
+        },
+        {
+          "from": "node_01_c_______1:_t",
+          "to": "node_02_c_______2:_t"
+        },
+        {
+          "from": "node_02_c_______2:_t",
+          "to": "node_03_c_______3:_t"
+        }
+      ],
+      "algorithm": "decision points extracted from text + linear chapter spine + BFS reachability"
+    },
+    "decision_points": [],
+    "validation": {
+      "total_nodes": 4,
+      "chapter_nodes": 3,
+      "decision_nodes": 0,
+      "visited_nodes": 4,
+      "orphan_nodes": [],
+      "isolated_decisions": [],
+      "orphan_rate": 0.0,
+      "verdict": "PASS"
+    },
+    "_method": "regex decision lexicon + sentence scan + chapter-mapped DAG — όχι σταθερά 3 τέλη",
+    "_note": "Για πλήρες branching με πολλαπλά τέλη απαιτείται LLM enrichment πάνω στα evidence"
+  },
+  "dda-rules.json": {
+    "evaluation_window_seconds": 90,
+    "difficulty_tuning_knobs": {
+      "player_performance_high": "Αύξηση πίεσης αντιπάλων, μείωση drops",
+      "player_performance_low": "Εισαγωγή πλεονεκτημάτων περιβάλλοντος, μεγαλύτερο παράθυρο αντίδρασης",
+      "target_flow_equilibrium": "Διατήρηση έντασης 0.40-0.75 (βάσει pacing curve)"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "book2game-mcp",
+  "version": "1.0.0",
+  "description": "Optional Model Context Protocol (MCP) server for book2game pipeline",
+  "main": "scripts/mcp_server.py",
+  "type": "stdio",
+  "commands": {
+    "run": "python scripts/mcp_server.py"
+  }
+}

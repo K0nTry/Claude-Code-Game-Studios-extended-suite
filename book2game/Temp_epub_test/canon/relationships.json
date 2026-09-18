@@ -1,0 +1,17 @@
+[
+  {
+    "source": "Chapter",
+    "target": "Beginning",
+    "relation": "αναφορά/συνάντηση",
+    "type": "αναφορά/συνάντηση",
+    "evidence": [
+      {
+        "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+        "line": 1
+      }
+    ],
+    "_epistemic": "canon",
+    "_source_uuid": "char_001",
+    "_target_uuid": "char_002"
+  }
+]

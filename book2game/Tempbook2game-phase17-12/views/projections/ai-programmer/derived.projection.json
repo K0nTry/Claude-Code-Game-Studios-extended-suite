@@ -1,0 +1,128 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:45:33.130864",
+    "derived_version": "2026-09-14T22:45:33.160374",
+    "extraction_timestamp": "2026-09-14T22:45:33.323551",
+    "canonical_uuids_present": 3,
+    "open_space_count": 0,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 0
+    },
+    "projection_agent": "ai-programmer"
+  },
+  "_epistemic_layer": "derived",
+  "npc-utility-schedules.json": [
+    {
+      "name": "This",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning"
+        }
+      ],
+      "chapter_count": 1,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "Chapter 1: The Beginning",
+        "line": 2,
+        "quote": "This is the first paragraph of the minimal test PDF book."
+      }
+    },
+    {
+      "name": "Chapter",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [
+        {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning"
+        }
+      ],
+      "chapter_count": 1,
+      "first_appearance": {
+        "chapter_index": 1,
+        "chapter_title": "Chapter 1: The Beginning",
+        "line": 1,
+        "quote": "Chapter 1: The Beginning"
+      }
+    },
+    {
+      "name": "Minimal",
+      "role": "Recurring Entity",
+      "appears_in_chapters": [],
+      "chapter_count": 0,
+      "first_appearance": null
+    }
+  ],
+  "dda-rules.json": {
+    "evaluation_window_seconds": 90,
+    "difficulty_tuning_knobs": {
+      "player_performance_high": "Αύξηση πίεσης αντιπάλων, μείωση drops",
+      "player_performance_low": "Εισαγωγή πλεονεκτημάτων περιβάλλοντος, μεγαλύτερο παράθυρο αντίδρασης",
+      "target_flow_equilibrium": "Διατήρηση έντασης 0.40-0.75 (βάσει pacing curve)"
+    }
+  },
+  "faction-dynamics.json": {
+    "nodes": [
+      {
+        "name": "This",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning"
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning",
+          "line": 2,
+          "quote": "This is the first paragraph of the minimal test PDF book."
+        }
+      },
+      {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning"
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning",
+          "line": 1,
+          "quote": "Chapter 1: The Beginning"
+        }
+      },
+      {
+        "name": "Minimal",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [],
+        "chapter_count": 0,
+        "first_appearance": null
+      }
+    ],
+    "edges": [
+      {
+        "source": "This",
+        "target": "Chapter",
+        "shared_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning"
+          }
+        ],
+        "shared_count": 1,
+        "evidence": []
+      }
+    ]
+  }
+}

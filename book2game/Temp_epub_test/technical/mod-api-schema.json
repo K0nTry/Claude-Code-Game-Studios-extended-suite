@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0",
+  "terminals": {
+    "CHARACTER": [
+      "Chapter",
+      "Beginning"
+    ],
+    "LOCATION": [
+      "Κεντρική Τοποθεσία"
+    ],
+    "OBJECT": [],
+    "CONCEPT": [],
+    "FACTION": []
+  },
+  "validation_hook": "scripts/audit_lore_drift.py --mod-mode",
+  "_note": "terminals = πραγματικά ονόματα από το βιβλίο — όχι placeholders <CHARACTER>"
+}

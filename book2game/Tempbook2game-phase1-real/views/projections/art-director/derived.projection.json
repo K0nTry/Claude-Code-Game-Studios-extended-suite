@@ -1,0 +1,53 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T21:48:04.985892",
+    "derived_version": "2026-09-14T21:48:05.008406",
+    "extraction_timestamp": "2026-09-14T21:48:05.070811",
+    "canonical_uuids_present": 3,
+    "open_space_count": 2,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 2
+    },
+    "projection_agent": "art-director"
+  },
+  "_epistemic_layer": "derived",
+  "lighting-color-script.json": [
+    {
+      "chapter_index": 1,
+      "chapter_title": "# Chapter 1: The Echoes of Old",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "# Chapter 1: The Echoes of Old"
+      ]
+    },
+    {
+      "chapter_index": 2,
+      "chapter_title": "# Chapter 2: The Bargain",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "# Chapter 2: The Bargain"
+      ]
+    },
+    {
+      "chapter_index": 3,
+      "chapter_title": "# Chapter 3: The Betrayal",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "# Chapter 3: The Betrayal"
+      ]
+    }
+  ]
+}

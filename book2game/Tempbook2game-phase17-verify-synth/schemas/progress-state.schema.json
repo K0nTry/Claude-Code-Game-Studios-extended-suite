@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "book2game/schemas/progress-state.schema.json",
+  "title": "Progress State",
+  "type": "object",
+  "required": ["session_id", "progress"],
+  "properties": {
+    "session_id": { "type": "string" },
+    "progress": { "type": "number" },
+    "unlocked_content": { "type": "array", "items": { "type": "string" } }
+  }
+}

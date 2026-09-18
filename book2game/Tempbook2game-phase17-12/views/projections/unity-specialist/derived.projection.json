@@ -1,0 +1,36 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:45:33.130864",
+    "derived_version": "2026-09-14T22:45:33.161374",
+    "extraction_timestamp": "2026-09-14T22:45:33.371552",
+    "canonical_uuids_present": 3,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "unity-specialist"
+  },
+  "_epistemic_layer": "derived",
+  "mod-api-schema.json": {
+    "schema_version": "2.0",
+    "terminals": {
+      "CHARACTER": [
+        "This",
+        "Chapter",
+        "Minimal"
+      ],
+      "LOCATION": [
+        "Κεντρική Τοποθεσία"
+      ],
+      "OBJECT": [],
+      "CONCEPT": [],
+      "FACTION": []
+    },
+    "validation_hook": "scripts/audit_lore_drift.py --mod-mode",
+    "_note": "terminals = πραγματικά ονόματα από το βιβλίο — όχι placeholders <CHARACTER>"
+  }
+}

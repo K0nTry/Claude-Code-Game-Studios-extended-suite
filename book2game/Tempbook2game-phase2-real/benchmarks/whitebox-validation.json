@@ -1,0 +1,72 @@
+{
+  "_tool": "book2game v2.0.0-whitebox",
+  "_generated": "2026-09-14T21:56:49.065573",
+  "_seed": 42,
+  "_deterministic": true,
+  "project": "Tempbook2game-phase2-real",
+  "edges_detected": 1,
+  "top_risk": {
+    "edge_id": "pacing:global-dead-zone",
+    "kind": "tension_curve",
+    "severity": "high",
+    "risk_score": 10.0,
+    "fan_out": 0,
+    "detail": {
+      "dead_zone_index": 1.0
+    },
+    "source": "design/balance/tension-pacing-curve.json",
+    "reason": "global dead_zone_index=1.00"
+  },
+  "edges": [
+    {
+      "edge_id": "pacing:global-dead-zone",
+      "kind": "tension_curve",
+      "severity": "high",
+      "risk_score": 10.0,
+      "fan_out": 0,
+      "detail": {
+        "dead_zone_index": 1.0
+      },
+      "source": "design/balance/tension-pacing-curve.json",
+      "reason": "global dead_zone_index=1.00"
+    }
+  ],
+  "simulation": {
+    "seed": 42,
+    "deterministic": true,
+    "total_edges": 1,
+    "outcomes": [
+      {
+        "edge_id": "pacing:global-dead-zone",
+        "kind": "tension_curve",
+        "severity": "high",
+        "risk_score": 10.0,
+        "simulated_pass": false,
+        "probe": 0.1518,
+        "fail_threshold": 0.45,
+        "verdict": "FAIL"
+      }
+    ],
+    "metrics": {
+      "robustness": 0.0,
+      "high_severity_robustness": 0.0,
+      "passed": 0,
+      "failed": 1,
+      "top_failure": "pacing:global-dead-zone"
+    }
+  },
+  "summary": {
+    "robustness": 0.0,
+    "high_severity_robustness": 0.0,
+    "verdict": "NEEDS_ATTENTION",
+    "seed": 42
+  },
+  "provenance": {
+    "inputs": [
+      "design/narrative/choice-tree.json",
+      "design/balance/tension-pacing-curve.json"
+    ],
+    "method": "deterministic whitebox: risk-edge detection + seeded traversal (seed=42)",
+    "repro": "python scripts/whitebox_runner.py <project_dir> --seed 42"
+  }
+}

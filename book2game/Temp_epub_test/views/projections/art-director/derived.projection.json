@@ -1,0 +1,31 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:27:28.147792",
+    "derived_version": "2026-09-14T22:27:28.166792",
+    "extraction_timestamp": "2026-09-14T22:27:28.284864",
+    "canonical_uuids_present": 2,
+    "open_space_count": 2,
+    "epistemic_breakdown": {
+      "canon": 2,
+      "derived": 0,
+      "open_space": 2
+    },
+    "projection_agent": "art-director"
+  },
+  "_epistemic_layer": "derived",
+  "lighting-color-script.json": [
+    {
+      "chapter_index": 1,
+      "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+      ]
+    }
+  ]
+}

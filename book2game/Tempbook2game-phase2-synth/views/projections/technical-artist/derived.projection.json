@@ -1,0 +1,64 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T21:52:10.770793",
+    "derived_version": "2026-09-14T21:52:10.795309",
+    "extraction_timestamp": "2026-09-14T21:52:10.895362",
+    "canonical_uuids_present": 4,
+    "open_space_count": 2,
+    "epistemic_breakdown": {
+      "canon": 4,
+      "derived": 0,
+      "open_space": 2
+    },
+    "projection_agent": "technical-artist"
+  },
+  "_epistemic_layer": "derived",
+  "lighting-color-script.json": [
+    {
+      "chapter_index": 1,
+      "chapter_title": "# Chapter 1: The Gathering",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "# Chapter 1: The Gathering"
+      ]
+    },
+    {
+      "chapter_index": 2,
+      "chapter_title": "# Chapter 2: The Quest",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "She carried the map to the Sunken Ruins."
+      ]
+    },
+    {
+      "chapter_index": 3,
+      "chapter_title": "# Chapter 3: The Encounter",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "# Chapter 3: The Encounter"
+      ]
+    },
+    {
+      "chapter_index": 4,
+      "chapter_title": "# Chapter 4: The Revelation",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "# Chapter 4: The Revelation"
+      ]
+    }
+  ]
+}

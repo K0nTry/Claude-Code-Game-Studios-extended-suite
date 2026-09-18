@@ -1,0 +1,187 @@
+{
+  "global_keywords": [
+    {
+      "word": "kael",
+      "count": 3
+    },
+    {
+      "word": "ship",
+      "count": 2
+    },
+    {
+      "word": "zora",
+      "count": 2
+    },
+    {
+      "word": "drive",
+      "count": 2
+    },
+    {
+      "word": "echoes",
+      "count": 1
+    },
+    {
+      "word": "drifted",
+      "count": 1
+    },
+    {
+      "word": "through",
+      "count": 1
+    },
+    {
+      "word": "nebula",
+      "count": 1
+    },
+    {
+      "word": "looked",
+      "count": 1
+    },
+    {
+      "word": "viewport",
+      "count": 1
+    },
+    {
+      "word": "missed",
+      "count": 1
+    },
+    {
+      "word": "green",
+      "count": 1
+    }
+  ],
+  "leitmotif_matrix": [
+    {
+      "chapter_index": 1,
+      "chapter_title": "# Chapter 1: The Echoes of Old",
+      "top_keywords": [
+        {
+          "word": "echoes",
+          "count": 1
+        },
+        {
+          "word": "ship",
+          "count": 1
+        },
+        {
+          "word": "drifted",
+          "count": 1
+        },
+        {
+          "word": "through",
+          "count": 1
+        },
+        {
+          "word": "nebula",
+          "count": 1
+        }
+      ],
+      "dominant_theme": "echoes",
+      "tone": "ισορροπημένος",
+      "evidence": [
+        "# Chapter 1: The Echoes of Old"
+      ],
+      "audio_hint": "ουδέτερο ambient"
+    },
+    {
+      "chapter_index": 2,
+      "chapter_title": "# Chapter 2: The Bargain",
+      "top_keywords": [
+        {
+          "word": "bargain",
+          "count": 1
+        },
+        {
+          "word": "space",
+          "count": 1
+        },
+        {
+          "word": "station",
+          "count": 1
+        },
+        {
+          "word": "zora",
+          "count": 1
+        },
+        {
+          "word": "waited",
+          "count": 1
+        }
+      ],
+      "dominant_theme": "bargain",
+      "tone": "ισορροπημένος",
+      "evidence": [
+        "# Chapter 2: The Bargain"
+      ],
+      "audio_hint": "ουδέτερο ambient"
+    },
+    {
+      "chapter_index": 3,
+      "chapter_title": "# Chapter 3: The Betrayal",
+      "top_keywords": [
+        {
+          "word": "betrayal",
+          "count": 1
+        },
+        {
+          "word": "kael",
+          "count": 1
+        },
+        {
+          "word": "realized",
+          "count": 1
+        },
+        {
+          "word": "late",
+          "count": 1
+        },
+        {
+          "word": "that",
+          "count": 1
+        }
+      ],
+      "dominant_theme": "betrayal",
+      "tone": "ισορροπημένος",
+      "evidence": [
+        "# Chapter 3: The Betrayal"
+      ],
+      "audio_hint": "ουδέτερο ambient"
+    }
+  ],
+  "lighting_color_script": [
+    {
+      "chapter_index": 1,
+      "chapter_title": "# Chapter 1: The Echoes of Old",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "# Chapter 1: The Echoes of Old"
+      ]
+    },
+    {
+      "chapter_index": 2,
+      "chapter_title": "# Chapter 2: The Bargain",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "# Chapter 2: The Bargain"
+      ]
+    },
+    {
+      "chapter_index": 3,
+      "chapter_title": "# Chapter 3: The Betrayal",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "# Chapter 3: The Betrayal"
+      ]
+    }
+  ],
+  "_method": "συχνότητα λέξεων (εκτός stopwords) + dark/bright λεξιλόγιο ανά κεφάλαιο — όχι presets",
+  "_note": "Για τελική μουσική/φωτισμό χρειάζεται art direction· εδώ δίνουμε χαρτογράφηση θεμάτων"
+}

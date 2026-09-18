@@ -1,0 +1,205 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:27:28.147792",
+    "derived_version": "2026-09-14T22:27:28.171792",
+    "extraction_timestamp": "2026-09-14T22:27:28.338918",
+    "canonical_uuids_present": 3,
+    "open_space_count": 2,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 2
+    },
+    "projection_agent": "world-builder"
+  },
+  "_epistemic_layer": "derived",
+  "relationship-matrix.json": [
+    {
+      "source": "Chapter",
+      "target": "Beginning",
+      "co_occurrence_ratio": 0.0,
+      "shared_chapters": 0,
+      "evidence": [
+        "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+      ],
+      "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+    }
+  ],
+  "information-spread-graph.json": {
+    "nodes": [
+      {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "line": 1,
+          "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      },
+      {
+        "name": "Beginning",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "line": 1,
+          "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      }
+    ],
+    "co_occurrence_edges": [
+      {
+        "source": "Chapter",
+        "target": "Beginning",
+        "shared_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "shared_count": 1,
+        "evidence": [
+          {
+            "chapter": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+            "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ]
+      }
+    ],
+    "propagation_order": [],
+    "isolated_characters": [],
+    "total_chapters": 1,
+    "_method": "presence ανά κεφάλαιο + co-occurrence + first-appearance order — όχι σταθερά schedules",
+    "_note": "Για Utility-AI schedules χρειάζεται game design· εδώ δίνουμε διάδοση πληροφορίας στο κείμενο"
+  },
+  "faction-dynamics.json": {
+    "nodes": [
+      {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "line": 1,
+          "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      },
+      {
+        "name": "Beginning",
+        "role": "Recurring Entity",
+        "appears_in_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "chapter_count": 1,
+        "first_appearance": {
+          "chapter_index": 1,
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "line": 1,
+          "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "Chapter",
+        "target": "Beginning",
+        "shared_chapters": [
+          {
+            "chapter_index": 1,
+            "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ],
+        "shared_count": 1,
+        "evidence": [
+          {
+            "chapter": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+            "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+          }
+        ]
+      }
+    ]
+  },
+  "expansion-grammar.json": {
+    "book_title": "Book",
+    "story_grammar": {
+      "QUEST": [
+        "<INCITING_INCIDENT> -> <DISCOVERY_PHASE> -> <COMPLICATION> -> <RESOLUTION>"
+      ],
+      "INCITING_INCIDENT": [
+        "Μήνυμα για τον Chapter ανακαλύπτεται στην Κεντρική Τοποθεσία",
+        "Ο/Η Beginning ζητά βοήθεια υπό την απειλή άγνωστης φατρίας",
+        "Το αντικείμενο εξαφανίζεται από την Κεντρική Τοποθεσία"
+      ],
+      "DISCOVERY_PHASE": [
+        "Αποκρυπτογράφηση ενδείξεων για το μυστικό",
+        "Μυστική συνάντηση στην Κεντρική Τοποθεσία",
+        "Συνομιλία με Chapter για την αλήθεια"
+      ],
+      "COMPLICATION": [
+        "Προδοσία από απρόσμενο σύμμαχο του Chapter",
+        "Χρονικός περιορισμός πριν επέμβουν οι αντίπαλοι",
+        "Ηθικό δίλημμα: θυσία αντικείμενο για σωτηρία"
+      ],
+      "RESOLUTION": [
+        "Αποκάλυψη για το παρελθόν με επίδραση στις φατρίες",
+        "Απόκτηση αντικείμενο ως κλειδί για το επόμενο κεφάλαιο",
+        "Νέο ισοζύγιο στην Κεντρική Τοποθεσία"
+      ]
+    },
+    "terminals_source": "entities.json (πραγματικά ονόματα από το κείμενο)",
+    "dynamic_difficulty_adjustment": {
+      "evaluation_window_seconds": 90,
+      "difficulty_tuning_knobs": {
+        "player_performance_high": "Αύξηση πίεσης αντιπάλων, μείωση drops",
+        "player_performance_low": "Εισαγωγή πλεονεκτημάτων περιβάλλοντος, μεγαλύτερο παράθυρο αντίδρασης",
+        "target_flow_equilibrium": "Διατήρηση έντασης 0.40-0.75 (βάσει pacing curve)"
+      }
+    },
+    "modding_extensibility_manifest": {
+      "schema_version": "2.0",
+      "terminals": {
+        "CHARACTER": [
+          "Chapter",
+          "Beginning"
+        ],
+        "LOCATION": [
+          "Κεντρική Τοποθεσία"
+        ],
+        "OBJECT": [],
+        "CONCEPT": [],
+        "FACTION": []
+      },
+      "validation_hook": "scripts/audit_lore_drift.py --mod-mode",
+      "_note": "terminals = πραγματικά ονόματα από το βιβλίο — όχι placeholders <CHARACTER>"
+    },
+    "_method": "terminals από entities + φράσεις με πραγματικά ονόματα",
+    "_caveat": "Για procedural quests χρειάζεται LLM expansion πάνω στη γραμματική"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_tool": "book2game v2.0.0-whitebox",
+  "_generated": "2026-09-14T22:27:28.446430",
+  "_seed": 42,
+  "_deterministic": true,
+  "project": "Temp_epub_test",
+  "edges_detected": 0,
+  "top_risk": null,
+  "edges": [],
+  "simulation": {
+    "seed": 42,
+    "deterministic": true,
+    "total_edges": 0,
+    "outcomes": [],
+    "metrics": {
+      "robustness": 1.0,
+      "high_severity_robustness": 1.0,
+      "passed": 0,
+      "failed": 0,
+      "top_failure": null
+    }
+  },
+  "summary": {
+    "robustness": 1.0,
+    "high_severity_robustness": 1.0,
+    "verdict": "PASS",
+    "seed": 42
+  },
+  "provenance": {
+    "inputs": [
+      "design/narrative/choice-tree.json",
+      "design/balance/tension-pacing-curve.json"
+    ],
+    "method": "deterministic whitebox: risk-edge detection + seeded traversal (seed=42)",
+    "repro": "python scripts/whitebox_runner.py <project_dir> --seed 42"
+  }
+}

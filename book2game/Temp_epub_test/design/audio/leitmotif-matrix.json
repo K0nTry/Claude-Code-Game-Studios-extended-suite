@@ -1,0 +1,85 @@
+{
+  "global_keywords": [
+    {
+      "word": "beginning",
+      "count": 2
+    },
+    {
+      "word": "this",
+      "count": 1
+    },
+    {
+      "word": "first",
+      "count": 1
+    },
+    {
+      "word": "paragraph",
+      "count": 1
+    },
+    {
+      "word": "minimal",
+      "count": 1
+    },
+    {
+      "word": "test",
+      "count": 1
+    },
+    {
+      "word": "epub",
+      "count": 1
+    },
+    {
+      "word": "book",
+      "count": 1
+    }
+  ],
+  "leitmotif_matrix": [
+    {
+      "chapter_index": 1,
+      "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+      "top_keywords": [
+        {
+          "word": "beginning",
+          "count": 2
+        },
+        {
+          "word": "this",
+          "count": 1
+        },
+        {
+          "word": "first",
+          "count": 1
+        },
+        {
+          "word": "paragraph",
+          "count": 1
+        },
+        {
+          "word": "minimal",
+          "count": 1
+        }
+      ],
+      "dominant_theme": "beginning",
+      "tone": "ισορροπημένος",
+      "evidence": [
+        "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+      ],
+      "audio_hint": "ουδέτερο ambient"
+    }
+  ],
+  "lighting_color_script": [
+    {
+      "chapter_index": 1,
+      "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+      "tone": "ισορροπημένος",
+      "dark_hits": 0,
+      "bright_hits": 0,
+      "lut_suggestion": "Neutral cinematic",
+      "evidence": [
+        "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+      ]
+    }
+  ],
+  "_method": "συχνότητα λέξεων (εκτός stopwords) + dark/bright λεξιλόγιο ανά κεφάλαιο — όχι presets",
+  "_note": "Για τελική μουσική/φωτισμό χρειάζεται art direction· εδώ δίνουμε χαρτογράφηση θεμάτων"
+}

@@ -1,0 +1,2219 @@
+{
+  "package_version": "17.1-phase1",
+  "source": {
+    "file": "sample_real_book.txt",
+    "sha256": "sha256:207632d33d2e17f0d2b403d78534e3ad96574adf9e3a21b61175503b61203bfd",
+    "ir": "source/document_ir.json"
+  },
+  "artifacts": [
+    {
+      "path": "benchmarks/executive_audit_report.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "benchmarks/nash-equilibrium-report.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "benchmarks/player-personas-simulation.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "benchmarks/whitebox-validation.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "canon/entities.json",
+      "tier": 0,
+      "authoritative": true,
+      "kind": "entities",
+      "count": 4
+    },
+    {
+      "path": "canon/entity-aliases.json",
+      "tier": 0,
+      "authoritative": true,
+      "kind": "entity_aliases",
+      "count": 3
+    },
+    {
+      "path": "canon/relationships.json",
+      "tier": 0,
+      "authoritative": true,
+      "kind": "relationships",
+      "count": 0
+    },
+    {
+      "path": "canon/unresolved-ambiguities.json",
+      "tier": 0,
+      "authoritative": true,
+      "kind": "unresolved_ambiguities",
+      "count": 1
+    },
+    {
+      "path": "canon/world-boundaries.json",
+      "tier": 0,
+      "authoritative": true,
+      "kind": "world_boundaries",
+      "count": 2
+    },
+    {
+      "path": "canon/world-glossary.json",
+      "tier": 0,
+      "authoritative": true,
+      "kind": "world_glossary",
+      "count": 1
+    },
+    {
+      "path": "design/ai/npc-utility-schedules.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/art/art-bible.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/art/lighting-color-script.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/audio/leitmotif-matrix.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/balance/economy-formulas.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/balance/progression-gini.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/balance/tension-pacing-curve.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/gdd/game-concept.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/gdd/game-pillars.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/gdd/systems-index.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/mechanics/dda-rules.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/mechanics/emotion-triggers.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/mechanics/faction-dynamics.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/narrative/character-psychology.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/narrative/choice-tree.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/narrative/consequences-matrix.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/narrative/expansion-grammar.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "design/narrative/voice-fingerprints.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "lore/bible.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "lore/information-spread-graph.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "lore/relationship-matrix.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "source/document_ir.json",
+      "tier": 0,
+      "authoritative": true,
+      "kind": "document_ir",
+      "count": 3
+    },
+    {
+      "path": "source/full_text.md",
+      "tier": 0,
+      "authoritative": true,
+      "kind": "full_text",
+      "count": 1
+    },
+    {
+      "path": "source/paragraph-hashes.json",
+      "tier": 0,
+      "authoritative": true,
+      "kind": "paragraph_hashes",
+      "count": 2
+    },
+    {
+      "path": "technical/mod-api-schema.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "derived",
+      "count": 1
+    },
+    {
+      "path": "views/projections/accessibility-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/accessibility-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/accessibility-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/accessibility-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/accessibility-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ai-programmer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ai-programmer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ai-programmer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ai-programmer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ai-programmer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/analytics-engineer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/analytics-engineer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/analytics-engineer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/analytics-engineer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/analytics-engineer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/art-director/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/art-director/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/art-director/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/art-director/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/art-director/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/audio-director/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/audio-director/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/audio-director/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/audio-director/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/audio-director/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/community-manager/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/community-manager/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/community-manager/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/community-manager/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/community-manager/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/creative-director/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/creative-director/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/creative-director/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/creative-director/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/creative-director/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/devops-engineer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/devops-engineer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/devops-engineer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/devops-engineer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/devops-engineer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/economy-designer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/economy-designer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/economy-designer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/economy-designer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/economy-designer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/engine-programmer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/engine-programmer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/engine-programmer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/engine-programmer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/engine-programmer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/game-designer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/game-designer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/game-designer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/game-designer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/game-designer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/gameplay-programmer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/gameplay-programmer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/gameplay-programmer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/gameplay-programmer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/gameplay-programmer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-csharp-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-csharp-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-csharp-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-csharp-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-csharp-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-gdextension-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-gdextension-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-gdextension-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-gdextension-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-gdextension-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-gdscript-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-gdscript-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-gdscript-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-gdscript-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-gdscript-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-shader-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-shader-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-shader-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-shader-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-shader-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/godot-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/lead-programmer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/lead-programmer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/lead-programmer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/lead-programmer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/lead-programmer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/level-designer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/level-designer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/level-designer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/level-designer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/level-designer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/live-ops-designer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/live-ops-designer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/live-ops-designer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/live-ops-designer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/live-ops-designer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/localization-lead/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/localization-lead/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/localization-lead/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/localization-lead/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/localization-lead/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/narrative-director/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/narrative-director/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/narrative-director/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/narrative-director/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/narrative-director/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/network-programmer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/network-programmer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/network-programmer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/network-programmer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/network-programmer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/performance-analyst/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/performance-analyst/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/performance-analyst/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/performance-analyst/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/performance-analyst/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/producer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/producer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/producer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/producer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/producer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/prototyper/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/prototyper/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/prototyper/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/prototyper/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/prototyper/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/qa-lead/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/qa-lead/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/qa-lead/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/qa-lead/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/qa-lead/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/qa-tester/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/qa-tester/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/qa-tester/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/qa-tester/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/qa-tester/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/release-manager/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/release-manager/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/release-manager/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/release-manager/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/release-manager/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/security-engineer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/security-engineer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/security-engineer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/security-engineer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/security-engineer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/sound-designer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/sound-designer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/sound-designer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/sound-designer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/sound-designer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/systems-designer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/systems-designer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/systems-designer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/systems-designer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/systems-designer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/technical-artist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/technical-artist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/technical-artist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/technical-artist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/technical-artist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/technical-director/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/technical-director/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/technical-director/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/technical-director/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/technical-director/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/tools-programmer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/tools-programmer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/tools-programmer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/tools-programmer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/tools-programmer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-blueprint-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-blueprint-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-blueprint-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-blueprint-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-blueprint-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-gas-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-gas-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-gas-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-gas-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-gas-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-replication-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-replication-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-replication-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-replication-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-replication-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-umg-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-umg-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-umg-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-umg-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ue-umg-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ui-programmer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ui-programmer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ui-programmer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ui-programmer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ui-programmer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-addressables-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-addressables-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-addressables-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-addressables-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-addressables-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-dots-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-dots-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-dots-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-dots-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-dots-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-shader-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-shader-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-shader-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-shader-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-shader-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-ui-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-ui-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-ui-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-ui-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unity-ui-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unreal-specialist/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unreal-specialist/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unreal-specialist/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unreal-specialist/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/unreal-specialist/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ux-designer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ux-designer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ux-designer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ux-designer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/ux-designer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/world-builder/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/world-builder/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/world-builder/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/world-builder/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/world-builder/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/writer/CONTEXT_BOUNDARY.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/writer/IMMUTABLE_KERNEL.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/writer/README.md",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/writer/canon.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    },
+    {
+      "path": "views/projections/writer/derived.projection.json",
+      "tier": 1,
+      "authoritative": false,
+      "kind": "projection_view",
+      "canonical_source": "canon/entities.json",
+      "count": 1
+    }
+  ],
+  "handoff": {
+    "status": "PASS",
+    "report": "_handover.json"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "source_file": "minimal.pdf",
+  "file_hash": "sha256:a7715dc9ffd27eb89b64446c6db4eda0c9a805e1c0b4903ecf5779f31d73c316",
+  "detected_format": "pdf",
+  "generated_at": "2026-09-14T22:45:33.115864",
+  "blocks": [
+    {
+      "index": 0,
+      "type": "paragraph",
+      "text": "Minimal Test Book PDF\nChapter 1: The Beginning\nThis is the first paragraph of the minimal test PDF book.",
+      "page": 1,
+      "hash": "sha256:d3464c2cb4f70659a9ea5f0938ba9c95c70d3c900706f5eb76532bc3685f6482"
+    }
+  ],
+  "tables": [],
+  "assets": [],
+  "notes": []
+}

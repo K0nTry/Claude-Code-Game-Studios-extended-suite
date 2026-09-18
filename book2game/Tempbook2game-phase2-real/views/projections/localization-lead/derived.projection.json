@@ -1,0 +1,107 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T21:56:48.822506",
+    "derived_version": "2026-09-14T21:56:48.851741",
+    "extraction_timestamp": "2026-09-14T21:56:48.933312",
+    "canonical_uuids_present": 3,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "localization-lead"
+  },
+  "_epistemic_layer": "derived",
+  "voice-fingerprints.json": {
+    "Kael": {
+      "name": "Kael",
+      "speech_rhythm": "σιωπηλός (καμία άμεση ατάκα στο κείμενο)",
+      "avg_sentence_length_words": 0,
+      "vocabulary_tier": "— (καμία άμεση ατάκα)",
+      "type_token_ratio": 0,
+      "dialogue_count": 0,
+      "sample_quotes": [],
+      "method": "μετρήθηκε από διαλόγους «…» που αποδίδονται στον χαρακτήρα στο κείμενο"
+    },
+    "Zora": {
+      "name": "Zora",
+      "speech_rhythm": "σιωπηλός (καμία άμεση ατάκα στο κείμενο)",
+      "avg_sentence_length_words": 0,
+      "vocabulary_tier": "— (καμία άμεση ατάκα)",
+      "type_token_ratio": 0,
+      "dialogue_count": 0,
+      "sample_quotes": [],
+      "method": "μετρήθηκε από διαλόγους «…» που αποδίδονται στον χαρακτήρα στο κείμενο"
+    },
+    "Chapter": {
+      "name": "Chapter",
+      "speech_rhythm": "σιωπηλός (καμία άμεση ατάκα στο κείμενο)",
+      "avg_sentence_length_words": 0,
+      "vocabulary_tier": "— (καμία άμεση ατάκα)",
+      "type_token_ratio": 0,
+      "dialogue_count": 0,
+      "sample_quotes": [],
+      "method": "μετρήθηκε από διαλόγους «…» που αποδίδονται στον χαρακτήρα στο κείμενο"
+    }
+  },
+  "expansion-grammar.json": {
+    "book_title": "Book",
+    "story_grammar": {
+      "QUEST": [
+        "<INCITING_INCIDENT> -> <DISCOVERY_PHASE> -> <COMPLICATION> -> <RESOLUTION>"
+      ],
+      "INCITING_INCIDENT": [
+        "Μήνυμα για τον Kael ανακαλύπτεται στην Κεντρική Τοποθεσία",
+        "Ο/Η Zora ζητά βοήθεια υπό την απειλή άγνωστης φατρίας",
+        "Το αντικείμενο εξαφανίζεται από την Κεντρική Τοποθεσία"
+      ],
+      "DISCOVERY_PHASE": [
+        "Αποκρυπτογράφηση ενδείξεων για το μυστικό",
+        "Μυστική συνάντηση στην Κεντρική Τοποθεσία",
+        "Συνομιλία με Kael για την αλήθεια"
+      ],
+      "COMPLICATION": [
+        "Προδοσία από απρόσμενο σύμμαχο του Kael",
+        "Χρονικός περιορισμός πριν επέμβουν οι αντίπαλοι",
+        "Ηθικό δίλημμα: θυσία αντικείμενο για σωτηρία"
+      ],
+      "RESOLUTION": [
+        "Αποκάλυψη για το παρελθόν με επίδραση στις φατρίες",
+        "Απόκτηση αντικείμενο ως κλειδί για το επόμενο κεφάλαιο",
+        "Νέο ισοζύγιο στην Κεντρική Τοποθεσία"
+      ]
+    },
+    "terminals_source": "entities.json (πραγματικά ονόματα από το κείμενο)",
+    "dynamic_difficulty_adjustment": {
+      "evaluation_window_seconds": 90,
+      "difficulty_tuning_knobs": {
+        "player_performance_high": "Αύξηση πίεσης αντιπάλων, μείωση drops",
+        "player_performance_low": "Εισαγωγή πλεονεκτημάτων περιβάλλοντος, μεγαλύτερο παράθυρο αντίδρασης",
+        "target_flow_equilibrium": "Διατήρηση έντασης 0.40-0.75 (βάσει pacing curve)"
+      }
+    },
+    "modding_extensibility_manifest": {
+      "schema_version": "2.0",
+      "terminals": {
+        "CHARACTER": [
+          "Kael",
+          "Zora",
+          "Chapter"
+        ],
+        "LOCATION": [
+          "Κεντρική Τοποθεσία"
+        ],
+        "OBJECT": [],
+        "CONCEPT": [],
+        "FACTION": []
+      },
+      "validation_hook": "scripts/audit_lore_drift.py --mod-mode",
+      "_note": "terminals = πραγματικά ονόματα από το βιβλίο — όχι placeholders <CHARACTER>"
+    },
+    "_method": "terminals από entities + φράσεις με πραγματικά ονόματα",
+    "_caveat": "Για procedural quests χρειάζεται LLM expansion πάνω στη γραμματική"
+  }
+}

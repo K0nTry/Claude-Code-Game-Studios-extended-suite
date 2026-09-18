@@ -1,0 +1,89 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:04:42.808796",
+    "derived_version": "2026-09-14T22:04:42.843540",
+    "extraction_timestamp": "2026-09-14T22:04:43.051113",
+    "canonical_uuids_present": 4,
+    "open_space_count": 0,
+    "epistemic_breakdown": {
+      "canon": 4,
+      "derived": 0,
+      "open_space": 0
+    },
+    "projection_agent": "network-programmer"
+  },
+  "_epistemic_layer": "canon",
+  "entities.json": {
+    "characters": [
+      {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "# Chapter 1: The Gathering",
+            "line": 1
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_001",
+        "_category": "characters"
+      },
+      {
+        "name": "Elder",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "Elder Thorne, the keeper of the Chronos Blade, spoke first.",
+            "line": 3
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_002",
+        "_category": "characters"
+      },
+      {
+        "name": "Lyra",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "Lyra left the city of Aethelgard.",
+            "line": 7
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_003",
+        "_category": "characters"
+      },
+      {
+        "name": "Within",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "Within the ruins, she found the Ancient Data Core.",
+            "line": 17
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_004",
+        "_category": "characters"
+      }
+    ],
+    "locations": [],
+    "objects": [],
+    "factions": []
+  }
+}

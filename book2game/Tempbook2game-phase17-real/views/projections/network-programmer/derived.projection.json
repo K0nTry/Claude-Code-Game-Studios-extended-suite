@@ -1,0 +1,36 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:07:07.954006",
+    "derived_version": "2026-09-14T22:07:07.990005",
+    "extraction_timestamp": "2026-09-14T22:07:08.197200",
+    "canonical_uuids_present": 3,
+    "open_space_count": 0,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 0
+    },
+    "projection_agent": "network-programmer"
+  },
+  "_epistemic_layer": "derived",
+  "mod-api-schema.json": {
+    "schema_version": "2.0",
+    "terminals": {
+      "CHARACTER": [
+        "Kael",
+        "Zora",
+        "Chapter"
+      ],
+      "LOCATION": [
+        "Κεντρική Τοποθεσία"
+      ],
+      "OBJECT": [],
+      "CONCEPT": [],
+      "FACTION": []
+    },
+    "validation_hook": "scripts/audit_lore_drift.py --mod-mode",
+    "_note": "terminals = πραγματικά ονόματα από το βιβλίο — όχι placeholders <CHARACTER>"
+  }
+}

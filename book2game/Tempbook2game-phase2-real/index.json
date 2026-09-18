@@ -1,0 +1,34 @@
+{
+  "source": "sample_real_book.txt",
+  "generated": "2026-09-14T21:56:48.813996",
+  "total_chars": 577,
+  "total_words": 104,
+  "chunks": 3,
+  "entries": [
+    {
+      "id": "ch01",
+      "title": "# Chapter 1: The Echoes of Old",
+      "file": "chapters/ch01-chapter-1-the-echoes-of-old.md",
+      "chars": 199,
+      "words": 36,
+      "offset": 0
+    },
+    {
+      "id": "ch02",
+      "title": "# Chapter 2: The Bargain",
+      "file": "chapters/ch02-chapter-2-the-bargain.md",
+      "chars": 208,
+      "words": 37,
+      "offset": 201
+    },
+    {
+      "id": "ch03",
+      "title": "# Chapter 3: The Betrayal",
+      "file": "chapters/ch03-chapter-3-the-betrayal.md",
+      "chars": 165,
+      "words": 31,
+      "offset": 411
+    }
+  ],
+  "rag_hint": "Χρήση: grep -n 'όρος' full_text.md  ή  grep -rn 'όρος' chapters/  — για μεγάλα βιβλία μην κάνεις Read(full_text.md)"
+}

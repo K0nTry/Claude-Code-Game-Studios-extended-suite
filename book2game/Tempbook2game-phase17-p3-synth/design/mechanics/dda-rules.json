@@ -1,0 +1,8 @@
+{
+  "evaluation_window_seconds": 90,
+  "difficulty_tuning_knobs": {
+    "player_performance_high": "Αύξηση πίεσης αντιπάλων, μείωση drops",
+    "player_performance_low": "Εισαγωγή πλεονεκτημάτων περιβάλλοντος, μεγαλύτερο παράθυρο αντίδρασης",
+    "target_flow_equilibrium": "Διατήρηση έντασης 0.40-0.75 (βάσει pacing curve)"
+  }
+}

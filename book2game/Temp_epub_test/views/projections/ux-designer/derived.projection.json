@@ -1,0 +1,131 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:27:28.147792",
+    "derived_version": "2026-09-14T22:27:28.162793",
+    "extraction_timestamp": "2026-09-14T22:27:28.342429",
+    "canonical_uuids_present": 2,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 2,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "ux-designer"
+  },
+  "_epistemic_layer": "derived",
+  "choice-tree.json": {
+    "branching_graph": {
+      "nodes": [
+        {
+          "id": "node_00_intro",
+          "type": "Intro",
+          "label": "Αρχή — setup"
+        },
+        {
+          "id": "node_01_c_______1:_t",
+          "type": "Chapter",
+          "title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "index": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "node_00_intro",
+          "to": "node_01_c_______1:_t"
+        }
+      ],
+      "algorithm": "decision points extracted from text + linear chapter spine + BFS reachability"
+    },
+    "decision_points": [],
+    "validation": {
+      "total_nodes": 2,
+      "chapter_nodes": 1,
+      "decision_nodes": 0,
+      "visited_nodes": 2,
+      "orphan_nodes": [],
+      "isolated_decisions": [],
+      "orphan_rate": 0.0,
+      "verdict": "PASS"
+    },
+    "_method": "regex decision lexicon + sentence scan + chapter-mapped DAG — όχι σταθερά 3 τέλη",
+    "_note": "Για πλήρες branching με πολλαπλά τέλη απαιτείται LLM enrichment πάνω στα evidence"
+  },
+  "character-psychology.json": {
+    "psychology": {
+      "Chapter": {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "big_five": {
+          "openness": 35,
+          "conscientiousness": 35,
+          "extraversion": 30,
+          "agreeableness": 40,
+          "neuroticism": 25
+        },
+        "big_five_method": "lexical proxies from dialogue (questions, social/organizing/negative vocab, TTR, volume)",
+        "big_five_note": "Για κλινική ακρίβεια Big-5 απαιτείται LLM enrichment — εδώ δίνουμε ανιχνεύσιμα proxies",
+        "moral_alignment": "Πραγματιστής / Ουδέτερος",
+        "core_flaw": "Συντηρητικός / αποφεύγει το ρίσκο",
+        "driving_desire": "Απόδειξη αξίας / αναγνώριση",
+        "dialogue_count": 0,
+        "evidence_dialogues": []
+      },
+      "Beginning": {
+        "name": "Beginning",
+        "role": "Recurring Entity",
+        "big_five": {
+          "openness": 35,
+          "conscientiousness": 35,
+          "extraversion": 30,
+          "agreeableness": 40,
+          "neuroticism": 25
+        },
+        "big_five_method": "lexical proxies from dialogue (questions, social/organizing/negative vocab, TTR, volume)",
+        "big_five_note": "Για κλινική ακρίβεια Big-5 απαιτείται LLM enrichment — εδώ δίνουμε ανιχνεύσιμα proxies",
+        "moral_alignment": "Πραγματιστής / Ουδέτερος",
+        "core_flaw": "Συντηρητικός / αποφεύγει το ρίσκο",
+        "driving_desire": "Απόδειξη αξίας / αναγνώριση",
+        "dialogue_count": 0,
+        "evidence_dialogues": []
+      }
+    },
+    "voice_fingerprints": {
+      "Chapter": {
+        "name": "Chapter",
+        "speech_rhythm": "σιωπηλός (καμία άμεση ατάκα στο κείμενο)",
+        "avg_sentence_length_words": 0,
+        "vocabulary_tier": "— (καμία άμεση ατάκα)",
+        "type_token_ratio": 0,
+        "dialogue_count": 0,
+        "sample_quotes": [],
+        "method": "μετρήθηκε από διαλόγους «…» που αποδίδονται στον χαρακτήρα στο κείμενο"
+      },
+      "Beginning": {
+        "name": "Beginning",
+        "speech_rhythm": "σιωπηλός (καμία άμεση ατάκα στο κείμενο)",
+        "avg_sentence_length_words": 0,
+        "vocabulary_tier": "— (καμία άμεση ατάκα)",
+        "type_token_ratio": 0,
+        "dialogue_count": 0,
+        "sample_quotes": [],
+        "method": "μετρήθηκε από διαλόγους «…» που αποδίδονται στον χαρακτήρα στο κείμενο"
+      }
+    },
+    "relationship_matrix": [
+      {
+        "source": "Chapter",
+        "target": "Beginning",
+        "co_occurrence_ratio": 0.0,
+        "shared_chapters": 0,
+        "evidence": [
+          "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book."
+        ],
+        "note": "co-occurrence = σε πόσα κεφάλαια/ενότητες εμφανίζονται μαζί"
+      }
+    ],
+    "_method": "dialogue extraction + lexical proxies (TTR, length, vocab hits) — όχι presets",
+    "_caveat": "Big-5 εδώ είναι proxies· για αφηγηματική ακρίβεια χρειάζεται LLM enrichment πάνω στα evidence"
+  }
+}

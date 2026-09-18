@@ -1,0 +1,42 @@
+{
+  "_description": "Canonical UUID schemas for deterministic entity identity across all projections.",
+  "_note": "UUIDs are deterministic: char_NNN, loc_NNN, obj_NNN, event_NNN, faction_NNN. NNN is zero-padded ordinal of first appearance in source text.",
+  "schemas": {
+    "character": {
+      "prefix": "char_",
+      "digits": 3,
+      "example": "char_001",
+      "description": "First-appeared character. Ordinal = order of first mention in full_text.md."
+    },
+    "location": {
+      "prefix": "loc_",
+      "digits": 3,
+      "example": "loc_001",
+      "description": "First-appeared location. Ordinal = order of first mention."
+    },
+    "object": {
+      "prefix": "obj_",
+      "digits": 3,
+      "example": "obj_001",
+      "description": "Significant object/artifact. Ordinal = order of first mention."
+    },
+    "event": {
+      "prefix": "evt_",
+      "digits": 3,
+      "example": "evt_001",
+      "description": "Narrative event/scene. Ordinal = order of occurrence in text."
+    },
+    "faction": {
+      "prefix": "fac_",
+      "digits": 3,
+      "example": "fac_001",
+      "description": "Group/organization. Ordinal = order of first mention."
+    }
+  },
+  "rules": [
+    "UUIDs are assigned at canon creation time and never reassigned.",
+    "If entity is split later, original UUID stays with the primary; derived entity gets new UUID.",
+    "UUIDs are lowercase ASCII only: [a-z]_[0-9]+.",
+    "Cross-references between projections use these UUIDs as stable keys."
+  ]
+}

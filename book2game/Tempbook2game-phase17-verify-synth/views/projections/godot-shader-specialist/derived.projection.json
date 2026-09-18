@@ -1,0 +1,37 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:11:24.165104",
+    "derived_version": "2026-09-14T22:11:24.196944",
+    "extraction_timestamp": "2026-09-14T22:11:24.390538",
+    "canonical_uuids_present": 4,
+    "open_space_count": 0,
+    "epistemic_breakdown": {
+      "canon": 4,
+      "derived": 0,
+      "open_space": 0
+    },
+    "projection_agent": "godot-shader-specialist"
+  },
+  "_epistemic_layer": "derived",
+  "mod-api-schema.json": {
+    "schema_version": "2.0",
+    "terminals": {
+      "CHARACTER": [
+        "Lyra",
+        "Within",
+        "Elder",
+        "Chapter"
+      ],
+      "LOCATION": [
+        "Κεντρική Τοποθεσία"
+      ],
+      "OBJECT": [],
+      "CONCEPT": [],
+      "FACTION": []
+    },
+    "validation_hook": "scripts/audit_lore_drift.py --mod-mode",
+    "_note": "terminals = πραγματικά ονόματα από το βιβλίο — όχι placeholders <CHARACTER>"
+  }
+}

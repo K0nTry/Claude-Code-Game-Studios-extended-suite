@@ -1,0 +1,79 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:11:25.246375",
+    "derived_version": "2026-09-14T22:11:25.269401",
+    "extraction_timestamp": "2026-09-14T22:11:25.339015",
+    "canonical_uuids_present": 3,
+    "open_space_count": 1,
+    "epistemic_breakdown": {
+      "canon": 3,
+      "derived": 0,
+      "open_space": 1
+    },
+    "projection_agent": "audio-director"
+  },
+  "_epistemic_layer": "canon",
+  "entities.json": {
+    "characters": [
+      {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "# Chapter 1: The Echoes of Old",
+            "line": 1
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_001",
+        "_category": "characters"
+      },
+      {
+        "name": "Kael",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "Kael looked out of the viewport.",
+            "line": 2
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_002",
+        "_category": "characters"
+      },
+      {
+        "name": "Zora",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "At the space station, Zora waited.",
+            "line": 7
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_003",
+        "_category": "characters"
+      }
+    ],
+    "locations": [],
+    "objects": [],
+    "factions": []
+  },
+  "relationships.json": [],
+  "world-glossary.json": {
+    "_epistemic": "open_space",
+    "_reason": "Glossary to be populated by narrative analysis from canon entities",
+    "terms": []
+  }
+}

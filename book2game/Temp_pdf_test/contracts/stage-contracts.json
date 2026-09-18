@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "book2game/contracts/stage-contracts.json",
+  "version": "1.0.0",
+  "description": "Root-level stage contracts for book2game. Defines ownership, inputs, outputs and handoff gates per stage. A Stage claims ONLY what its contract declares.",
+  "tool": "book2game",
+  "contract_principle": "No stage may claim outputs outside its declared outputs. Anything declared output but not verifiable is quarantined to canon/unresolved-ambiguities.json.",
+  "stages": [
+    {
+      "id": "stage-01-source",
+      "label": "Source Extraction",
+      "owner": "parse_book.py::extract_text + write_source_hashes",
+      "tier": 0,
+      "inputs": ["<book-file: pdf|epub|docx|txt|md>"],
+      "outputs": [
+        "source/document_ir.json",
+        "source/full_text.md",
+        "source/paragraph-hashes.json",
+        "full_text.md",
+        "chapters/chNN-*.md",
+        "index.json"
+      ],
+      "handoff_gate": "(full_text.md || source/full_text.md) exists && paragraph-hashes.file_hash == sha256(source/full_text.md) && document_ir.json exists && document_ir.file_hash present",
+      "invariants": ["No truncation: len(full_text.md) >= len(book) - headers"]
+    },
+    {
+      "id": "stage-02-canon",
+      "label": "Canon Layer",
+      "owner": "parse_book.py::write_canon_layer + extract_entities.py",
+      "tier": 0,
+      "inputs": ["source/full_text.md", "source/paragraph-hashes.json"],
+      "outputs": [
+        "canon/entities.json",
+        "canon/relationships.json",
+        "canon/entity-aliases.json",
+        "canon/world-boundaries.json",
+        "canon/world-glossary.json",
+        "canon/unresolved-ambiguities.json",
+        "audit/provenance.json",
+        "entities.json"
+      ],
+      "handoff_gate": "every canon entity has _uuid and _epistemic==canon; relationships have _source_uuid/_target_uuid; ambiguous items quarantined",
+      "invariants": ["UUIDs deterministic (first-mention order)", "No hallucination: all canon traceable to paragraph hash"]
+    },
+    {
+      "id": "stage-03-derived",
+      "label": "Derived Layer (Cycles 5-12)",
+      "owner": "parse_book.py::write_advanced_artifacts",
+      "tier": 1,
+      "inputs": ["canon/entities.json", "chapters/*", "archetype.json"],
+      "outputs": [
+        "design/narrative/character-psychology.json",
+        "design/narrative/voice-fingerprints.json",
+        "design/balance/tension-pacing-curve.json",
+        "design/balance/economy-formulas.md",
+        "design/narrative/choice-tree.json",
+        "design/narrative/consequences-matrix.md",
+        "benchmarks/player-personas-simulation.json",
+        "design/audio/leitmotif-matrix.json",
+        "design/art/lighting-color-script.json",
+        "lore/information-spread-graph.json",
+        "design/ai/npc-utility-schedules.json",
+        "design/mechanics/faction-dynamics.json",
+        "benchmarks/nash-equilibrium-report.json",
+        "design/balance/progression-gini.json",
+        "design/narrative/expansion-grammar.json",
+        "design/mechanics/dda-rules.json",
+        "technical/mod-api-schema.json",
+        "benchmarks/executive_audit_report.json"
+      ],
+      "handoff_gate": "all JSON valid; each has evidence/citations or explicit open_space label; no FAKE_METRICS",
+      "invariants": ["Cycles 5-12 evidence-grounded; no hardcoded 99.8% / Nash / retention claims (quarantined if present)"]
+    },
+    {
+      "id": "stage-04-projections",
+      "label": "Projection Views",
+      "owner": "assemble_projection.py",
+      "tier": 1,
+      "inputs": [
+        "canon/*.json",
+        "design/**",
+        "benchmarks/**",
+        "lore/**",
+        "technical/mod-api-schema.json",
+        "source/full_text.md"
+      ],
+      "outputs": ["views/projections/<agent>/IMMUTABLE_KERNEL.md", "views/projections/<agent>/canon.projection.json", "views/projections/<agent>/derived.projection.json", "views/projections/<agent>/README.md", "views/projections/<agent>/CONTEXT_BOUNDARY.md"],
+      "handoff_gate": "every assembled projection has IMMUTABLE_KERNEL.md with source_hash + canonical_uuids_present; kernel matches provenance",
+      "invariants": ["Self-contained: agent can produce deliverable without source lookup", "CANON/DERIVED/OPEN_SPACE epistemic breakdown recorded"]
+    },
+    {
+      "id": "stage-05-whitebox",
+      "label": "Whitebox Runtime Validation",
+      "owner": "whitebox_runner.py",
+      "tier": 2,
+      "inputs": ["design/narrative/choice-tree.json", "design/balance/tension-pacing-curve.json"],
+      "outputs": ["benchmarks/whitebox-validation.json"],
+      "handoff_gate": "whitebox-validation.json exists; deterministic==true; seed recorded; PASS requires robustness >= 0.6 else NEEDS_ATTENTION is non-fatal",
+      "invariants": ["Pure stdlib; no ML; deterministic with seed=42 by default", "Top risk edge identified (highest fan-out / steepest tension drop)"]
+    },
+    {
+      "id": "stage-06-contracts",
+      "label": "Contract Distribution",
+      "owner": "parse_book.py::write_contract_snapshot",
+      "tier": 0,
+      "inputs": ["contracts/stage-contracts.json (repo root)"],
+      "outputs": ["contracts/stage-contracts.json"],
+      "handoff_gate": "contracts/stage-contracts.json present in output; version matches repo contracts/stage-contracts.json",
+      "invariants": ["Stage ownership is authority: a stage may not claim an output outside its declared outputs", "Stage-crossing claim → quarantine to canon/unresolved-ambiguities.json"]
+    },
+    {
+      "id": "stage-07-handover",
+      "label": "Package Index & Handover (Phase 17 Phase 1)",
+      "owner": "build_package_index.py::run",
+      "tier": 1,
+      "inputs": ["source/document_ir.json", "canon/*", "design/**", "benchmarks/**", "audit/provenance.json"],
+      "outputs": ["_manifest.json", "_catalog.md", "_handover.json"],
+      "handoff_gate": "_manifest.json valid && _handover.status in {PASS, NEEDS_ATTENTION}; document_ir.json exists && file_hash present; every authoritative:true exists; every authoritative:false has canonical_source",
+      "invariants": ["_catalog.md is thin view of _manifest.json — no independent authority", "_handover.json has next_action handoff instruction"]
+    }
+  ],
+  "global_rules": {
+    "ownership": "Each artifact has exactly one owning stage. Duplicates are forbidden unless declared as derived copy in a later stage.",
+    "anti_overclaim": "Any claim not traceable to source_offsets or to a deterministic method with confidence is labeled open_space and quarantined if asserted as fact.",
+    "determinism": "All derived computations and whitebox simulation use fixed seed (42) and pure Python. No nondeterminism crosses a stage boundary.",
+    "backward_compat": "Legacy flat paths (e.g., entities.json at root) are deprecated wrappers pointing to canonical locations; their presence is non-fatal."
+  }
+}

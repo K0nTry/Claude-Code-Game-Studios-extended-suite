@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "archetype": "THEMATIC_EDUCATIONAL",
+  "nodes": [
+    {
+      "id": "creative-director",
+      "tier": 1
+    },
+    {
+      "id": "narrative-director",
+      "tier": 2
+    },
+    {
+      "id": "systems-designer",
+      "tier": 3
+    },
+    {
+      "id": "art-director",
+      "tier": 2
+    }
+  ],
+  "edges": [
+    {
+      "from": "creative-director",
+      "to": "narrative-director"
+    },
+    {
+      "from": "narrative-director",
+      "to": "systems-designer"
+    },
+    {
+      "from": "creative-director",
+      "to": "art-director"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# book2game — προαιρετικά deps
+# Το skill δουλεύει και χωρίς αυτά (pandoc fallback).
+# Εγκατάσταση: pip install -r requirements.txt
+
+# PDF
+pymupdf>=1.23
+# fallback αν το pymupdf αποτύχει
+pdfminer.six>=20221105
+
+# EPUB
+ebooklib>=0.18
+beautifulsoup4>=4.12
+
+# DOCX
+python-docx>=1.1
+# εναλλακτικό για DOCX
+mammoth>=1.6

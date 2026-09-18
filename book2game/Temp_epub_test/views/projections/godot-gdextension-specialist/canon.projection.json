@@ -1,0 +1,57 @@
+{
+  "_kernel": {
+    "tool_version": "book2game v2.0.0",
+    "source_hash": "sha256:none",
+    "canon_version": "2026-09-14T22:27:28.145792",
+    "derived_version": "2026-09-14T22:27:28.172792",
+    "extraction_timestamp": "2026-09-14T22:27:28.433429",
+    "canonical_uuids_present": 2,
+    "open_space_count": 0,
+    "epistemic_breakdown": {
+      "canon": 2,
+      "derived": 0,
+      "open_space": 0
+    },
+    "projection_agent": "godot-gdextension-specialist"
+  },
+  "_epistemic_layer": "canon",
+  "entities.json": {
+    "characters": [
+      {
+        "name": "Chapter",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+            "line": 1
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_001",
+        "_category": "characters"
+      },
+      {
+        "name": "Beginning",
+        "role": "Recurring Entity",
+        "traits": [
+          "Αυτόματη εξαγωγή από συχνότητα"
+        ],
+        "evidence": [
+          {
+            "quote": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+            "line": 1
+          }
+        ],
+        "_epistemic": "canon",
+        "_uuid": "char_002",
+        "_category": "characters"
+      }
+    ],
+    "locations": [],
+    "objects": [],
+    "factions": []
+  }
+}

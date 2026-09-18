@@ -1,0 +1,57 @@
+{
+  "suite": "book2game-integration",
+  "phase": "PHASE 6",
+  "total": 6,
+  "passed": 6,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "skill-loads",
+      "path": ".claude\\skills\\book2game-prep\\SKILL.md",
+      "command": "read .claude\\skills\\book2game-prep\\SKILL.md frontmatter",
+      "expected": "user-invocable: true",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "handoff-game-concept",
+      "path": "scripts\\handoff_to_ccgs.py",
+      "command": "python scripts/handoff_to_ccgs.py <workshop> <repo>",
+      "expected": "exit 0 + game-concept.md non-empty",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "validator-gate",
+      "path": "scripts\\validate_book2game.py",
+      "command": "python scripts/validate_book2game.py <out_dir>",
+      "expected": "exit 0 valid / exit 1 invalid",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "hook-gate",
+      "path": ".claude\\hooks\\book2game-gate.sh",
+      "command": "bash -lc \"cd <out> && book2game-gate.sh\"",
+      "expected": "silent 0 OK / warn 1 fail",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "start-book-option",
+      "path": ".claude\\skills\\start\\SKILL.md",
+      "command": "grep 'I have a book' .claude\\skills\\start\\SKILL.md",
+      "expected": "option visible + routes to book2game",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "real-parser-pipeline",
+      "path": ".claude\\skills\\book2game-prep\\scripts\\parse_book.py",
+      "command": "python parse_book.py <book> --out <out> && python validate_book2game.py <out>",
+      "expected": "parse_book.py exit 0 then validate GATE PASS",
+      "result": "PASS",
+      "detail": ""
+    }
+  ]
+}

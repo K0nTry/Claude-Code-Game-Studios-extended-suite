@@ -1,0 +1,40 @@
+{
+  "theory_lenses": [
+    {
+      "lens": "south_park_causality",
+      "validator": "therefore/but causal linkage",
+      "total_decision_points": 0,
+      "causal_linked": 0,
+      "coverage": 1.0,
+      "verdict": "PASS",
+      "deterministic": true
+    },
+    {
+      "lens": "character_arc",
+      "validator": "Big-5 trait variance (character arc)",
+      "character_count": 0,
+      "verdict": "SKIPPED",
+      "reason": "No character profiles available",
+      "deterministic": true
+    },
+    {
+      "lens": "heros_journey",
+      "validator": "12-stage Hero's Journey mapping",
+      "total_chapters": 1,
+      "stages_mapped": 1,
+      "coverage": 0.083,
+      "stages": [
+        {
+          "stage_index": 1,
+          "label": "ordinary_world",
+          "chapter_title": "Chapter 1: The Beginning Chapter 1: The Beginning This is the first paragraph of the minimal test epub book.",
+          "tension": 0.5
+        }
+      ],
+      "verdict": "NEEDS_ATTENTION",
+      "deterministic": true
+    }
+  ],
+  "generated": "theory_lenses.py",
+  "deterministic": true
+}
