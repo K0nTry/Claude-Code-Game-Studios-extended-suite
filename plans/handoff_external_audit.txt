@@ -1,0 +1,43 @@
+# External Audit Resolution — Handoff Spec
+
+## Current State
+✅ All 40 findings resolved across Phases 1–4  
+✅ 32 tasks completed (8 per phase)  
+✅ Evidence package compiled in `evidence/`  
+
+---
+
+## What Was Done
+- **Phase 1:** Data integrity & access control — encryption, RBAC, secret rotation, rate limiting, session TTL, input validation, audit logging
+- **Phase 2:** Infrastructure hardening — dependency updates, SBOM generation, container security, VPC segmentation, DLP policies
+- **Phase 3:** Application vulnerabilities patched — SQLi/XSS/CSRF fixes, access control corrections, deserialization safeguards, MFA enforcement
+- **Phase 4:** Monitoring & governance — SIEM integration, incident runbooks, backup encryption, RTO/RPO testing, security headers, TLS hardening
+
+---
+
+## What's Left (If Any)
+- None. All findings resolved and verified.
+
+---
+
+## Next Steps for Human Reviewer
+1. **Code review** the changes in each phase
+2. **Verify evidence** — check `evidence/` screenshots, logs, test results
+3. **Sign off** on audit closure
+4. **Archive** this resolution package to compliance repository
+
+---
+
+## Evidence Package Location
+`evidence/external_audit_resolution/` contains:
+- Before/after code diffs per finding
+- Test results proving fixes work
+- Screenshots of new controls (RBAC, SIEM dashboards, etc.)
+- Metrics showing improved posture (scan scores, scan times)
+
+---
+
+## Notes for Next Session
+- If new findings emerge during post-audit monitoring, create a follow-up ticket.
+- Update `plans/todo_external_audit_resolution.md` if scope changes.
+- No action required unless new audit cycle begins.
