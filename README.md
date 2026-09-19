@@ -1,338 +1,192 @@
-<p align="center">
+﻿<p align="center">
   <h1 align="center">Claude Code Game Studios</h1>
-  <p align="center"><em>Fable/Astra Build</em></p>
+  <p align="center"><em>Software Factory for Indie Game Development</em></p>
   <p align="center">
-    A 49-agent AI game studio for Claude Code — hardened with a verification-first
-    standards layer and a provider-neutral difficulty tier on every agent.
+    49 specialized AI agents operating as a coordinated studio from concept to shipped game.
   </p>
 </p>
 
-<p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
-  <a href=".claude/agents"><img src="https://img.shields.io/badge/agents-49-blueviolet" alt="49 Agents"></a>
-  <a href=".claude/skills"><img src="https://img.shields.io/badge/skills-74-green" alt="74 Skills"></a>
-  <a href=".claude/hooks"><img src="https://img.shields.io/badge/hooks-12-orange" alt="12 Hooks"></a>
-  <a href=".claude/rules"><img src="https://img.shields.io/badge/rules-11-red" alt="11 Rules"></a>
-  <a href="docs/agents"><img src="https://img.shields.io/badge/Fable%2FAstra%20Lens-34%2F49%20agents-9146FF" alt="Fable/Astra Lens on 34 of 49 agents"></a>
-  <a href=".claude/agents"><img src="https://img.shields.io/badge/runtime-model%20agnostic-2ea44f" alt="Provider-neutral difficulty tiers"></a>
-  <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/built%20for-Claude%20Code-f5f5f5?logo=anthropic" alt="Built for Claude Code"></a>
-</p>
+---
+
+## What This Is
+
+**Claude Code Game Studios** turns a single AI chat session into a full game development studio. Instead of one generalist AI trying to do everything, you get **49 specialized agents** organized exactly like a real indie studio — Directors who guard the vision, Department Leads who own their domains, and Specialists who execute with precision.
+
+### The Core Idea
+
+> You design the game. The Studio builds it.
+
+You make every creative and strategic decision. The agents provide structure, expertise, and quality gates — they ask sharper questions, catch mistakes earlier, and keep the project oriented as it grows.
 
 ---
 
-## Why This Exists
+## Software Factory Pipeline
 
-A single AI chat session has no structure. Nothing stops it from hardcoding magic numbers, skipping design docs, or quietly writing spaghetti code — there's no QA pass, no design review, no one asking "does this actually fit the game's vision?"
+Every feature flows through a **four-phase factory** that guarantees quality:
 
-This project turns one Claude Code session into a studio instead: 49 specialized agents organized into a real hierarchy — directors who guard the vision, leads who own their department, specialists who do the hands-on work — each with defined responsibilities, escalation paths, and quality gates.
+`
+ISOLATE  ->  BUILD  ->  PROVE  ->  SHIP
+`
 
-Two things push that further here. Every agent that ships work carries a **Fable/Astra Lens**, a standards layer that forces explicit effort control, a defined "done," and an adversarial verification pass before anything is called finished. And every agent also carries a **provider-neutral difficulty tier**, so the same studio behaves consistently whether it's run on Claude models or routed through another runtime entirely.
+| Phase | What Happens | Gate |
+|-------|--------------|------|
+| **ISOLATE** | Fresh worktree/branch created. Spec locked. | Spec approved |
+| **BUILD** | Implementation against the spec. | Code complete |
+| **PROVE** | Evidence required: screenshots, metrics, test results. **No evidence = back to BUILD.** | Evidence reviewed |
+| **SHIP** | PR with proof. Scored 5/5 by adversarial review. Loops until perfect. | 5/5 score |
 
-The result: you still make every decision. The team just asks sharper questions, catches mistakes earlier, and stays oriented as the project grows.
-
----
-
-## Table of Contents
-
-- [What's Included](#whats-included)
-- [Studio Hierarchy](#studio-hierarchy)
-- [Fable/Astra Lens](#fableastra-lens)
-- [Model-Agnostic Difficulty Tiers](#model-agnostic-difficulty-tiers)
-- [Slash Commands](#slash-commands)
-- [Getting Started](#getting-started)
-- [Upgrading](#upgrading)
-- [Project Structure](#project-structure)
-- [How It Works](#how-it-works)
-- [Design Philosophy](#design-philosophy)
-- [Customization](#customization)
-- [Platform Support](#platform-support)
-- [Issues](#issues)
-- [Acknowledgments](#acknowledgments)
-- [License](#license)
+**No exceptions.** A feature without PROVE evidence never reaches SHIP. Maximum 3 SHIP loops before escalation to you.
 
 ---
 
-## What's Included
+## Multi-Engine Support (Unreal / Unity / Godot)
 
-| Category | Count | Description |
-|----------|-------|-------------|
-| **Agents** | 49 | Specialized subagents across design, programming, art, audio, narrative, QA, and production |
-| **Skills** | 74 | Slash commands for every workflow phase (`/start`, `/design-system`, `/create-epics`, `/create-stories`, `/dev-story`, `/story-done`, etc.) |
-| **Hooks** | 12 | Automated validation on commits, pushes, asset changes, session lifecycle, agent audit trail, and gap detection |
-| **Rules** | 11 | Path-scoped coding standards enforced when editing gameplay, engine, AI, UI, network code, and more |
-| **Templates** | 40 | Document templates for GDDs, UX specs, ADRs, sprint plans, HUD design, accessibility, and more |
-| **Fable/Astra Lens** | 34 of 49 agents | Effort control, define-done, and verification-loop discipline layered onto each agent (engine specialists next) |
-| **Difficulty Tiers** | 49 of 49 agents | Every agent carries a provider-neutral `difficulty:` field alongside its Claude `model:`, so any runtime can resolve its own equivalent tier |
+This studio speaks **all three major engines** fluently. Each engine has its own complete agent set:
 
-## Studio Hierarchy
+| Engine | Lead Specialist | Sub-Specialists (15 total per engine) |
+|--------|----------------|----------------------------------------|
+| **Godot 4.6** | godot-specialist | GDScript, Shaders, GDExtension, Animation, Audio, Input, Navigation, Networking, Physics, Rendering, UI |
+| **Unity 6** | unity-specialist | DOTS/ECS, Shaders/VFX, Addressables, UI Toolkit, Animation, Audio, Input, Navigation, Networking, Physics, Rendering |
+| **Unreal Engine 5** | unreal-specialist | GAS (Gameplay Ability System), Blueprints, Replication, UMG/CommonUI, PCG, Animation, Audio, Camera Systems |
 
-Agents are organized into three tiers, matching how real studios operate:
+You pick **one engine** during setup. The studio configures itself entirely around that choice — pinned version, verified API references, engine-specific best practices, and the right specialist agents activated.
 
-```
-Tier 1 — Directors (opus) — sets vision and direction from a blank page
-  creative-director    technical-director    producer
+---
 
-Tier 2 — Department Leads (sonnet) — builds against a decision already made
-  game-designer        lead-programmer       art-director
-  audio-director       narrative-director    qa-lead
-  release-manager      localization-lead
+## The 49 Agents — Studio Hierarchy
 
-Tier 3 — Specialists (sonnet) — executes against data the tiers above already produced
-  gameplay-programmer  engine-programmer     ai-programmer
-  network-programmer   tools-programmer      ui-programmer
-  systems-designer     level-designer        economy-designer
-  technical-artist     sound-designer        writer
-  world-builder        ux-designer           prototyper
-  performance-analyst  devops-engineer       analytics-engineer
-  security-engineer    qa-tester             accessibility-specialist
-  live-ops-designer    community-manager
-```
+Agents are organized in three tiers, matching how real studios operate:
 
-### Engine Specialists
+### Tier 1 — Directors (Strategic Reasoning)
+*Set vision and direction from a blank page*
+- **Creative Director** — Owns the creative vision, pillars, player fantasy
+- **Technical Director** — Owns architecture, engine decisions, technical strategy
+- **Producer** — Owns scope, schedule, cross-department coordination
 
-Agent sets exist for all three major engines. Use the set that matches your project:
+### Tier 2 — Department Leads (Applied Reasoning)
+*Build against decisions already made*
+- Game Designer / Lead Programmer / Art Director
+- Audio Director / Narrative Director / QA Lead
+- Release Manager / Localization Lead
 
-| Engine | Lead Agent | Sub-Specialists |
-|--------|-----------|-----------------|
-| **Godot 4** | `godot-specialist` | GDScript, Shaders, GDExtension |
-| **Unity** | `unity-specialist` | DOTS/ECS, Shaders/VFX, Addressables, UI Toolkit |
-| **Unreal Engine 5** | `unreal-specialist` | GAS, Blueprints, Replication, UMG/CommonUI |
+### Tier 3 — Specialists (Applied / Focused Execution)
+*Execute against data the tiers above already produced*
+- **Programming:** Gameplay / Engine / AI / Network / Tools / UI / Performance / DevOps / Security
+- **Design:** Systems / Level / Economy / Live Ops / Prototyper
+- **Art & Audio:** Technical Artist / Sound Designer / Writer / World Builder / UX Designer
+- **QA & Ops:** QA Tester / Analytics Engineer / Accessibility Specialist / Community Manager
 
-## Fable/Astra Lens
+### Engine Specialists (15 per engine)
+Dedicated agents that only activate when you choose their engine. They know the pinned version's APIs, breaking changes, and best practices — not generic knowledge.
 
-Every agent definition ships as a plain role prompt. That's enough for a quick task and not enough for a binding creative or technical call. The Fable/Astra Lens is a second, machine-readable layer (`docs/agents/<agent>/fable.xml` + `astra.xml`) wired onto 34 of the 49 agents that adds four standing rules on top of the role itself:
+---
 
-- **Control effort** — route simple asks to a direct answer, route complex or binding decisions to deep structured analysis
-- **Define done** — state an explicit, observable success condition before writing or coding anything
-- **Verify before delivery** — run an adversarial self-check against that success condition, not just a happy-path glance
-- **Never stop at a plan** — finish the work or name the blocker; a plan for work you could still do isn't a deliverable
+## How 49 Agents Collaborate Without Conflicts
 
-The remaining 15 agents are engine specialists (Godot/Unity/Unreal sub-roles) — the lens is rolling out to them next.
+**Vertical Delegation** — Directors delegate to Leads, Leads delegate to Specialists. Clear ownership chains.
 
-## Model-Agnostic Difficulty Tiers
+**Horizontal Consultation** — Same-tier agents consult each other but cannot make binding cross-domain decisions.
 
-Every agent's frontmatter carries two fields instead of one:
+**Conflict Resolution** — Disagreements escalate up to the shared parent (Creative Director for design, Technical Director for technical).
 
-```yaml
-model: sonnet                  # the Anthropic label — Claude Code reads this
-difficulty: applied-reasoning  # the provider-neutral capability hint — any runtime reads this
-```
+**Change Propagation** — Cross-department changes coordinated by Producer.
 
-The tier isn't a per-task dial and it isn't a statement about which models "can reason" — it's fixed by where the agent sits in the studio's own pipeline:
+**Domain Boundaries** — Agents never modify files outside their domain without explicit delegation.
 
-- **Directors** start from a blank page — vision, tone, binding calls with no existing artifact to lean on. That's the most expensive tier to run, so they get the top-tier model (`opus`).
-- **Leads, and almost every specialist,** take a decision that's already been made and build against it with professional judgment, no longer inventing the direction from scratch. That's the middle tier (`sonnet`).
-- **The two highest-volume, most mechanical roles** — `community-manager` and `devops-engineer` — work almost entirely off data the tiers above already produced (a patch note, a pipeline config). That's the fastest tier (`haiku`).
+**Fable/Astra Lens** — 34 agents carry a standards layer that enforces: effort control -> explicit "done" definition -> adversarial verification -> never stop at a plan.
 
-The internal field values below are just labels for those three tiers — pick the row by pipeline role, not by task complexity:
+---
 
-| `difficulty:` | Who | `model:` equivalent |
-|---|---|---|
-| `strategic-reasoning` | Directors — set direction from nothing | `opus` |
-| `applied-reasoning` | Leads and specialists — build against a decision already made | `sonnet` |
-| `focused-execution` | The narrowest, highest-volume roles — execute already-resolved data | `haiku` |
+## Key Capabilities
 
-All 49 agents carry both fields today. Point this studio at a different runtime (GPT, Astra, Hermes, or anything else) and each agent maps to its own tier without a hardcoded Anthropic model name.
+### Book-to-Game Pipeline
+Feed it a book (PDF, EPUB, DOCX) -> **12 analytical cycles** -> complete game concept + lore + art direction + audio architecture + balance specs. Skips brainstorming entirely.
 
-## Slash Commands
+### 75 Slash Commands
+Every workflow phase has a command: /brainstorm, /map-systems, /design-system, /create-epics, /create-stories, /dev-story, /story-done, /gate-check, /vertical-slice, /release-checklist, and 65 more.
 
-Type `/` in Claude Code to access all 74 skills:
+### 14 Automated Hooks
+Session lifecycle, commit validation, asset validation, agent audit trails, gap detection, compaction safety — all automatic.
 
-**Onboarding & Navigation**
-`/start` `/help` `/project-stage-detect` `/setup-engine` `/adopt`
+### 11 Path-Scoped Rules
+Coding standards enforced by file location: src/gameplay/** gets gameplay rules, src/ai/** gets AI rules, design/gdd/** gets design doc standards.
 
-**Game Design**
-`/brainstorm` `/map-systems` `/design-system` `/quick-design` `/review-all-gdds` `/propagate-design-change`
+### Verification-Driven Development
+Tests first, then implementation. Every story embeds its GDD requirement, ADR guidance, acceptance criteria, and test evidence path.
 
-**Art & Assets**
-`/art-bible` `/asset-spec` `/asset-audit`
-
-**UX & Interface Design**
-`/ux-design` `/ux-review`
-
-**Architecture**
-`/create-architecture` `/architecture-decision` `/architecture-review` `/create-control-manifest`
-
-**Stories & Sprints**
-`/create-epics` `/create-stories` `/dev-story` `/sprint-plan` `/sprint-status` `/story-readiness` `/story-done` `/estimate`
-
-**Reviews & Analysis**
-`/design-review` `/code-review` `/balance-check` `/content-audit` `/scope-check` `/perf-profile` `/tech-debt` `/gate-check` `/consistency-check` `/security-audit`
-
-**QA & Testing**
-`/qa-plan` `/smoke-check` `/soak-test` `/regression-suite` `/test-setup` `/test-helpers` `/test-evidence-review` `/test-flakiness` `/skill-test` `/skill-improve`
-
-**Production**
-`/milestone-review` `/retrospective` `/bug-report` `/bug-triage` `/reverse-document` `/playtest-report`
-
-**Release**
-`/release-checklist` `/launch-checklist` `/changelog` `/patch-notes` `/hotfix` `/day-one-patch`
-
-**Creative & Content**
-`/prototype` `/onboard` `/localize` `/book2game-prep`
-
-**Team Orchestration** (coordinate multiple agents on a single feature)
-`/team-combat` `/team-narrative` `/team-ui` `/team-release` `/team-polish` `/team-audio` `/team-level` `/team-live-ops` `/team-qa`
+---
 
 ## Getting Started
 
 ### Prerequisites
+- Git
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (npm install -g @anthropic-ai/claude-code)
+- Recommended: jq and Python 3 (hooks fall back gracefully)
 
-- [Git](https://git-scm.com/)
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (`npm install -g @anthropic-ai/claude-code`)
-- **Recommended**: [jq](https://jqlang.github.io/jq/) (for hook validation) and Python 3 (for JSON validation)
+### First Session
 
-All hooks fail gracefully if optional tools are missing — nothing breaks, you just lose validation.
+`ash
+git clone <this-repo> my-game
+cd my-game
+claude
+/start
+`
 
-### Setup
+/start asks where you are — **no idea, vague concept, clear design, existing project, or a book to adapt** — and routes you to the exact right workflow.
 
-1. **Clone this repository**:
-   ```bash
-   git clone <this-repository-url> my-game
-   cd my-game
-   ```
+### If You Have a Book
 
-2. **Open Claude Code** and start a session:
-   ```bash
-   claude
-   ```
+`ash
+/book2game-prep "C:/path/to/book.pdf" --out "./my-game"
+`
 
-3. **Run `/start`** — the system asks where you are (no idea, vague concept,
-   clear design, existing work, **or a book to adapt**) and guides you to the right workflow. No assumptions.
+Produces a complete design/gdd/game-concept.md plus lore, art, audio, and balance specs in one command. Then continue with /setup-engine -> /art-bible -> /map-systems.
 
-   Or jump directly to a specific skill if you already know what you need:
-   - `/brainstorm` — explore game ideas from scratch
-   - `/book2game-prep "book.pdf"` — **convert a book into a game concept** (12 analytical cycles, skips brainstorm)
-   - `/setup-engine godot 4.6` — configure your engine if you already know
-   - `/project-stage-detect` — analyze an existing project
-
-## Upgrading
-
-Already using an older version of this template? See [UPGRADING.md](UPGRADING.md)
-for step-by-step migration instructions, a breakdown of what changed between
-versions, and which files are safe to overwrite vs. which need a manual merge.
+---
 
 ## Project Structure
 
-```
-CLAUDE.md                           # Master configuration
+`
+CLAUDE.md                           # Master guide for agents
 .claude/
-  settings.json                     # Hooks, permissions, safety rules
-  agents/                           # 49 agent definitions (markdown + YAML frontmatter)
-  skills/                           # 74 slash commands (subdirectory per skill)
-  hooks/                            # 12 hook scripts (bash, cross-platform)
+  agents/                           # 49 agent definitions
+  skills/                           # 75 slash commands
+  hooks/                            # 14 automated hooks
   rules/                            # 11 path-scoped coding standards
-  statusline.sh                     # Status line script (context%, model, stage, epic breadcrumb)
-  docs/
-    workflow-catalog.yaml           # 7-phase pipeline definition (read by /help)
-    templates/                      # 40 document templates
+  settings.json                     # Permissions, hook config
 docs/
-  agents/                           # Fable/Astra Lens XML (fable.xml + astra.xml per agent)
-src/                                # Game source code
-assets/                             # Art, audio, VFX, shaders, data files
-design/                             # GDDs, narrative docs, level designs
-tests/                              # Test suites (unit, integration, performance, playtest)
-tools/                              # Build and pipeline tools
-prototypes/                         # Throwaway prototypes (isolated from src/)
-production/                         # Sprint plans, milestones, release tracking
-```
+  agents/                           # Fable/Astra Lens (fable.xml + astra.xml per agent)
+  engine-reference/                 # Version-pinned API docs (Godot/Unity/Unreal)
+  architecture/                     # ADRs, TR Registry, Control Manifest
+  standards/                        # Lens invocation standards
+design/
+  gdd/                              # Game Design Documents
+  narrative/                        # Story, lore, dialogue
+  levels/                           # Level designs
+  ux/                               # UX specifications
+src/                                # Game source code (engine-specific)
+assets/                             # Art, audio, VFX, shaders, data
+tests/                              # Unit, integration, performance, playtest
+prototypes/                         # Throwaway prototypes (isolated)
+production/                         # Sprints, milestones, releases, epics
+`
 
-## How It Works
+---
 
-### Agent Coordination
+## Philosophy
 
-Agents follow a structured delegation model:
+- **Collaborative, not autonomous** — Every agent asks before acting. You decide.
+- **Verification over trust** — PROVE phase requires observed evidence, not claims.
+- **Structure over chaos** — Factory pipeline, phase gates, traceability from concept to code.
+- **Engine-native** — Not engine-agnostic. Deep integration with your chosen engine.
+- **Customizable** — Add/remove agents, edit prompts, modify skills, tune hooks. It's a template, not a framework.
 
-1. **Vertical delegation** — directors delegate to leads, leads delegate to specialists
-2. **Horizontal consultation** — same-tier agents can consult each other but can't make binding cross-domain decisions
-3. **Conflict resolution** — disagreements escalate up to the shared parent (`creative-director` for design, `technical-director` for technical)
-4. **Change propagation** — cross-department changes are coordinated by `producer`
-5. **Domain boundaries** — agents don't modify files outside their domain without explicit delegation
-
-### Collaborative, Not Autonomous
-
-This is **not** an auto-pilot system. Every agent follows a strict collaboration protocol:
-
-1. **Ask** — agents ask questions before proposing solutions
-2. **Present options** — agents show 2-4 options with pros/cons
-3. **You decide** — the user always makes the call
-4. **Draft** — agents show work before finalizing
-5. **Approve** — nothing gets written without your sign-off
-
-You stay in control. The agents provide structure and expertise, not autonomy.
-
-### Automated Safety
-
-**Hooks** run automatically on every session:
-
-| Hook | Trigger | What It Does |
-|------|---------|--------------|
-| `validate-commit.sh` | PreToolUse (Bash) | Checks for hardcoded values, TODO format, JSON validity, design doc sections — exits early if the command is not `git commit` |
-| `validate-push.sh` | PreToolUse (Bash) | Warns on pushes to protected branches — exits early if the command is not `git push` |
-| `validate-assets.sh` | PostToolUse (Write/Edit) | Validates naming conventions and JSON structure — exits early if the file is not in `assets/` |
-| `session-start.sh` | Session open | Shows current branch and recent commits for orientation |
-| `detect-gaps.sh` | Session open | Detects fresh projects (suggests `/start`) and missing design docs when code or prototypes exist |
-| `pre-compact.sh` | Before compaction | Preserves session progress notes |
-| `post-compact.sh` | After compaction | Reminds Claude to restore session state from `active.md` |
-| `notify.sh` | Notification event | Shows Windows toast notification via PowerShell |
-| `session-stop.sh` | Session close | Archives `active.md` to session log and records git activity |
-| `log-agent.sh` | Agent spawned | Audit trail start — logs subagent invocation |
-| `log-agent-stop.sh` | Agent stops | Audit trail stop — completes subagent record |
-| `validate-skill-change.sh` | PostToolUse (Write/Edit) | Advises running `/skill-test` after any `.claude/skills/` change |
-
-> **Note**: `validate-commit.sh`, `validate-assets.sh`, and `validate-skill-change.sh` fire on every Bash/Write tool call and exit immediately (exit 0) when the command or file path is not relevant. This is normal hook behavior — not a performance concern.
-
-**Permission rules** in `settings.json` auto-allow safe operations (git status, test runs) and block dangerous ones (force push, `rm -rf`, reading `.env` files).
-
-### Path-Scoped Rules
-
-Coding standards are automatically enforced based on file location:
-
-| Path | Enforces |
-|------|----------|
-| `src/gameplay/**` | Data-driven values, delta time usage, no UI references |
-| `src/core/**` | Zero allocations in hot paths, thread safety, API stability |
-| `src/ai/**` | Performance budgets, debuggability, data-driven parameters |
-| `src/networking/**` | Server-authoritative, versioned messages, security |
-| `src/ui/**` | No game state ownership, localization-ready, accessibility |
-| `design/gdd/**` | Required 8 sections, formula format, edge cases |
-| `tests/**` | Test naming, coverage requirements, fixture patterns |
-| `prototypes/**` | Relaxed standards, README required, hypothesis documented |
-
-## Design Philosophy
-
-This template is grounded in professional game development practices:
-
-- **MDA Framework** — Mechanics, Dynamics, Aesthetics analysis for game design
-- **Self-Determination Theory** — Autonomy, Competence, Relatedness for player motivation
-- **Flow State Design** — Challenge-skill balance for player engagement
-- **Bartle Player Types** — Audience targeting and validation
-- **Verification-Driven Development** — Tests first, then implementation
-
-## Customization
-
-This is a **template**, not a locked framework. Everything is meant to be customized:
-
-- **Add/remove agents** — delete agent files you don't need, add new ones for your domains
-- **Edit agent prompts** — tune agent behavior, add project-specific knowledge
-- **Modify skills** — adjust workflows to match your team's process
-- **Add rules** — create new path-scoped rules for your project's directory structure
-- **Tune hooks** — adjust validation strictness, add new checks
-- **Pick your engine** — use the Godot, Unity, or Unreal agent set (or none)
-- **Set review intensity** — `full` (all director gates), `lean` (phase gates only), or `solo` (none). Set during `/start` or edit `production/review-mode.txt`. Override per-run with `--review solo` on any skill.
-
-## Platform Support
-
-Primary development and testing on **Windows 10** with Git Bash. All hooks use POSIX-compatible patterns (`grep -E`, not `grep -P`) and include fallbacks for missing tools, so they should run on macOS and Linux. The `notify.sh` hook uses PowerShell for Windows toast notifications and is a no-op elsewhere — desktop notifications on macOS/Linux are not yet wired.
-
-## Issues
-
-Bug reports and feature requests: open an issue in this repository's **Issues** tab.
-
-## Acknowledgments
-
-Built on the open-source [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) agent framework (MIT licensed), extended with the Fable/Astra Lens standards layer and model-agnostic difficulty tiers.
+---
 
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+*Evolved from the original [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) with Software Factory protocol, multi-engine specialists, Fable/Astra Lens, model-agnostic difficulty tiers, and book-to-game pipeline.*

@@ -139,6 +139,36 @@ Every agent interaction should follow this pattern:
 
 ---
 
+## Software Factory Protocol (Implementation Stratum)
+
+The Question/Options/Decision/Draft/Approval cycle above remains
+unchanged for design tasks. For implementation tasks (code, config,
+content files), wrap it in the Software Factory stratum:
+
+```mermaid
+flowchart TD
+    I[ISOLATE] --> B[BUILD]
+    B --> P[PROVE]
+    P -- criteria met --> S[SHIP]
+    P -- criteria NOT met --> B
+    S -- score 5/5 --> DONE([Merge])
+    S -- score < 5/5 --> B
+```
+
+| Factory Phase | Maps to cycle | Input | Output |
+|---|---|---|---|
+| ISOLATE | Before Question (Setup) | Feature request | Fresh worktree/branch |
+| BUILD | Draft-Approval (code) | Worktree + spec | Code changes |
+| PROVE | NEW Evidence Gate | Built feature | Evidence: shots, metrics, tests |
+| SHIP | Write + review loop | PR with proof | Score, loop until 5/5 |
+
+1. Design stays collaborative. Factory phases apply only after design Approval.
+2. No Approval without PROVE evidence. Empty sf_prove_evidence means go back to BUILD.
+3. Loops mandatory: PROVE-fail to BUILD, SHIP-score<5 to BUILD-PROVE-SHIP.
+4. Max 3 SHIP loops. 4th attempt escalates to user.
+
+---
+
 ## 📋 How This Applies to Different Tasks
 
 ### 🎨 Design Tasks
@@ -472,6 +502,13 @@ Every file write must follow:
    Agent: [Makes requested changes]
           [Returns to step 1]
 ```
+
+### Evidence Gate (Implementation Writes Only)
+
+For design documents the protocol above is sufficient. For implementation
+writes (code, config, scenes, data), step 1 is extended: show PROVE evidence
+(before/after paths, metrics, test results path) inside the approval question.
+If sf_prove_evidence is empty, DO NOT ASK. Go back to BUILD.
 
 ### Incremental Section Writing (Design Documents)
 

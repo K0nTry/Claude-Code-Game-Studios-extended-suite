@@ -7,6 +7,9 @@
 3. **Conflict Resolution**: When two agents disagree, escalate to the shared
    parent. If no shared parent, escalate to `creative-director` for design
    conflicts or `technical-director` for technical conflicts.
+   Workflow Violation (skipped ISOLATE, missing PROVE evidence, SHIP without
+   5/5) auto-escalates: ISOLATE/BUILD violations to producer;
+   PROVE/SHIP violations to technical-director.
 4. **Change Propagation**: When a design change affects multiple domains, the
    `producer` agent coordinates the propagation.
 5. **No Unilateral Cross-Domain Changes**: An agent must never modify files
@@ -71,3 +74,22 @@ When an orchestration skill spawns multiple independent agents:
 2. Collect all results before proceeding to dependent phases
 3. If any agent is BLOCKED, surface it immediately — do not silently skip
 4. Always produce a partial report if some agents complete and others block
+
+## Software Factory Enforcement
+
+Lead agents act as phase gatekeepers. Delegation MUST carry phase metadata.
+
+```mermaid
+flowchart LR
+    PROD[producer ISOLATE-BUILD] --> TD[technical-director PROVE gate]
+    TD --> CD[creative-director SHIP gate]
+    TD -- missing evidence --> PROD
+    CD -- score below 5 --> PROD
+```
+
+1. producer, ISOLATE to BUILD owner. Blocks BUILD if no fresh worktree/branch and no sf_phase ISOLATE in active.md.
+2. technical-director, PROVE gate owner. Rejects SHIP if sf_prove_evidence empty or paths missing.
+3. creative-director, SHIP gate owner. Approves review-loop entry only if matches design.
+4. Phase metadata in delegation. Every parent to subagent prompt MUST include phase tag.
+5. Phase verdicts are Opus-tier. Same tier as gate-check.
+

@@ -20,6 +20,27 @@ after each significant milestone:
 The state file should contain: current task, progress checklist, key decisions
 made, files being worked on, and open questions.
 
+For implementation work it MUST also contain the Software Factory phase block:
+
+```markdown
+sf_phase: BUILD
+sf_worktree: ../wts/melee-hitbox
+sf_branch: feat/melee-hitbox
+sf_prove_evidence:
+  screenshots: [tests/evidence/before.png, tests/evidence/after.png]
+  metrics: { fps: 60, memory: 45MB, coverage: 87pct }
+  test_results: tests/results/prove.json
+sf_ship_review:
+  reviewer: greptile
+  score: 4
+  feedback: Missing null-check line 42
+  loop_count: 2
+```
+
+- sf_phase is required: ISOLATE, BUILD, PROVE, or SHIP.
+- sf_prove_evidence required before SHIP, paths MUST exist.
+- sf_ship_review loop_count caps at 3.
+
 ### Status Line Block (Production+ only)
 
 When the project is in Production, Polish, or Release stage, include a structured
@@ -30,6 +51,8 @@ status block in `active.md` that the status line script can parse:
 Epic: Combat System
 Feature: Melee Combat
 Task: Implement hitbox detection
+SF_Phase: PROVE
+SF_Loop: 2/3
 <!-- /STATUS -->
 ```
 
@@ -105,3 +128,22 @@ If a session dies ("prompt too long") or you start a new session to continue wor
 2. Read the full state file for context
 3. Read the partially-completed file(s) listed in the state
 4. Continue from the next incomplete section or task
+
+## Software Factory State Machine
+
+```mermaid
+stateDiagram-v2
+    [*] --> ISOLATE
+    ISOLATE --> BUILD
+    BUILD --> PROVE
+    PROVE --> SHIP: criteria met
+    PROVE --> BUILD: criteria NOT met
+    SHIP --> BUILD: score below 5
+    SHIP --> [*]: score 5of5, merge
+```
+
+1. Read sf_phase from active.md.
+2. Resume FROM THAT PHASE, never restart from ISOLATE.
+3. If sf_phase SHIP and score below 5, load feedback and resume at BUILD.
+4. Invalid: ISOLATE to SHIP, ISOLATE to PROVE, BUILD to SHIP.
+
