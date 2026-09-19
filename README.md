@@ -53,15 +53,6 @@ These aren't just "engine experts." They're **evolved agents** with three differ
 
 ---
 
-## How They Work in Parallel Without Conflicts
-
-- Every task runs in its **own git worktree**
-- Multiple agents work simultaneously — nobody overwrites anyone else
-- ISOLATE creates the worktree, SHIP merges back
-- Clean parallel flow
-
----
-
 ## Your Role
 
 - Design (see the big picture)

@@ -622,14 +622,14 @@ Skill (Coordinator):
  [gameplay-programmer proposes code structure]
  [User approves or requests changes]
 
- **Phase 3: Parallel Implementation**
- I'll now coordinate 4 agents to implement in parallel:
- - gameplay-programmer: Core grapple physics
- - technical-artist: Cable VFX
- - sound-designer: Whoosh + impact SFX
- - ai-programmer: Enemy reactions to being grappled
+**Phase 3: Implementation**
+  I'll now coordinate the team to implement the grappling hook:
+  - gameplay-programmer: Core grapple physics
+  - technical-artist: Cable VFX
+  - sound-designer: Whoosh + impact SFX
+  - ai-programmer: Enemy reactions to being grappled
 
- Each will show you their work before writing files. Proceed?"
+  Each will show you their work before writing files. Proceed?"
 
 User: "Yes"
 
