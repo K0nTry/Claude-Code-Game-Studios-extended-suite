@@ -16,11 +16,12 @@ import json
 import shutil
 
 # src (relative to workshop output dir) -> dst (relative to repo root)
+# New nested structure: full_text.md in source/, entities.json in canon/
 MAPPING = {
-    "full_text.md": "design/lore/source_text.md",
+    "source/full_text.md": "design/lore/source_text.md",
     "chapters": "design/lore/chapters",
     "index.json": "design/rag/index.json",
-    "entities.json": "design/entities/entity-registry.md",   # JSON -> Markdown
+    "canon/entities.json": "design/entities/entity-registry.md",   # JSON -> Markdown
     "design/gdd/game-concept.md": "design/gdd/game-concept.md",
 }
 

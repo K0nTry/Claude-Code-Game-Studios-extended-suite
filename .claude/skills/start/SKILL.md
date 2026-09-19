@@ -41,6 +41,7 @@ This is the first thing the user sees. Use `AskUserQuestion` with these exact op
   - `B) Vague idea` — I have a rough theme, feeling, or genre in mind (e.g., "something with space" or "a cozy farming game") but nothing concrete.
   - `C) Clear concept` — I know the core idea — genre, basic mechanics, maybe a pitch sentence — but haven't formalized it into documents yet.
   - `D) Existing work` — I already have design docs, prototypes, code, or significant planning done. I want to organize or continue the work.
+  - `E) I have a book to adapt` — I have a book (PDF, EPUB, DOCX) I want to convert into a game. Run book2game pipeline first, then skip brainstorm.
 
 Wait for the user's selection. Do not proceed until they respond.
 
@@ -153,8 +154,8 @@ The user needs creative exploration before anything else.
    **Sub-case D2 — GDDs, ADRs, or stories already exist:**
    - Explain: "Having files isn't the same as the template's skills being able to use them. GDDs might be missing required sections. `/adopt` checks this specifically."
    - Recommend:
-     1. `/project-stage-detect` — understand what phase and what's missing entirely
-     2. `/adopt` — audit whether existing artifacts are in the right internal format
+      1. `/project-stage-detect` — understand what phase and what's missing entirely
+      2. `/adopt` — audit whether existing artifacts are in the right internal format
 
 3. Show the recommended path for D2:
    - `/project-stage-detect` — phase detection + existence gaps
@@ -165,6 +166,49 @@ The user needs creative exploration before anything else.
    - `/architecture-review` — bootstrap the TR requirement registry
    - `/gate-check` — validate readiness for next phase
 
+#### If E: I have a book to adapt
+
+1. Acknowledge the book-to-game pipeline — this is a specialized entry path that produces a full game concept from a book before any design work begins.
+
+2. Run the book2game prep skill to extract narrative data:
+   ```
+   /book2game-prep "<path-to-book>" --out "./my-game"
+   ```
+   This produces a complete workshop output with 12 analytical cycles (entities, psychology, pacing, branching, personas, audio direction, knowledge graph, balance, expansion grammar, engine selection).
+
+3. Run the handoff script to map book2game output into CCGS artifacts:
+   ```
+   python scripts/handoff_to_ccgs.py "./my-game"
+   ```
+   This creates `design/gdd/game-concept.md`, `design/lore/`, `design/entities/entity-registry.md`, `design/rag/index.json` — all wired into the studio.
+
+4. Run the validation gate:
+   ```
+   python scripts/validate_book2game.py "./my-game"
+   bash .claude/hooks/book2game-gate.sh "./my-game"
+   ```
+   Both must pass (GATE PASS).
+
+5. Skip `/brainstorm` entirely — the book provides the concept. Proceed directly to:
+   - `/setup-engine` — configure engine (book2game recommends one in `technical/engine.md`)
+   - `/art-bible` — define visual identity (uses book2game's `design/art/art-bible.md` + `lighting-color-script.json`)
+   - `/map-systems` — decompose the concept into systems
+   - Continue with normal Concept phase from there
+
+6. Show the recommended path:
+   **Book Adaptation phase:**
+   - `/book2game-prep "<book>"` — extract full narrative data
+   - `handoff_to_ccgs.py` — map to CCGS structure
+   - `validate_book2game.py` + `book2game-gate.sh` — verify output
+   **Concept phase (post-book):**
+   - `/setup-engine` — configure engine (or accept book2game recommendation)
+   - `/art-bible` — visual identity from book's aesthetic data
+   - `/map-systems` — decompose into systems
+   - `/design-system` — author GDD for each MVP system
+   - `/review-all-gdds` — cross-system consistency check
+   - `/gate-check` — validate readiness before architecture work
+   **Then continue with normal Architecture → Pre-Production → Production flow**
+
 ---
 
 ## Phase 3c: Write Initial Stage File
@@ -172,7 +216,7 @@ The user needs creative exploration before anything else.
 After confirming the starting path (and before asking about review mode), write the initial stage to `production/stage.txt`. Create the `production/` directory if it does not exist.
 
 Stage mapping:
-- **Path A, B, or C (starting from scratch)**: write `Concept`
+- **Path A, B, C, or E (starting from scratch / book adaptation)**: write `Concept`
 - **Path D, existing project, engine not configured or only a game concept exists**: write `Concept`
 - **Path D, existing project with GDDs but no architecture documents**: write `Systems Design`
 - **Path D, existing project with full architecture (ADRs, architecture doc)**: write `Technical Setup`
@@ -229,8 +273,9 @@ Verdict: **COMPLETE** — user oriented and handed off to next step.
 
 ## Edge Cases
 
-- **User picks D but project is empty**: Gently redirect — "It looks like the project is a fresh template with no artifacts yet. Would Path A or B be a better fit?"
+- **User picks D but project is empty**: Gently redirect — "It looks like the project is a fresh template with no artifacts yet. Would Path A, B, or E be a better fit?"
 - **User picks A but project has code**: Mention what you found — "I noticed there's already code in `src/`. Did you mean to pick D (existing work)?"
+- **User picks E but no book path provided**: Ask for the book path — "Please provide the path to your book file (PDF, EPUB, DOCX, TXT, or MD)."
 - **User is returning (engine configured, concept exists)**: Skip onboarding entirely — "It looks like you're already set up! Your engine is [X] and you have a game concept at `design/gdd/game-concept.md`. Review mode: `[read from production/review-mode.txt, or 'lean (default)' if missing]`. Want to pick up where you left off? Try `/sprint-plan` or just tell me what you'd like to work on."
 - **User doesn't fit any option**: Let them describe their situation in their own words and adapt.
 

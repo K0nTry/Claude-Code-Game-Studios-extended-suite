@@ -21,6 +21,15 @@ phases:
     description: "Develop your game idea into a documented concept"
     next_phase: systems-design
     steps:
+      - id: book-adapt
+        name: "Book Adaptation (Optional)"
+        command: /book2game-prep
+        required: false
+        description: "Convert a book (PDF/EPUB/DOCX) into a game concept — produces game-concept.md, lore, entities, RAG index. Run this INSTEAD of brainstorm if you have a book."
+        artifact:
+          glob: "design/gdd/game-concept.md"
+          note: "If book-adapt runs, brainstorm is skipped. Concept gate still requires game-concept.md."
+
       - id: brainstorm
         name: "Brainstorm"
         command: /brainstorm

@@ -1,8 +1,9 @@
 #!/bin/bash
 # book2game-gate.sh — post-run verification hook for book2game-prep.
 # Pass: silent (exit 0). Fail: warn to stderr + block Concept Gate (exit 1).
-# Checks: full_text.md >0, index.json valid JSON, chapters/ has .md,
+# Checks: source/full_text.md >0, index.json valid JSON, chapters/ has .md,
 #         design/gdd/game-concept.md exists.
+# Handles new nested structure: full_text.md in source/, entities.json in canon/.
 
 fail() {
     echo "book2game Concept Gate: $1" >&2
@@ -11,7 +12,7 @@ fail() {
 
 DIR="${1:-.}"
 
-[ -s "$DIR/full_text.md" ] || fail "full_text.md missing or empty"
+[ -s "$DIR/source/full_text.md" ] || fail "source/full_text.md missing or empty"
 [ -f "$DIR/index.json" ] || fail "index.json missing"
 
 # JSON sanity check — pure bash builtins, no python/jq dependency (WSL-safe).

@@ -151,26 +151,108 @@ with defined pillars and a player journey. This is where you figure out
 ### Phase 1 Pipeline
 
 ```
-/brainstorm  -->  game-concept.md  -->  /design-review  -->  /setup-engine
-     |                                        |                    |
-     v                                        v                    v
-  10 concepts     Concept doc with       Validation          Engine pinned in
-  MDA analysis    pillars, MDA,          of concept          technical-preferences.md
-  Player motiv.   core loop, USP         document
-                                                                   |
-                                                                   v
-                                                             /prototype
-                                                       (concept prototype — 1-3 days)
-                                                        PROCEED ↓     PIVOT → /brainstorm
-                                                                   |
-                                                                   v (PROCEED)
-                                                             /map-systems
-                                                                   |
-                                                                   v
-                                                            systems-index.md
-                                                            (all systems, deps,
-                                                             priority tiers)
+[/book2game-prep] -->  /brainstorm  -->  game-concept.md  -->  /design-review  -->  /setup-engine
+     |                       |                                        |                    |
+     v                       v                                        v                    v
+  Book → CCGS         10 concepts     Concept doc with       Validation          Engine pinned in
+  artifacts           MDA analysis    pillars, MDA,          of concept          technical-preferences.md
+  (skips brainstorm)  Player motiv.   core loop, USP         document
+                                                                    |
+                                                                    v
+                                                              /prototype
+                                                        (concept prototype — 1-3 days)
+                                                         PROCEED ↓     PIVOT → /brainstorm
+                                                                    |
+                                                                    v (PROCEED)
+                                                              /map-systems
+                                                                    |
+                                                                    v
+                                                             systems-index.md
+                                                             (all systems, deps,
+                                                              priority tiers)
 ```
+
+**Entry points:**
+
+- **Standard**: Start with `/brainstorm` (Paths A, B, C in `/start`)
+- **Book adaptation**: Start with `/book2game-prep` (Path E in `/start`) — produces `game-concept.md` directly, then continues with `/setup-engine`
+
+### Step 1.0: Book Adaptation (Optional — Path E)
+
+If you have a book (PDF, EPUB, DOCX, TXT, MD) you want to adapt into a game, use the book2game pipeline **instead of** `/brainstorm`. This is selected via Path E in `/start`.
+
+```bash
+/book2game-prep "C:/path/to/book.pdf" --out "./my-game"
+```
+
+**What `/book2game-prep` does (12 analytical cycles):**
+
+1. **Parse & Chunk** — `full_text.md`, `chapters/`, `index.json` (RAG), `entities.json`, `archetype.json`
+2. **Character Psychology** — voice fingerprints, Big-5 proxies, relationship matrix
+3. **Pacing & Tension** — chapter-level intensity curve from lexical analysis
+4. **Branching Graph** — decision points with citations from dialogue gaps
+5. **Player Personas** — distributed interest mapping (characters/themes/decisions)
+6. **Audio Direction** — leitmotif matrix, lighting/color script from pacing
+7. **Knowledge Graph** — character presence/co-occurrence/first-appearance matrix
+8. **Conflict/Balance** — resource/conflict mapping from lexical cues
+9. **Expansion Grammar** — grammar with terminals from real entities + DDA + mod schema
+10. **Executive Audit** — evidence-based coverage/traceability report
+11. **Engine & MCP Selection** — Godot/Unity/Unreal/Phaser recommendation + MCP servers
+12. **A/B Fable Check** — no fabricated claims, real file evidence only
+
+**Output structure** (in `--out` folder):
+```
+my-game/
+  design/
+    gdd/game-concept.md          # Complete game concept from book
+    art/art-bible.md             # Visual identity from book's aesthetic data
+    art/lighting-color-script.json
+    narrative/character-psychology.json
+    narrative/voice-fingerprints.json
+    narrative/choice-tree.json
+    narrative/expansion-grammar.json
+    balance/tension-pacing-curve.json
+    audio/leitmotif-matrix.json
+    ai/npc-utility-schedules.json
+  lore/
+    bible.md, connectors.md, relationship-matrix.json, information-spread-graph.json
+  technical/
+    engine.md, mcp-servers.md, mod-api-schema.json
+  production/stage.txt, execution-dag.json, briefs/, epics/
+  benchmarks/executive_audit_report.json
+  source/full_text.md, paragraph-hashes.json
+  canon/entities.json, relationships.json, entity-aliases.json, ...
+```
+
+**Handoff to CCGS:**
+
+```bash
+python scripts/handoff_to_ccgs.py "./my-game"
+```
+
+This maps book2game output into the studio:
+- `full_text.md` → `design/lore/source_text.md`
+- `chapters/` → `design/lore/chapters/`
+- `index.json` → `design/rag/index.json`
+- `entities.json` → `design/entities/entity-registry.md` (readable Markdown)
+- `design/gdd/game-concept.md` → `design/gdd/game-concept.md` (in place)
+
+**Validation gate:**
+
+```bash
+python scripts/validate_book2game.py "./my-game"
+bash .claude/hooks/book2game-gate.sh "./my-game"
+```
+
+Both must print `GATE PASS`. The hook also runs automatically after `/book2game-prep` via `book2game-post-run.py`.
+
+**Then continue with normal flow:**
+1. `/setup-engine` — configure engine (book2game recommends one in `technical/engine.md`)
+2. `/art-bible` — visual identity (book2game already produced `design/art/art-bible.md`)
+3. `/map-systems` — decompose into systems
+4. ... rest of Concept phase
+
+> **Note:** If you run `/book2game-prep`, you **skip `/brainstorm` entirely**. The book provides the concept. The Concept gate (`/gate-check concept`) still requires `game-concept.md` — book2game produces it.
 
 ### Step 1.1: Brainstorm With /brainstorm
 

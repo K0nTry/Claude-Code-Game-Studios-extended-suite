@@ -52,3 +52,14 @@ See `docs/COLLABORATIVE-DESIGN-PRINCIPLE.md` for full protocol and examples.
 ## Context Management
 
 @.claude/docs/context-management.md
+
+## Book-to-Game Pipeline
+
+If you have a book (PDF, EPUB, DOCX) to adapt into a game, use the book2game entry path:
+
+1. Run `/start` and select **Option E: "I have a book to adapt"**
+2. Or run directly: `/book2game-prep "<book-path>" --out "./my-game"`
+3. The pipeline extracts 12 analytical cycles and produces a complete `design/gdd/game-concept.md` + lore/art/audio/balance specs
+4. Then continue with `/setup-engine` → `/art-bible` → `/map-systems` (skips `/brainstorm`)
+
+See `docs/WORKFLOW-GUIDE.md#step-10-book-adaptation-optional---path-e` for full details.

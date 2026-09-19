@@ -19,7 +19,7 @@ domain lead) should delegate to specialists.
 | `lead-programmer` | Code architecture | System design, code review, API design, refactoring |
 | `art-director` | Visual direction | Style guides, art bible, asset standards, UI/UX direction |
 | `audio-director` | Audio direction | Music direction, sound palette, audio implementation strategy |
-| `narrative-director` | Story and writing | Story arcs, world-building, character design, dialogue strategy |
+| `narrative-director` | Story and writing | Story arcs, world-building, character design, dialogue strategy. **Book adaptation:** consumes book2game `character-psychology.json`, `voice-fingerprints.json`, `choice-tree.json` to author narrative GDDs. |
 | `qa-lead` | Quality assurance | Test strategy, bug triage, release readiness, regression planning |
 | `release-manager` | Release pipeline | Build management, versioning, changelogs, deployment, rollbacks |
 | `localization-lead` | Internationalization | String externalization, translation pipeline, locale testing |
@@ -38,8 +38,8 @@ domain lead) should delegate to specialists.
 | `ui-programmer` | UI implementation | Sonnet | UI framework, screens, widgets, data binding |
 | `technical-artist` | Tech art | Sonnet | Shaders, VFX, optimization, art pipeline tools |
 | `sound-designer` | Sound design | Sonnet | SFX design docs, audio event lists, mixing notes |
-| `writer` | Dialogue/lore | Sonnet | Dialogue writing, lore entries, item descriptions |
-| `world-builder` | World/lore design | Sonnet | World rules, faction design, history, geography |
+| `writer` | Dialogue/lore | Sonnet | Dialogue writing, lore entries, item descriptions. **Book adaptation:** uses book2game `lore/bible.md`, `relationship-matrix.json`, `information-spread-graph.json` as source canon. |
+| `world-builder` | World/lore design | Sonnet | World rules, faction design, history, geography. **Book adaptation:** consumes book2game `canon/world-boundaries.json`, `world-glossary.json`, `factions` from entities for world GDD. |
 | `qa-tester` | Test execution | Haiku | Writing test cases, bug reports, test checklists |
 | `performance-analyst` | Performance | Sonnet | Profiling, optimization recs, memory analysis |
 | `devops-engineer` | Build/deploy | Haiku | CI/CD, build scripts, version control workflow |

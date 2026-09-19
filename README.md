@@ -169,7 +169,7 @@ Type `/` in Claude Code to access all 74 skills:
 `/release-checklist` `/launch-checklist` `/changelog` `/patch-notes` `/hotfix` `/day-one-patch`
 
 **Creative & Content**
-`/prototype` `/onboard` `/localize`
+`/prototype` `/onboard` `/localize` `/book2game-prep`
 
 **Team Orchestration** (coordinate multiple agents on a single feature)
 `/team-combat` `/team-narrative` `/team-ui` `/team-release` `/team-polish` `/team-audio` `/team-level` `/team-live-ops` `/team-qa`
@@ -198,10 +198,11 @@ All hooks fail gracefully if optional tools are missing — nothing breaks, you 
    ```
 
 3. **Run `/start`** — the system asks where you are (no idea, vague concept,
-   clear design, existing work) and guides you to the right workflow. No assumptions.
+   clear design, existing work, **or a book to adapt**) and guides you to the right workflow. No assumptions.
 
    Or jump directly to a specific skill if you already know what you need:
    - `/brainstorm` — explore game ideas from scratch
+   - `/book2game-prep "book.pdf"` — **convert a book into a game concept** (12 analytical cycles, skips brainstorm)
    - `/setup-engine godot 4.6` — configure your engine if you already know
    - `/project-stage-detect` — analyze an existing project
 

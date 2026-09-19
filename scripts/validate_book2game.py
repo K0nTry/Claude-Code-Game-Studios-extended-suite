@@ -17,7 +17,9 @@ import sys
 
 
 def check_entities_citations(path, errors):
-    """Each entity must carry a citation string + a line number."""
+    """Each entity must carry a citation string + a line number.
+    Accepts both old flat format (citation + line) and new evidence array format (evidence[].quote + evidence[].line).
+    """
     if not os.path.exists(path):
         errors.append(f"entities.json missing: {path}")
         return
@@ -37,22 +39,36 @@ def check_entities_citations(path, errors):
             if not isinstance(entity, dict):
                 errors.append(f"entities.json [{key}][{i}]: not an object")
                 continue
+            label = entity.get("name", f"#{i}")
+
+            # Old flat format
             has_citation = "citation" in entity and isinstance(entity["citation"], str) and entity["citation"].strip()
             has_line = "line" in entity and isinstance(entity["line"], int)
-            label = entity.get("name", f"#{i}")
+
+            # New evidence array format
+            if not (has_citation and has_line):
+                evidence = entity.get("evidence", [])
+                if isinstance(evidence, list) and evidence:
+                    first_ev = evidence[0]
+                    if isinstance(first_ev, dict):
+                        has_citation = has_citation or ("quote" in first_ev and isinstance(first_ev["quote"], str) and first_ev["quote"].strip())
+                        has_line = has_line or ("line" in first_ev and isinstance(first_ev["line"], int))
+
             if not has_citation:
-                errors.append(f"entities.json [{key}] '{label}': missing non-empty 'citation'")
+                errors.append(f"entities.json [{key}] '{label}': missing citation (need 'citation' or 'evidence[0].quote')")
             if not has_line:
-                errors.append(f"entities.json [{key}] '{label}': missing integer 'line'")
+                errors.append(f"entities.json [{key}] '{label}': missing line number (need 'line' or 'evidence[0].line')")
 
 
 def validate(out_dir="."):
     errors = []
 
-    full_text = os.path.join(out_dir, "full_text.md")
+    # New nested structure: full_text.md in source/
+    full_text = os.path.join(out_dir, "source", "full_text.md")
     if not os.path.exists(full_text) or os.path.getsize(full_text) == 0:
-        errors.append("full_text.md missing or empty")
+        errors.append("source/full_text.md missing or empty")
 
+    # index.json at root (unchanged)
     index_json = os.path.join(out_dir, "index.json")
     if not os.path.exists(index_json):
         errors.append("index.json missing")
@@ -65,11 +81,13 @@ def validate(out_dir="."):
         except json.JSONDecodeError as e:
             errors.append(f"index.json invalid JSON: {e}")
 
+    # chapters/ at root (unchanged)
     chapters_dir = os.path.join(out_dir, "chapters")
     if not os.path.isdir(chapters_dir) or not any(f.endswith(".md") for f in os.listdir(chapters_dir)):
         errors.append("chapters/: missing or no .md files")
 
-    entities_json = os.path.join(out_dir, "entities.json")
+    # New nested structure: entities.json in canon/
+    entities_json = os.path.join(out_dir, "canon", "entities.json")
     check_entities_citations(entities_json, errors)
 
     if errors:
@@ -79,10 +97,10 @@ def validate(out_dir="."):
         sys.exit(1)
 
     print("GATE PASS")
-    print(f"  full_text.md OK")
+    print(f"  source/full_text.md OK")
     print(f"  index.json OK")
     print(f"  chapters/ OK")
-    print(f"  entities.json citations OK")
+    print(f"  canon/entities.json citations OK")
     sys.exit(0)
 
 
